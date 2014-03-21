@@ -14,13 +14,17 @@
 		F6773B5418D80EB40066F2A6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F6773B5318D80EB40066F2A6 /* main.m */; };
 		F6773B5818D80EB40066F2A6 /* QotDAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F6773B5718D80EB40066F2A6 /* QotDAppDelegate.m */; };
 		F6773B5B18D80EB40066F2A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6773B5918D80EB40066F2A6 /* Main.storyboard */; };
-		F6773B5E18D80EB40066F2A6 /* QotDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6773B5D18D80EB40066F2A6 /* QotDViewController.m */; };
+		F6773B5E18D80EB40066F2A6 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6773B5D18D80EB40066F2A6 /* LoginViewController.m */; };
 		F6773B6018D80EB40066F2A6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6773B5F18D80EB40066F2A6 /* Images.xcassets */; };
 		F6773B6718D80EB40066F2A6 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6773B6618D80EB40066F2A6 /* XCTest.framework */; };
 		F6773B6818D80EB40066F2A6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6773B4718D80EB40066F2A6 /* Foundation.framework */; };
 		F6773B6918D80EB40066F2A6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6773B4B18D80EB40066F2A6 /* UIKit.framework */; };
 		F6773B7118D80EB50066F2A6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F6773B6F18D80EB50066F2A6 /* InfoPlist.strings */; };
 		F6773B7318D80EB50066F2A6 /* Question_of_the_DayTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F6773B7218D80EB50066F2A6 /* Question_of_the_DayTests.m */; };
+		F6773B8118D81C510066F2A6 /* SectionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F6773B8018D81C510066F2A6 /* SectionModel.m */; };
+		F6773B8418D81C680066F2A6 /* QuestionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F6773B8318D81C680066F2A6 /* QuestionModel.m */; };
+		F6773B8A18D820630066F2A6 /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F6773B8918D820630066F2A6 /* UserModel.m */; };
+		F68D5C6018DBA77D0025D416 /* StudentHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F68D5C5F18DBA77D0025D416 /* StudentHomeViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,14 +49,22 @@
 		F6773B5618D80EB40066F2A6 /* QotDAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QotDAppDelegate.h; sourceTree = "<group>"; };
 		F6773B5718D80EB40066F2A6 /* QotDAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QotDAppDelegate.m; sourceTree = "<group>"; };
 		F6773B5A18D80EB40066F2A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		F6773B5C18D80EB40066F2A6 /* QotDViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QotDViewController.h; sourceTree = "<group>"; };
-		F6773B5D18D80EB40066F2A6 /* QotDViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QotDViewController.m; sourceTree = "<group>"; };
+		F6773B5C18D80EB40066F2A6 /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		F6773B5D18D80EB40066F2A6 /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		F6773B5F18D80EB40066F2A6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		F6773B6518D80EB40066F2A6 /* Question of the DayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Question of the DayTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6773B6618D80EB40066F2A6 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		F6773B6E18D80EB50066F2A6 /* Question of the DayTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Question of the DayTests-Info.plist"; sourceTree = "<group>"; };
 		F6773B7018D80EB50066F2A6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F6773B7218D80EB50066F2A6 /* Question_of_the_DayTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Question_of_the_DayTests.m; sourceTree = "<group>"; };
+		F6773B7F18D81C510066F2A6 /* SectionModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SectionModel.h; sourceTree = "<group>"; };
+		F6773B8018D81C510066F2A6 /* SectionModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SectionModel.m; sourceTree = "<group>"; };
+		F6773B8218D81C680066F2A6 /* QuestionModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionModel.h; sourceTree = "<group>"; };
+		F6773B8318D81C680066F2A6 /* QuestionModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionModel.m; sourceTree = "<group>"; };
+		F6773B8818D820630066F2A6 /* UserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserModel.h; sourceTree = "<group>"; };
+		F6773B8918D820630066F2A6 /* UserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserModel.m; sourceTree = "<group>"; };
+		F68D5C5E18DBA77D0025D416 /* StudentHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudentHomeViewController.h; sourceTree = "<group>"; };
+		F68D5C5F18DBA77D0025D416 /* StudentHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudentHomeViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,11 +124,19 @@
 		F6773B4D18D80EB40066F2A6 /* Question of the Day */ = {
 			isa = PBXGroup;
 			children = (
+				F68D5C5E18DBA77D0025D416 /* StudentHomeViewController.h */,
+				F68D5C5F18DBA77D0025D416 /* StudentHomeViewController.m */,
+				F6773B8818D820630066F2A6 /* UserModel.h */,
+				F6773B8918D820630066F2A6 /* UserModel.m */,
+				F6773B7F18D81C510066F2A6 /* SectionModel.h */,
+				F6773B8018D81C510066F2A6 /* SectionModel.m */,
+				F6773B8218D81C680066F2A6 /* QuestionModel.h */,
+				F6773B8318D81C680066F2A6 /* QuestionModel.m */,
 				F6773B5618D80EB40066F2A6 /* QotDAppDelegate.h */,
 				F6773B5718D80EB40066F2A6 /* QotDAppDelegate.m */,
 				F6773B5918D80EB40066F2A6 /* Main.storyboard */,
-				F6773B5C18D80EB40066F2A6 /* QotDViewController.h */,
-				F6773B5D18D80EB40066F2A6 /* QotDViewController.m */,
+				F6773B5C18D80EB40066F2A6 /* LoginViewController.h */,
+				F6773B5D18D80EB40066F2A6 /* LoginViewController.m */,
 				F6773B5F18D80EB40066F2A6 /* Images.xcassets */,
 				F6773B4E18D80EB40066F2A6 /* Supporting Files */,
 			);
@@ -250,8 +270,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6773B8118D81C510066F2A6 /* SectionModel.m in Sources */,
+				F6773B8418D81C680066F2A6 /* QuestionModel.m in Sources */,
+				F6773B8A18D820630066F2A6 /* UserModel.m in Sources */,
+				F68D5C6018DBA77D0025D416 /* StudentHomeViewController.m in Sources */,
 				F6773B5818D80EB40066F2A6 /* QotDAppDelegate.m in Sources */,
-				F6773B5E18D80EB40066F2A6 /* QotDViewController.m in Sources */,
+				F6773B5E18D80EB40066F2A6 /* LoginViewController.m in Sources */,
 				F6773B5418D80EB40066F2A6 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -461,6 +485,7 @@
 				F6773B7818D80EB50066F2A6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F6773B7918D80EB50066F2A6 /* Build configuration list for PBXNativeTarget "Question of the DayTests" */ = {
 			isa = XCConfigurationList;
@@ -469,6 +494,7 @@
 				F6773B7B18D80EB50066F2A6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
