@@ -48,4 +48,29 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ( [segue.identifier isEqualToString:@"QuestionsSegue"])   //this is the segue name that you can change from story board.
+    {
+        
+        QuestionsViewController *viewCont = segue.destinationViewController;
+        viewCont.userModel = self.userModel;
+    }
+    
+    if ( [segue.identifier isEqualToString:@"StatisticsSegue"])   //this is the segue name that you can change from story board.
+    {
+        
+        StatisticsViewController *viewCont = segue.destinationViewController;
+        viewCont.userModel = self.userModel;
+    }
+    
+    if ( [segue.identifier isEqualToString:@"MenuSegue"])   //this is the segue name that you can change from story board.
+    {
+        
+        MenuViewController *viewCont = segue.destinationViewController;
+        viewCont.userModel = self.userModel;
+    }
+}
+
 @end

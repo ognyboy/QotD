@@ -8,10 +8,18 @@
 
 #import <UIKit/UIKit.h>
 #import "UserModel.h"
+#import "StatisticsViewController.h"
+#import "QuestionsViewController.h"
+#import "MenuViewController.h"
 
 @interface StudentHomeViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UILabel *studentHomeText;
 @property (strong, nonatomic) UserModel *userModel;
+
+@property (weak, nonatomic) IBOutlet UIButton *questionsButton;
+@property (weak, nonatomic) IBOutlet UIButton *statisticsButton;
+@property (weak, nonatomic) IBOutlet UIButton *settingsButton;
+
 
 @end
