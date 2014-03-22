@@ -25,6 +25,9 @@
 		F6773B8418D81C680066F2A6 /* QuestionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F6773B8318D81C680066F2A6 /* QuestionModel.m */; };
 		F6773B8A18D820630066F2A6 /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F6773B8918D820630066F2A6 /* UserModel.m */; };
 		F68D5C6018DBA77D0025D416 /* StudentHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F68D5C5F18DBA77D0025D416 /* StudentHomeViewController.m */; };
+		F690198018DD0752005330D7 /* QuestionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F690197F18DD0752005330D7 /* QuestionsViewController.m */; };
+		F690198318DD0766005330D7 /* StatisticsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F690198218DD0766005330D7 /* StatisticsViewController.m */; };
+		F690198618DD0777005330D7 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F690198518DD0777005330D7 /* MenuViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +68,12 @@
 		F6773B8918D820630066F2A6 /* UserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserModel.m; sourceTree = "<group>"; };
 		F68D5C5E18DBA77D0025D416 /* StudentHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudentHomeViewController.h; sourceTree = "<group>"; };
 		F68D5C5F18DBA77D0025D416 /* StudentHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudentHomeViewController.m; sourceTree = "<group>"; };
+		F690197E18DD0752005330D7 /* QuestionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionsViewController.h; sourceTree = "<group>"; };
+		F690197F18DD0752005330D7 /* QuestionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionsViewController.m; sourceTree = "<group>"; };
+		F690198118DD0766005330D7 /* StatisticsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatisticsViewController.h; sourceTree = "<group>"; };
+		F690198218DD0766005330D7 /* StatisticsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatisticsViewController.m; sourceTree = "<group>"; };
+		F690198418DD0777005330D7 /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
+		F690198518DD0777005330D7 /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +144,12 @@
 				F6773B5618D80EB40066F2A6 /* QotDAppDelegate.h */,
 				F6773B5718D80EB40066F2A6 /* QotDAppDelegate.m */,
 				F6773B5918D80EB40066F2A6 /* Main.storyboard */,
+				F690197E18DD0752005330D7 /* QuestionsViewController.h */,
+				F690197F18DD0752005330D7 /* QuestionsViewController.m */,
+				F690198118DD0766005330D7 /* StatisticsViewController.h */,
+				F690198218DD0766005330D7 /* StatisticsViewController.m */,
+				F690198418DD0777005330D7 /* MenuViewController.h */,
+				F690198518DD0777005330D7 /* MenuViewController.m */,
 				F6773B5C18D80EB40066F2A6 /* LoginViewController.h */,
 				F6773B5D18D80EB40066F2A6 /* LoginViewController.m */,
 				F6773B5F18D80EB40066F2A6 /* Images.xcassets */,
@@ -273,10 +288,13 @@
 				F6773B8118D81C510066F2A6 /* SectionModel.m in Sources */,
 				F6773B8418D81C680066F2A6 /* QuestionModel.m in Sources */,
 				F6773B8A18D820630066F2A6 /* UserModel.m in Sources */,
+				F690198318DD0766005330D7 /* StatisticsViewController.m in Sources */,
 				F68D5C6018DBA77D0025D416 /* StudentHomeViewController.m in Sources */,
 				F6773B5818D80EB40066F2A6 /* QotDAppDelegate.m in Sources */,
 				F6773B5E18D80EB40066F2A6 /* LoginViewController.m in Sources */,
+				F690198018DD0752005330D7 /* QuestionsViewController.m in Sources */,
 				F6773B5418D80EB40066F2A6 /* main.m in Sources */,
+				F690198618DD0777005330D7 /* MenuViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
