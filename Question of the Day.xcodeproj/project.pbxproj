@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F654E90218E0C050007889B7 /* DetailAnswerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F654E90118E0C050007889B7 /* DetailAnswerViewController.m */; };
+		F6647BC718DD7E2000086D6D /* AnswerScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6647BC618DD7E2000086D6D /* AnswerScreenViewController.m */; };
+		F6647BC918DD8FB900086D6D /* rightArrow2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = F6647BC818DD8FB900086D6D /* rightArrow2.jpeg */; };
+		F6647BCC18DDB2BF00086D6D /* checked.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F6647BCA18DDB2BF00086D6D /* checked.jpg */; };
+		F6647BCD18DDB2BF00086D6D /* unchecked.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F6647BCB18DDB2BF00086D6D /* unchecked.jpg */; };
+		F6647BD018DDD69900086D6D /* SubmittedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6647BCF18DDD69900086D6D /* SubmittedViewController.m */; };
+		F6647BD218DE58A600086D6D /* newMail.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F6647BD118DE58A600086D6D /* newMail.jpg */; };
+		F6647BD418DE59B600086D6D /* circle.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F6647BD318DE59B600086D6D /* circle.jpg */; };
+		F6647BD718DE5B3300086D6D /* NewQuestionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6647BD618DE5B3300086D6D /* NewQuestionsViewController.m */; };
 		F6773B4818D80EB40066F2A6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6773B4718D80EB40066F2A6 /* Foundation.framework */; };
 		F6773B4A18D80EB40066F2A6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6773B4918D80EB40066F2A6 /* CoreGraphics.framework */; };
 		F6773B4C18D80EB40066F2A6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6773B4B18D80EB40066F2A6 /* UIKit.framework */; };
@@ -24,6 +33,9 @@
 		F6773B8118D81C510066F2A6 /* SectionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F6773B8018D81C510066F2A6 /* SectionModel.m */; };
 		F6773B8418D81C680066F2A6 /* QuestionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F6773B8318D81C680066F2A6 /* QuestionModel.m */; };
 		F6773B8A18D820630066F2A6 /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F6773B8918D820630066F2A6 /* UserModel.m */; };
+		F68B66BC18E0A975002ABD03 /* QuestionStatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F68B66BB18E0A975002ABD03 /* QuestionStatViewController.m */; };
+		F68B66BE18E0B2BD002ABD03 /* logo_yellow.PNG in Resources */ = {isa = PBXBuildFile; fileRef = F68B66BD18E0B2BD002ABD03 /* logo_yellow.PNG */; };
+		F68B66C118E0BD15002ABD03 /* ViewDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F68B66C018E0BD15002ABD03 /* ViewDetailsViewController.m */; };
 		F68D5C6018DBA77D0025D416 /* StudentHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F68D5C5F18DBA77D0025D416 /* StudentHomeViewController.m */; };
 		F690198018DD0752005330D7 /* QuestionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F690197F18DD0752005330D7 /* QuestionsViewController.m */; };
 		F690198318DD0766005330D7 /* StatisticsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F690198218DD0766005330D7 /* StatisticsViewController.m */; };
@@ -41,6 +53,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F654E90018E0C050007889B7 /* DetailAnswerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailAnswerViewController.h; sourceTree = "<group>"; };
+		F654E90118E0C050007889B7 /* DetailAnswerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailAnswerViewController.m; sourceTree = "<group>"; };
+		F6647BC518DD7E2000086D6D /* AnswerScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnswerScreenViewController.h; sourceTree = "<group>"; };
+		F6647BC618DD7E2000086D6D /* AnswerScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnswerScreenViewController.m; sourceTree = "<group>"; };
+		F6647BC818DD8FB900086D6D /* rightArrow2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = rightArrow2.jpeg; sourceTree = "<group>"; };
+		F6647BCA18DDB2BF00086D6D /* checked.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = checked.jpg; sourceTree = "<group>"; };
+		F6647BCB18DDB2BF00086D6D /* unchecked.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = unchecked.jpg; sourceTree = "<group>"; };
+		F6647BCE18DDD69900086D6D /* SubmittedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubmittedViewController.h; sourceTree = "<group>"; };
+		F6647BCF18DDD69900086D6D /* SubmittedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubmittedViewController.m; sourceTree = "<group>"; };
+		F6647BD118DE58A600086D6D /* newMail.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = newMail.jpg; sourceTree = "<group>"; };
+		F6647BD318DE59B600086D6D /* circle.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = circle.jpg; sourceTree = "<group>"; };
+		F6647BD518DE5B3300086D6D /* NewQuestionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewQuestionsViewController.h; sourceTree = "<group>"; };
+		F6647BD618DE5B3300086D6D /* NewQuestionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewQuestionsViewController.m; sourceTree = "<group>"; };
 		F6773B4418D80EB40066F2A6 /* Question of the Day.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Question of the Day.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6773B4718D80EB40066F2A6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F6773B4918D80EB40066F2A6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -66,6 +91,11 @@
 		F6773B8318D81C680066F2A6 /* QuestionModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionModel.m; sourceTree = "<group>"; };
 		F6773B8818D820630066F2A6 /* UserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserModel.h; sourceTree = "<group>"; };
 		F6773B8918D820630066F2A6 /* UserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserModel.m; sourceTree = "<group>"; };
+		F68B66BA18E0A975002ABD03 /* QuestionStatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionStatViewController.h; sourceTree = "<group>"; };
+		F68B66BB18E0A975002ABD03 /* QuestionStatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionStatViewController.m; sourceTree = "<group>"; };
+		F68B66BD18E0B2BD002ABD03 /* logo_yellow.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo_yellow.PNG; sourceTree = "<group>"; };
+		F68B66BF18E0BD15002ABD03 /* ViewDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewDetailsViewController.h; sourceTree = "<group>"; };
+		F68B66C018E0BD15002ABD03 /* ViewDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewDetailsViewController.m; sourceTree = "<group>"; };
 		F68D5C5E18DBA77D0025D416 /* StudentHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudentHomeViewController.h; sourceTree = "<group>"; };
 		F68D5C5F18DBA77D0025D416 /* StudentHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudentHomeViewController.m; sourceTree = "<group>"; };
 		F690197E18DD0752005330D7 /* QuestionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionsViewController.h; sourceTree = "<group>"; };
@@ -133,8 +163,22 @@
 		F6773B4D18D80EB40066F2A6 /* Question of the Day */ = {
 			isa = PBXGroup;
 			children = (
+				F68B66BD18E0B2BD002ABD03 /* logo_yellow.PNG */,
+				F6647BD318DE59B600086D6D /* circle.jpg */,
+				F654E90018E0C050007889B7 /* DetailAnswerViewController.h */,
+				F654E90118E0C050007889B7 /* DetailAnswerViewController.m */,
+				F6647BD118DE58A600086D6D /* newMail.jpg */,
+				F6647BCA18DDB2BF00086D6D /* checked.jpg */,
+				F6647BCB18DDB2BF00086D6D /* unchecked.jpg */,
+				F6647BC818DD8FB900086D6D /* rightArrow2.jpeg */,
+				F6647BC518DD7E2000086D6D /* AnswerScreenViewController.h */,
+				F6647BC618DD7E2000086D6D /* AnswerScreenViewController.m */,
+				F6647BCE18DDD69900086D6D /* SubmittedViewController.h */,
+				F6647BCF18DDD69900086D6D /* SubmittedViewController.m */,
 				F68D5C5E18DBA77D0025D416 /* StudentHomeViewController.h */,
 				F68D5C5F18DBA77D0025D416 /* StudentHomeViewController.m */,
+				F68B66BA18E0A975002ABD03 /* QuestionStatViewController.h */,
+				F68B66BB18E0A975002ABD03 /* QuestionStatViewController.m */,
 				F6773B8818D820630066F2A6 /* UserModel.h */,
 				F6773B8918D820630066F2A6 /* UserModel.m */,
 				F6773B7F18D81C510066F2A6 /* SectionModel.h */,
@@ -144,6 +188,10 @@
 				F6773B5618D80EB40066F2A6 /* QotDAppDelegate.h */,
 				F6773B5718D80EB40066F2A6 /* QotDAppDelegate.m */,
 				F6773B5918D80EB40066F2A6 /* Main.storyboard */,
+				F68B66BF18E0BD15002ABD03 /* ViewDetailsViewController.h */,
+				F68B66C018E0BD15002ABD03 /* ViewDetailsViewController.m */,
+				F6647BD518DE5B3300086D6D /* NewQuestionsViewController.h */,
+				F6647BD618DE5B3300086D6D /* NewQuestionsViewController.m */,
 				F690197E18DD0752005330D7 /* QuestionsViewController.h */,
 				F690197F18DD0752005330D7 /* QuestionsViewController.m */,
 				F690198118DD0766005330D7 /* StatisticsViewController.h */,
@@ -264,9 +312,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6647BCC18DDB2BF00086D6D /* checked.jpg in Resources */,
 				F6773B6018D80EB40066F2A6 /* Images.xcassets in Resources */,
+				F6647BD218DE58A600086D6D /* newMail.jpg in Resources */,
+				F6647BD418DE59B600086D6D /* circle.jpg in Resources */,
 				F6773B5218D80EB40066F2A6 /* InfoPlist.strings in Resources */,
+				F68B66BE18E0B2BD002ABD03 /* logo_yellow.PNG in Resources */,
 				F6773B5B18D80EB40066F2A6 /* Main.storyboard in Resources */,
+				F6647BCD18DDB2BF00086D6D /* unchecked.jpg in Resources */,
+				F6647BC918DD8FB900086D6D /* rightArrow2.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,15 +339,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F68B66C118E0BD15002ABD03 /* ViewDetailsViewController.m in Sources */,
 				F6773B8118D81C510066F2A6 /* SectionModel.m in Sources */,
 				F6773B8418D81C680066F2A6 /* QuestionModel.m in Sources */,
+				F6647BD718DE5B3300086D6D /* NewQuestionsViewController.m in Sources */,
 				F6773B8A18D820630066F2A6 /* UserModel.m in Sources */,
 				F690198318DD0766005330D7 /* StatisticsViewController.m in Sources */,
+				F6647BD018DDD69900086D6D /* SubmittedViewController.m in Sources */,
 				F68D5C6018DBA77D0025D416 /* StudentHomeViewController.m in Sources */,
+				F6647BC718DD7E2000086D6D /* AnswerScreenViewController.m in Sources */,
+				F654E90218E0C050007889B7 /* DetailAnswerViewController.m in Sources */,
 				F6773B5818D80EB40066F2A6 /* QotDAppDelegate.m in Sources */,
 				F6773B5E18D80EB40066F2A6 /* LoginViewController.m in Sources */,
 				F690198018DD0752005330D7 /* QuestionsViewController.m in Sources */,
 				F6773B5418D80EB40066F2A6 /* main.m in Sources */,
+				F68B66BC18E0A975002ABD03 /* QuestionStatViewController.m in Sources */,
 				F690198618DD0777005330D7 /* MenuViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
