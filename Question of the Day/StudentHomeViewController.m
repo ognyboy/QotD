@@ -34,20 +34,33 @@
     
 }
 
+- (IBAction)newQuestions:(id)sender
+{
+    
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
     [self.studentHomeText setText:[NSString stringWithFormat:@"Welcome %@ %@ \nto Section %@.", [self.userModel getFirstName], [self.userModel getLastName], [self.userModel.listOfSections objectAtIndex:0]]];
+    
+    [self.navigationItem setHidesBackButton:TRUE];
+    
+    [self newQs];
 }
 
-- (void)didReceiveMemoryWarning
+-(void)newQs
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://199.180.255.173/index.php/mobile/getNotAnsweredQuestions/%@/%@/0", [self.userModel getUserName], [self.userModel.listOfSections objectAtIndex:0]]];
+    
+    NSData *userInfoData = [NSData dataWithContentsOfURL:url];
+    
+    NSString *string = [[NSString alloc] initWithData:userInfoData encoding:NSASCIIStringEncoding];
+    
+    [self.theNewLabel setText:string];
 }
-
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
@@ -69,6 +82,12 @@
     {
         
         MenuViewController *viewCont = segue.destinationViewController;
+        viewCont.userModel = self.userModel;
+    }
+    
+    if ( [segue.identifier isEqualToString:@"NewQuestions"])   //this is the segue name that you can change from story board.
+    {
+        NewQuestionsViewController *viewCont = segue.destinationViewController;
         viewCont.userModel = self.userModel;
     }
 }

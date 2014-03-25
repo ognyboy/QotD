@@ -11,6 +11,7 @@
 #import "StatisticsViewController.h"
 #import "QuestionsViewController.h"
 #import "MenuViewController.h"
+#import "NewQuestionsViewController.h"
 
 @interface StudentHomeViewController : UIViewController
 
@@ -21,5 +22,6 @@
 @property (weak, nonatomic) IBOutlet UIButton *statisticsButton;
 @property (weak, nonatomic) IBOutlet UIButton *settingsButton;
 
+@property (weak, nonatomic) IBOutlet UILabel *theNewLabel;
 
 @end

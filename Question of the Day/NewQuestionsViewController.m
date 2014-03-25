@@ -1,21 +1,22 @@
 //
-//  QuestionsViewController.m
+//  NewQuestionsViewController.m
 //  Question of the Day
 //
-//  Created by Ogny on 3/21/14.
+//  Created by Ogny on 3/22/14.
 //  Copyright (c) 2014 dognean. All rights reserved.
 //
 
-#import "QuestionsViewController.h"
+#import "NewQuestionsViewController.h"
 #import "DetailAnswerViewController.h"
 
-@interface QuestionsViewController ()
+@interface NewQuestionsViewController ()
 {
     NSMutableArray *questionList;
 }
+
 @end
 
-@implementation QuestionsViewController
+@implementation NewQuestionsViewController
 
 -(UserModel *)userModel
 {
@@ -49,19 +50,15 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
     [self instantiateQuestionList];
-    [self.questionsTableView flashScrollIndicators];
-    [self.questionsText setText:[NSString stringWithFormat:@"Section %@ Questions", [self.userModel.listOfSections objectAtIndex:0]]];
-    
-    if(!questionList)
+    [self.questionsTablew flashScrollIndicators];
+    [self.questionsLabel setText:[NSString stringWithFormat:@"Section %@ Questions", [self.userModel.listOfSections objectAtIndex:0]]];
+    if(!questionList || !questionList.count)
     {
-        self.questionsTableView.hidden = true;
+        self.questionsTablew.hidden = true;
         [self.aaaa setText:@"No new questions!"];
     }
-    
 }
-
 
 - (void)didReceiveMemoryWarning
 {
@@ -71,7 +68,7 @@
 
 -(void) instantiateQuestionList
 {
-    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://199.180.255.173/index.php/mobile/getsentQuestions/%@", [self.userModel.listOfSections objectAtIndex:0]]];
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://199.180.255.173/index.php/mobile/getNotAnsweredQuestions/%@/%@/1", [self.userModel getUserName], [self.userModel.listOfSections objectAtIndex:0]]];
     
     NSData *userInfoData = [NSData dataWithContentsOfURL:url];
     
@@ -88,8 +85,8 @@
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return [questionList count];
+    
 }
-
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -99,7 +96,8 @@
     
     UIButton *button = (UIButton *)[cell viewWithTag:5555];
     
-    UIImageView *imageView = (UIImageView *)[cell viewWithTag:105];
+    UIImageView *imageView = (UIImageView *)[cell viewWithTag:11];
+    
     UIImage *with = [UIImage imageNamed:@"rightArrow2.jpeg"];
     [imageView setImage:with];
     
@@ -136,21 +134,19 @@
     [self.questionModel setQuestionID:[[singleQuestion valueForKey:@"id"] intValue]];
     [self.questionModel setPrompt:[singleQuestion valueForKey:@"prompt"]];
     [self.questionModel setTopic:[singleQuestion valueForKey:@"topic"]];
-
+    
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if ( [segue.identifier isEqualToString:@"PrepareQuestion"])   //this is the segue name that you can change from story board.
+    if ( [segue.identifier isEqualToString:@"PrepareQuestion2"])   //this is the segue name that you can change from story board.
     {
         
         DetailAnswerViewController *viewCont = segue.destinationViewController;
         viewCont.userModel = self.userModel;
         viewCont.questionModel = self.questionModel;
     }
-
+    
 }
-
-
 
 @end
