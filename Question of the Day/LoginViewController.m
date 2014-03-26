@@ -40,6 +40,7 @@
 }
 
 - (IBAction)login:(id)sender {
+    
     NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://199.180.255.173/index.php/mobile/getUserInfo/%@", [self.userModel getUserName]]];
 
     NSData *userInfoData = [NSData dataWithContentsOfURL:url];
