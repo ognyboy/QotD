@@ -25,7 +25,6 @@
                                 </state>
                                 <connections>
                                     <action selector="login:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="LMY-6U-kd3"/>
-                                    <segue destination="yyN-Sw-gn5" kind="push" identifier="goStudentHome" id="3NB-0o-Ym1"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo_yellow.PNG" translatesAutoresizingMaskIntoConstraints="NO" id="Gef-Bz-PL9">
@@ -37,12 +36,18 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="kh9-bI-dsS" id="g6B-Ng-LWa"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rsf-O8-8a5">
                                 <rect key="frame" x="70" y="269" width="181" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="kh9-bI-dsS" id="tfX-IF-UFt"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Username:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2oY-jz-v3m">
                                 <rect key="frame" x="70" y="153" width="91" height="21"/>
@@ -64,6 +69,7 @@
                     <connections>
                         <outlet property="passwordTextField" destination="Rsf-O8-8a5" id="kJL-tK-c5l"/>
                         <outlet property="usernameTextField" destination="77O-bR-arR" id="qgc-WP-msy"/>
+                        <segue destination="yyN-Sw-gn5" kind="push" identifier="goStudentHome" id="kxx-5x-ynj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
