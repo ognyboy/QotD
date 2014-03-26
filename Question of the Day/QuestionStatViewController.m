@@ -76,7 +76,7 @@
 
 -(void) instantiateAttemptList
 {
-    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://199.180.255.173/index.php/mobile/oollalabambino/%d/%@/%d", [self.userModel getUserID], [self.userModel.listOfSections objectAtIndex:0], [self.questionModel getQuestionID]]];
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://199.180.255.173/index.php/mobile/getAttemptsAsStudent/%d/%@/%d", [self.userModel getUserID], [self.userModel.listOfSections objectAtIndex:0], [self.questionModel getQuestionID]]];
     
     NSData *userInfoData = [NSData dataWithContentsOfURL:url];
     
