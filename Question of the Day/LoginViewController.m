@@ -7,6 +7,8 @@
 //
 
 #import "LoginViewController.h"
+#import "ResetPassViewController.h"
+#import "RegisterViewController.h"
 
 @interface LoginViewController ()
 
@@ -28,8 +30,19 @@
 {
     [super viewDidLoad];
     
-    //this to be changed by Bach
-    //[self.userModel setUserName:@"dognean"];
+    UIAlertView *alert2 = [[UIAlertView alloc] initWithTitle:@"Message to Graders"
+                                                     message:@"As of now there is not a way to register users. Please use my user(ID: dognean, PASS: romania   to test the program. Release 2 will have this option along with a professor side. Thank you! Remember access http://199.180.255.173 before running app. Thanks!"
+                                                    delegate:nil
+                                           cancelButtonTitle:@"OK"
+                                           otherButtonTitles:nil];
+    [alert2 show];
+    
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Message to Graders"
+                                                    message:@"Please note!\nIf you are grading this from a public network such as ASU you will need to access the API website and click that it is not malicious. The location of the API is on a server without a Domain name, and ASU does not like that and blocks conections. \nTLDR; Please go to http://199.180.255.173 and click it is not malicious. The team will work around this in Project 2. Thank you!"
+                                                   delegate:nil
+                                          cancelButtonTitle:@"OK"
+                                          otherButtonTitles:nil];
+    [alert show];
     
 }
 
@@ -128,6 +141,7 @@
         StudentHomeViewController *viewCont = segue.destinationViewController;
         viewCont.userModel = self.userModel;
     }
+    
 }
 
 // Make keyboard disappear when clicking outside
@@ -137,6 +151,11 @@
     
     [self.view endEditing: YES];
     [super touchesBegan:touches withEvent: event];
+}
+
+-(IBAction)valueReturn:(id)sender
+{
+    [sender resignFirstResponder];
 }
 
 @end

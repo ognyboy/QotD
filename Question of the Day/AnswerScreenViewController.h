@@ -25,6 +25,9 @@
 @property (weak, nonatomic) IBOutlet UIButton *bButton;
 @property (weak, nonatomic) IBOutlet UIButton *cButton;
 @property (weak, nonatomic) IBOutlet UIButton *dButton;
+@property (weak, nonatomic) IBOutlet UIImageView *logo;
 
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (weak, nonatomic) IBOutlet UIView *viewView;
 
 @end

@@ -26,5 +26,17 @@
 @property (weak, nonatomic) IBOutlet UILabel *explanationDetail;
 @property (weak, nonatomic) IBOutlet UILabel *titleDetail;
 @property (weak, nonatomic) IBOutlet UIView *viewView;
+@property (weak, nonatomic) IBOutlet UIImageView *logo;
+@property (weak, nonatomic) IBOutlet UIView *viewsuff;
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollStuff;
+@property (weak, nonatomic) IBOutlet UILabel *t;
+@property (weak, nonatomic) IBOutlet UILabel *p;
+@property (weak, nonatomic) IBOutlet UILabel *a;
+@property (weak, nonatomic) IBOutlet UILabel *b;
+@property (weak, nonatomic) IBOutlet UILabel *c;
+@property (weak, nonatomic) IBOutlet UILabel *d;
+@property (weak, nonatomic) IBOutlet UILabel *co;
+@property (weak, nonatomic) IBOutlet UILabel *hi;
+@property (weak, nonatomic) IBOutlet UILabel *e;
 
 @end

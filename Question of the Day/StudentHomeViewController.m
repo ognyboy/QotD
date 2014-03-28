@@ -34,11 +34,6 @@
     
 }
 
-- (IBAction)newQuestions:(id)sender
-{
-    
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -49,6 +44,9 @@
     [self.navigationItem setHidesBackButton:TRUE];
     
     [self newQs];
+    
+    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Log out" style:UIBarButtonItemStyleBordered target:self action:@selector(logout:)];
 }
 
 -(void)newQs
@@ -60,6 +58,11 @@
     NSString *string = [[NSString alloc] initWithData:userInfoData encoding:NSASCIIStringEncoding];
     
     [self.theNewLabel setText:string];
+}
+
+-(void) logout: (id) sender
+{
+    [self.navigationController popToViewController:[self.navigationController.viewControllers objectAtIndex:0] animated:YES];
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender

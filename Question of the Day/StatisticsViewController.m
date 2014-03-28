@@ -50,7 +50,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Log out" style:UIBarButtonItemStyleBordered target:self action:@selector(logout:)];
+    
     [self instantiateQuestionList];
     [self.questionsTablew flashScrollIndicators];
     if(!questionList || !questionList.count)
@@ -58,6 +60,11 @@
         self.questionsTablew.hidden = true;
         [self.aaaa setText:@"No new questions!"];
     }
+}
+
+-(void) logout: (id) sender
+{
+    [self.navigationController popToViewController:[self.navigationController.viewControllers objectAtIndex:0] animated:YES];
 }
 
 - (void)didReceiveMemoryWarning

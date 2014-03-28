@@ -49,7 +49,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Log out" style:UIBarButtonItemStyleBordered target:self action:@selector(logout:)];
+    
     [self instantiateQuestionList];
     [self.questionsTableView flashScrollIndicators];
     [self.questionsText setText:[NSString stringWithFormat:@"Section %@ Questions", [self.userModel.listOfSections objectAtIndex:0]]];
@@ -66,7 +68,11 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+}
+
+-(void) logout: (id) sender
+{
+    [self.navigationController popToViewController:[self.navigationController.viewControllers objectAtIndex:0] animated:YES];
 }
 
 -(void) instantiateQuestionList

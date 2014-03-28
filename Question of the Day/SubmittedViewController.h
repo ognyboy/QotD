@@ -22,5 +22,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *retryButton;
 @property (weak, nonatomic) IBOutlet UISwitch *switchExp;
 @property (weak, nonatomic) IBOutlet UIButton *homeButton;
+@property (weak, nonatomic) IBOutlet UIView *viewView;
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 
 @end

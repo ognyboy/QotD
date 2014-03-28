@@ -13,5 +13,9 @@
 @interface MenuViewController : UIViewController
 
 @property (strong, nonatomic) UserModel *userModel;
+@property (weak, nonatomic) IBOutlet UIButton *emailsButton;
 
+@property (weak, nonatomic) IBOutlet UIButton *notificationButton;
+@property (weak, nonatomic) IBOutlet UIButton *saveButton;
+@property (weak, nonatomic) IBOutlet UIButton *changePassword;
 @end
