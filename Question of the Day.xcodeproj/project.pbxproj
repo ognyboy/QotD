@@ -40,6 +40,11 @@
 		F690198018DD0752005330D7 /* QuestionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F690197F18DD0752005330D7 /* QuestionsViewController.m */; };
 		F690198318DD0766005330D7 /* StatisticsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F690198218DD0766005330D7 /* StatisticsViewController.m */; };
 		F690198618DD0777005330D7 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F690198518DD0777005330D7 /* MenuViewController.m */; };
+		F690407118E5AD8F00AF8CB4 /* bifat.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F690406F18E5AD8F00AF8CB4 /* bifat.jpg */; };
+		F690407218E5AD8F00AF8CB4 /* nebifat.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F690407018E5AD8F00AF8CB4 /* nebifat.jpg */; };
+		F690407518E5BC9A00AF8CB4 /* ChangePasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F690407418E5BC9A00AF8CB4 /* ChangePasswordViewController.m */; };
+		F690407818E5C71F00AF8CB4 /* ResetPassViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F690407718E5C71F00AF8CB4 /* ResetPassViewController.m */; };
+		F690407B18E5C75100AF8CB4 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F690407A18E5C75100AF8CB4 /* RegisterViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,7 +100,7 @@
 		F68B66BB18E0A975002ABD03 /* QuestionStatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionStatViewController.m; sourceTree = "<group>"; };
 		F68B66BD18E0B2BD002ABD03 /* logo_yellow.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo_yellow.PNG; sourceTree = "<group>"; };
 		F68B66BF18E0BD15002ABD03 /* ViewDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewDetailsViewController.h; sourceTree = "<group>"; };
-		F68B66C018E0BD15002ABD03 /* ViewDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewDetailsViewController.m; sourceTree = "<group>"; };
+		F68B66C018E0BD15002ABD03 /* ViewDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewDetailsViewController.m; sourceTree = "<group>"; usesTabs = 0; };
 		F68D5C5E18DBA77D0025D416 /* StudentHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudentHomeViewController.h; sourceTree = "<group>"; };
 		F68D5C5F18DBA77D0025D416 /* StudentHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudentHomeViewController.m; sourceTree = "<group>"; };
 		F690197E18DD0752005330D7 /* QuestionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionsViewController.h; sourceTree = "<group>"; };
@@ -104,6 +109,14 @@
 		F690198218DD0766005330D7 /* StatisticsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatisticsViewController.m; sourceTree = "<group>"; };
 		F690198418DD0777005330D7 /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
 		F690198518DD0777005330D7 /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
+		F690406F18E5AD8F00AF8CB4 /* bifat.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bifat.jpg; sourceTree = "<group>"; };
+		F690407018E5AD8F00AF8CB4 /* nebifat.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = nebifat.jpg; sourceTree = "<group>"; };
+		F690407318E5BC9A00AF8CB4 /* ChangePasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangePasswordViewController.h; sourceTree = "<group>"; };
+		F690407418E5BC9A00AF8CB4 /* ChangePasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangePasswordViewController.m; sourceTree = "<group>"; };
+		F690407618E5C71F00AF8CB4 /* ResetPassViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResetPassViewController.h; sourceTree = "<group>"; };
+		F690407718E5C71F00AF8CB4 /* ResetPassViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResetPassViewController.m; sourceTree = "<group>"; };
+		F690407918E5C75100AF8CB4 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
+		F690407A18E5C75100AF8CB4 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +176,8 @@
 		F6773B4D18D80EB40066F2A6 /* Question of the Day */ = {
 			isa = PBXGroup;
 			children = (
+				F690406F18E5AD8F00AF8CB4 /* bifat.jpg */,
+				F690407018E5AD8F00AF8CB4 /* nebifat.jpg */,
 				F68B66BD18E0B2BD002ABD03 /* logo_yellow.PNG */,
 				F6647BD318DE59B600086D6D /* circle.jpg */,
 				F654E90018E0C050007889B7 /* DetailAnswerViewController.h */,
@@ -188,6 +203,12 @@
 				F6773B5618D80EB40066F2A6 /* QotDAppDelegate.h */,
 				F6773B5718D80EB40066F2A6 /* QotDAppDelegate.m */,
 				F6773B5918D80EB40066F2A6 /* Main.storyboard */,
+				F690407918E5C75100AF8CB4 /* RegisterViewController.h */,
+				F690407A18E5C75100AF8CB4 /* RegisterViewController.m */,
+				F690407618E5C71F00AF8CB4 /* ResetPassViewController.h */,
+				F690407718E5C71F00AF8CB4 /* ResetPassViewController.m */,
+				F690407318E5BC9A00AF8CB4 /* ChangePasswordViewController.h */,
+				F690407418E5BC9A00AF8CB4 /* ChangePasswordViewController.m */,
 				F68B66BF18E0BD15002ABD03 /* ViewDetailsViewController.h */,
 				F68B66C018E0BD15002ABD03 /* ViewDetailsViewController.m */,
 				F6647BD518DE5B3300086D6D /* NewQuestionsViewController.h */,
@@ -314,10 +335,12 @@
 			files = (
 				F6647BCC18DDB2BF00086D6D /* checked.jpg in Resources */,
 				F6773B6018D80EB40066F2A6 /* Images.xcassets in Resources */,
+				F690407218E5AD8F00AF8CB4 /* nebifat.jpg in Resources */,
 				F6647BD218DE58A600086D6D /* newMail.jpg in Resources */,
 				F6647BD418DE59B600086D6D /* circle.jpg in Resources */,
 				F6773B5218D80EB40066F2A6 /* InfoPlist.strings in Resources */,
 				F68B66BE18E0B2BD002ABD03 /* logo_yellow.PNG in Resources */,
+				F690407118E5AD8F00AF8CB4 /* bifat.jpg in Resources */,
 				F6773B5B18D80EB40066F2A6 /* Main.storyboard in Resources */,
 				F6647BCD18DDB2BF00086D6D /* unchecked.jpg in Resources */,
 				F6647BC918DD8FB900086D6D /* rightArrow2.jpeg in Resources */,
@@ -344,8 +367,10 @@
 				F6773B8418D81C680066F2A6 /* QuestionModel.m in Sources */,
 				F6647BD718DE5B3300086D6D /* NewQuestionsViewController.m in Sources */,
 				F6773B8A18D820630066F2A6 /* UserModel.m in Sources */,
+				F690407818E5C71F00AF8CB4 /* ResetPassViewController.m in Sources */,
 				F690198318DD0766005330D7 /* StatisticsViewController.m in Sources */,
 				F6647BD018DDD69900086D6D /* SubmittedViewController.m in Sources */,
+				F690407B18E5C75100AF8CB4 /* RegisterViewController.m in Sources */,
 				F68D5C6018DBA77D0025D416 /* StudentHomeViewController.m in Sources */,
 				F6647BC718DD7E2000086D6D /* AnswerScreenViewController.m in Sources */,
 				F654E90218E0C050007889B7 /* DetailAnswerViewController.m in Sources */,
@@ -353,6 +378,7 @@
 				F6773B5E18D80EB40066F2A6 /* LoginViewController.m in Sources */,
 				F690198018DD0752005330D7 /* QuestionsViewController.m in Sources */,
 				F6773B5418D80EB40066F2A6 /* main.m in Sources */,
+				F690407518E5BC9A00AF8CB4 /* ChangePasswordViewController.m in Sources */,
 				F68B66BC18E0A975002ABD03 /* QuestionStatViewController.m in Sources */,
 				F690198618DD0777005330D7 /* MenuViewController.m in Sources */,
 			);
