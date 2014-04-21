@@ -129,20 +129,220 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To be implemented in Release 2" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="FMw-Ms-Zm3">
-                                <rect key="frame" x="29" y="118" width="250" height="137"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First Name:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="RVw-vv-MsB">
+                                <rect key="frame" x="20" y="93" width="94" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="17"/>
+                                <color key="textColor" red="0.97241932149999999" green="0.2716219634" blue="0.038715092610000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Name:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="sd8-1e-20g">
+                                <rect key="frame" x="20" y="141" width="94" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="17"/>
+                                <color key="textColor" red="0.97241932149999999" green="0.2716219634" blue="0.038715092610000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="E-Mail:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="E1U-w0-uch">
+                                <rect key="frame" x="20" y="187" width="66" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="17"/>
+                                <color key="textColor" red="0.97241932149999999" green="0.2716219634" blue="0.038715092610000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jUe-dd-bcP">
+                                <rect key="frame" x="20" y="236" width="87" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="17"/>
+                                <color key="textColor" red="0.97241932149999999" green="0.2716219634" blue="0.038715092610000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pasword:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Mxz-yn-JB2">
+                                <rect key="frame" x="20" y="283" width="87" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="17"/>
+                                <color key="textColor" red="0.97241932149999999" green="0.2716219634" blue="0.038715092610000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confirm Password:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="CNt-1K-4Z3">
+                                <rect key="frame" x="20" y="332" width="134" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="16"/>
+                                <color key="textColor" red="0.97241932149999999" green="0.2716219634" blue="0.038715092610000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Lb7-yr-TUX">
+                                <rect key="frame" x="20" y="379" width="255" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="17"/>
+                                <color key="tintColor" red="0.39934973239999999" green="0.2493808974" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Select Section">
+                                    <color key="titleColor" red="0.97241932149999999" green="0.2716219634" blue="0.038715092610000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="selectSection:" destination="TxP-xJ-meD" eventType="touchUpInside" id="TTg-jg-7Dp"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="78m-Q1-vge">
+                                <rect key="frame" x="122" y="93" width="178" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="valueReturn:" destination="TxP-xJ-meD" eventType="editingDidEnd" id="4DK-2g-0MB"/>
+                                    <action selector="valueReturn:" destination="TxP-xJ-meD" eventType="touchUpOutside" id="BSt-XD-jEh"/>
+                                    <action selector="valueReturn:" destination="TxP-xJ-meD" eventType="editingDidEndOnExit" id="FE7-0q-teq"/>
+                                    <action selector="valueReturn:" destination="TxP-xJ-meD" eventType="touchDragExit" id="K4A-jK-FxR"/>
+                                    <action selector="valueReturn:" destination="TxP-xJ-meD" eventType="touchCancel" id="hD7-Wr-TsK"/>
+                                    <action selector="valueReturn:" destination="TxP-xJ-meD" eventType="touchDragOutside" id="vZD-JO-Gqy"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="o4X-2K-rfp">
+                                <rect key="frame" x="122" y="141" width="178" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="valueReturn:" destination="TxP-xJ-meD" eventType="touchDragExit" id="606-2f-w2m"/>
+                                    <action selector="valueReturn:" destination="TxP-xJ-meD" eventType="touchDragOutside" id="KOb-6T-3Br"/>
+                                    <action selector="valueReturn:" destination="TxP-xJ-meD" eventType="editingDidEnd" id="RRx-2K-xaM"/>
+                                    <action selector="valueReturn:" destination="TxP-xJ-meD" eventType="touchUpOutside" id="naP-yU-TSn"/>
+                                    <action selector="valueReturn:" destination="TxP-xJ-meD" eventType="editingDidEndOnExit" id="p7F-ex-hy3"/>
+                                    <action selector="valueReturn:" destination="TxP-xJ-meD" eventType="touchCancel" id="qMj-VU-PZW"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="nRm-XJ-l8V">
+                                <rect key="frame" x="122" y="183" width="178" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="valueReturn:" destination="TxP-xJ-meD" eventType="touchDragOutside" id="2B9-Za-hdG"/>
+                                    <action selector="valueReturn:" destination="TxP-xJ-meD" eventType="editingDidEnd" id="LPO-Rx-uh8"/>
+                                    <action selector="valueReturn:" destination="TxP-xJ-meD" eventType="touchDragExit" id="O9D-Lz-vBc"/>
+                                    <action selector="valueReturn:" destination="TxP-xJ-meD" eventType="editingDidEndOnExit" id="egM-Q4-6va"/>
+                                    <action selector="valueReturn:" destination="TxP-xJ-meD" eventType="touchUpOutside" id="wC2-4d-2aZ"/>
+                                    <action selector="valueReturn:" destination="TxP-xJ-meD" eventType="touchCancel" id="zfK-pL-Wqe"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="aoq-cr-wZz">
+                                <rect key="frame" x="122" y="236" width="178" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="valueReturn:" destination="TxP-xJ-meD" eventType="touchCancel" id="4c7-pX-Gmv"/>
+                                    <action selector="valueReturn:" destination="TxP-xJ-meD" eventType="touchUpOutside" id="CrX-lx-jkP"/>
+                                    <action selector="valueReturn:" destination="TxP-xJ-meD" eventType="touchDragOutside" id="E6s-FY-mjh"/>
+                                    <action selector="valueReturn:" destination="TxP-xJ-meD" eventType="editingDidEndOnExit" id="SRz-J8-EKg"/>
+                                    <action selector="valueReturn:" destination="TxP-xJ-meD" eventType="touchDragExit" id="lLB-9k-WDV"/>
+                                    <action selector="valueReturn:" destination="TxP-xJ-meD" eventType="editingDidEnd" id="thS-qM-Viw"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="SFn-Rj-Cr1">
+                                <rect key="frame" x="122" y="279" width="178" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <connections>
+                                    <action selector="valueReturn:" destination="TxP-xJ-meD" eventType="editingDidEnd" id="S6I-gv-gMB"/>
+                                    <action selector="valueReturn:" destination="TxP-xJ-meD" eventType="touchUpOutside" id="VxD-sO-rPr"/>
+                                    <action selector="valueReturn:" destination="TxP-xJ-meD" eventType="editingDidEndOnExit" id="YAf-nX-Tig"/>
+                                    <action selector="valueReturn:" destination="TxP-xJ-meD" eventType="touchDragOutside" id="eht-cv-wvv"/>
+                                    <action selector="valueReturn:" destination="TxP-xJ-meD" eventType="touchDragExit" id="iYC-VP-oUp"/>
+                                    <action selector="valueReturn:" destination="TxP-xJ-meD" eventType="touchCancel" id="utI-RY-vGV"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="1pN-4i-zt5">
+                                <rect key="frame" x="169" y="328" width="131" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <connections>
+                                    <action selector="valueReturn:" destination="TxP-xJ-meD" eventType="touchUpOutside" id="6Q2-nX-lp4"/>
+                                    <action selector="valueReturn:" destination="TxP-xJ-meD" eventType="touchDragExit" id="bxY-hj-xKB"/>
+                                    <action selector="valueReturn:" destination="TxP-xJ-meD" eventType="editingDidEnd" id="d9b-XB-lZp"/>
+                                    <action selector="valueReturn:" destination="TxP-xJ-meD" eventType="touchCancel" id="hhx-cr-0d6"/>
+                                    <action selector="valueReturn:" destination="TxP-xJ-meD" eventType="editingDidEndOnExit" id="rRJ-zx-rAs"/>
+                                    <action selector="valueReturn:" destination="TxP-xJ-meD" eventType="touchDragOutside" id="wNX-d9-Sxr"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Register" id="Ucj-8G-lPK"/>
+                    <connections>
+                        <outlet property="email" destination="nRm-XJ-l8V" id="Sir-r1-o44"/>
+                        <outlet property="firstName" destination="78m-Q1-vge" id="aLV-oR-7Zv"/>
+                        <outlet property="lastName" destination="o4X-2K-rfp" id="DVy-oQ-Vw3"/>
+                        <outlet property="password1" destination="SFn-Rj-Cr1" id="OQ7-Vd-Fk9"/>
+                        <outlet property="password2" destination="1pN-4i-zt5" id="XMV-cJ-YwR"/>
+                        <outlet property="username" destination="aoq-cr-wZz" id="u9x-KY-S6v"/>
+                        <segue destination="GKT-Wt-TsZ" kind="push" identifier="SelectSection" id="Q6F-Xb-EC7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E0O-Dc-rPG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="547" y="1122"/>
+        </scene>
+        <!--Select Section View Controller - Select Your Section-->
+        <scene sceneID="qHp-YO-gHl">
+            <objects>
+                <viewController id="GKT-Wt-TsZ" customClass="SelectSectionViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6o4-kT-rPL">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_yellow.PNG" id="iA8-6M-0Qb">
+                                <rect key="frame" x="0.0" y="64" width="320" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" indicatorStyle="black" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="52" sectionHeaderHeight="22" sectionFooterHeight="22" id="aIe-Lf-A9e">
+                                <rect key="frame" x="4" y="110" width="313" height="311"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="separatorColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="52" id="sIH-Hq-nbH">
+                                        <rect key="frame" x="0.0" y="22" width="313" height="52"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="sIH-Hq-nbH" id="wRa-ro-zFE">
+                                            <rect key="frame" x="0.0" y="0.0" width="313" height="52"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" tag="1414" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="tailTruncation" id="Y4g-TD-Tan">
+                                                    <rect key="frame" x="13" y="0.0" width="300" height="52"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="13"/>
+                                                    <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="15" maxY="0.0"/>
+                                                    <state key="normal" title="Button">
+                                                        <color key="titleColor" red="1" green="0.2434898408" blue="0.0041734570850000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                </button>
+                                                <imageView userInteractionEnabled="NO" tag="12" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rightArrow2.jpeg" id="Vje-ed-qYO">
+                                                    <rect key="frame" x="293" y="5" width="20" height="42"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <sections/>
+                                <connections>
+                                    <outlet property="dataSource" destination="GKT-Wt-TsZ" id="1bq-aa-Yjf"/>
+                                    <outlet property="delegate" destination="GKT-Wt-TsZ" id="bkk-Cn-AaV"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Select Your Section" id="aay-Qg-nRi"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1d5-Ek-mbP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="961" y="1121"/>
         </scene>
         <!--Professor Home View Controller - Professor Home-->
         <scene sceneID="uML-Vj-6xi">

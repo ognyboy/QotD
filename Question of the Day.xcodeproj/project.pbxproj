@@ -42,6 +42,7 @@
 		F68B66C118E0BD15002ABD03 /* ViewDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F68B66C018E0BD15002ABD03 /* ViewDetailsViewController.m */; };
 		F68BFBC41904CB2100ED8200 /* CoursePropertiesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F68BFBC31904CB2100ED8200 /* CoursePropertiesViewController.m */; };
 		F68BFBC71904CBF300ED8200 /* RosterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F68BFBC61904CBF300ED8200 /* RosterViewController.m */; };
+		F68D32EF1905BFEC006E93E2 /* SelectSectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F68D32EE1905BFEC006E93E2 /* SelectSectionViewController.m */; };
 		F68D5C6018DBA77D0025D416 /* StudentHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F68D5C5F18DBA77D0025D416 /* StudentHomeViewController.m */; };
 		F690198018DD0752005330D7 /* QuestionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F690197F18DD0752005330D7 /* QuestionsViewController.m */; };
 		F690198318DD0766005330D7 /* StatisticsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F690198218DD0766005330D7 /* StatisticsViewController.m */; };
@@ -124,6 +125,8 @@
 		F68BFBC31904CB2100ED8200 /* CoursePropertiesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoursePropertiesViewController.m; sourceTree = "<group>"; };
 		F68BFBC51904CBF300ED8200 /* RosterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RosterViewController.h; sourceTree = "<group>"; };
 		F68BFBC61904CBF300ED8200 /* RosterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RosterViewController.m; sourceTree = "<group>"; };
+		F68D32ED1905BFEC006E93E2 /* SelectSectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectSectionViewController.h; sourceTree = "<group>"; };
+		F68D32EE1905BFEC006E93E2 /* SelectSectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectSectionViewController.m; sourceTree = "<group>"; };
 		F68D5C5E18DBA77D0025D416 /* StudentHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudentHomeViewController.h; sourceTree = "<group>"; };
 		F68D5C5F18DBA77D0025D416 /* StudentHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudentHomeViewController.m; sourceTree = "<group>"; };
 		F690197E18DD0752005330D7 /* QuestionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionsViewController.h; sourceTree = "<group>"; };
@@ -268,6 +271,8 @@
 		F6E07DED18FC83A6000B975D /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				F68D32ED1905BFEC006E93E2 /* SelectSectionViewController.h */,
+				F68D32EE1905BFEC006E93E2 /* SelectSectionViewController.m */,
 				F690407918E5C75100AF8CB4 /* RegisterViewController.h */,
 				F690407A18E5C75100AF8CB4 /* RegisterViewController.m */,
 				F690407618E5C71F00AF8CB4 /* ResetPassViewController.h */,
@@ -483,6 +488,7 @@
 				F68BFBC41904CB2100ED8200 /* CoursePropertiesViewController.m in Sources */,
 				F690198018DD0752005330D7 /* QuestionsViewController.m in Sources */,
 				F6773B5418D80EB40066F2A6 /* main.m in Sources */,
+				F68D32EF1905BFEC006E93E2 /* SelectSectionViewController.m in Sources */,
 				F690407518E5BC9A00AF8CB4 /* ChangePasswordViewController.m in Sources */,
 				F660558C1904CEB200237B24 /* SearchQuestionViewController.m in Sources */,
 				F68B66BC18E0A975002ABD03 /* QuestionStatViewController.m in Sources */,

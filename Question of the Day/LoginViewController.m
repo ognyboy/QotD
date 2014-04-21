@@ -130,9 +130,13 @@
             }
             
             if([self.userModel getUserType] == 1)
+            {
                 [self performSegueWithIdentifier:@"goStudentHome" sender:self];
+            }
             else
+            {
                 [self performSegueWithIdentifier:@"goProfessorHome" sender:self];
+            }
         }
     }
 }
