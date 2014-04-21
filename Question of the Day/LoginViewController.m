@@ -9,6 +9,7 @@
 #import "LoginViewController.h"
 #import "ResetPassViewController.h"
 #import "RegisterViewController.h"
+#import "ProfessorHomeViewController.h"
 
 @interface LoginViewController ()
 
@@ -43,6 +44,7 @@
                                           cancelButtonTitle:@"OK"
                                           otherButtonTitles:nil];
     [alert show];
+    
     
 }
 
@@ -127,8 +129,10 @@
                 [self.userModel.listOfSections addObject:[[userInfoDictionary valueForKey:@"sectionID"] objectAtIndex:i]];
             }
             
-            [self performSegueWithIdentifier:@"goStudentHome" sender:self];
-            
+            if([self.userModel getUserType] == 1)
+                [self performSegueWithIdentifier:@"goStudentHome" sender:self];
+            else
+                [self performSegueWithIdentifier:@"goProfessorHome" sender:self];
         }
     }
 }
@@ -139,6 +143,12 @@
     {
         
         StudentHomeViewController *viewCont = segue.destinationViewController;
+        viewCont.userModel = self.userModel;
+    }
+    if ( [segue.identifier isEqualToString:@"goProfessorHome"] && [self.userModel getUserType] == 2)   //this is the segue name that you can change from story board.
+    {
+        
+        ProfessorHomeViewController *viewCont = segue.destinationViewController;
         viewCont.userModel = self.userModel;
     }
     

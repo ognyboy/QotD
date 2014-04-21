@@ -103,7 +103,10 @@
             NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://199.180.255.173/index.php/mobile/updatePassword/%@/%@", [self.userModel getUserName], theNewPassword]];
             
             NSData *userInfoData = [NSData dataWithContentsOfURL:url];
-            
+            if(userInfoData == 0)
+            {
+                
+            }
             [self.navigationController popViewControllerAnimated:YES];
             
         }

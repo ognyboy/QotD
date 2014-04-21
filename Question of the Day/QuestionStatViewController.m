@@ -86,7 +86,7 @@
     
     NSData *userInfoData = [NSData dataWithContentsOfURL:url];
     
-    NSMutableDictionary *userInfoDictionary = [NSJSONSerialization JSONObjectWithData:userInfoData options:kNilOptions error:Nil];
+    NSMutableArray *userInfoDictionary = [NSJSONSerialization JSONObjectWithData:userInfoData options:NSJSONReadingMutableContainers error:Nil];
     
     attemptList = userInfoDictionary;
 }

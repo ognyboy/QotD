@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		F654E90218E0C050007889B7 /* DetailAnswerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F654E90118E0C050007889B7 /* DetailAnswerViewController.m */; };
+		F66055861904CE7A00237B24 /* ManageQuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F66055851904CE7A00237B24 /* ManageQuestionViewController.m */; };
+		F66055891904CE9400237B24 /* CreateQuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F66055881904CE9400237B24 /* CreateQuestionViewController.m */; };
+		F660558C1904CEB200237B24 /* SearchQuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F660558B1904CEB200237B24 /* SearchQuestionViewController.m */; };
+		F660558F1904CEC800237B24 /* SendByTopicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F660558E1904CEC800237B24 /* SendByTopicViewController.m */; };
 		F6647BC718DD7E2000086D6D /* AnswerScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6647BC618DD7E2000086D6D /* AnswerScreenViewController.m */; };
 		F6647BC918DD8FB900086D6D /* rightArrow2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = F6647BC818DD8FB900086D6D /* rightArrow2.jpeg */; };
 		F6647BCC18DDB2BF00086D6D /* checked.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F6647BCA18DDB2BF00086D6D /* checked.jpg */; };
@@ -36,6 +40,8 @@
 		F68B66BC18E0A975002ABD03 /* QuestionStatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F68B66BB18E0A975002ABD03 /* QuestionStatViewController.m */; };
 		F68B66BE18E0B2BD002ABD03 /* logo_yellow.PNG in Resources */ = {isa = PBXBuildFile; fileRef = F68B66BD18E0B2BD002ABD03 /* logo_yellow.PNG */; };
 		F68B66C118E0BD15002ABD03 /* ViewDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F68B66C018E0BD15002ABD03 /* ViewDetailsViewController.m */; };
+		F68BFBC41904CB2100ED8200 /* CoursePropertiesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F68BFBC31904CB2100ED8200 /* CoursePropertiesViewController.m */; };
+		F68BFBC71904CBF300ED8200 /* RosterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F68BFBC61904CBF300ED8200 /* RosterViewController.m */; };
 		F68D5C6018DBA77D0025D416 /* StudentHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F68D5C5F18DBA77D0025D416 /* StudentHomeViewController.m */; };
 		F690198018DD0752005330D7 /* QuestionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F690197F18DD0752005330D7 /* QuestionsViewController.m */; };
 		F690198318DD0766005330D7 /* StatisticsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F690198218DD0766005330D7 /* StatisticsViewController.m */; };
@@ -45,6 +51,11 @@
 		F690407518E5BC9A00AF8CB4 /* ChangePasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F690407418E5BC9A00AF8CB4 /* ChangePasswordViewController.m */; };
 		F690407818E5C71F00AF8CB4 /* ResetPassViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F690407718E5C71F00AF8CB4 /* ResetPassViewController.m */; };
 		F690407B18E5C75100AF8CB4 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F690407A18E5C75100AF8CB4 /* RegisterViewController.m */; };
+		F6C85F9E1904CDC800A0908D /* StatsByNameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6C85F9B1904CDC800A0908D /* StatsByNameViewController.m */; };
+		F6C85F9F1904CDC800A0908D /* StatsByTopicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6C85F9D1904CDC800A0908D /* StatsByTopicViewController.m */; };
+		F6E07DE818FC8384000B975D /* SectionHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E07DE718FC8384000B975D /* SectionHomeViewController.m */; };
+		F6E07DEB18FC8395000B975D /* ProfessorHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E07DEA18FC8395000B975D /* ProfessorHomeViewController.m */; };
+		F6EE8E53190375530076552B /* ProfessorHome2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6EE8E52190375530076552B /* ProfessorHome2ViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +71,14 @@
 /* Begin PBXFileReference section */
 		F654E90018E0C050007889B7 /* DetailAnswerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailAnswerViewController.h; sourceTree = "<group>"; };
 		F654E90118E0C050007889B7 /* DetailAnswerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailAnswerViewController.m; sourceTree = "<group>"; };
+		F66055841904CE7A00237B24 /* ManageQuestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ManageQuestionViewController.h; sourceTree = "<group>"; };
+		F66055851904CE7A00237B24 /* ManageQuestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManageQuestionViewController.m; sourceTree = "<group>"; };
+		F66055871904CE9400237B24 /* CreateQuestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateQuestionViewController.h; sourceTree = "<group>"; };
+		F66055881904CE9400237B24 /* CreateQuestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateQuestionViewController.m; sourceTree = "<group>"; };
+		F660558A1904CEB200237B24 /* SearchQuestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchQuestionViewController.h; sourceTree = "<group>"; };
+		F660558B1904CEB200237B24 /* SearchQuestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchQuestionViewController.m; sourceTree = "<group>"; };
+		F660558D1904CEC800237B24 /* SendByTopicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SendByTopicViewController.h; sourceTree = "<group>"; };
+		F660558E1904CEC800237B24 /* SendByTopicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SendByTopicViewController.m; sourceTree = "<group>"; };
 		F6647BC518DD7E2000086D6D /* AnswerScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnswerScreenViewController.h; sourceTree = "<group>"; };
 		F6647BC618DD7E2000086D6D /* AnswerScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnswerScreenViewController.m; sourceTree = "<group>"; };
 		F6647BC818DD8FB900086D6D /* rightArrow2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = rightArrow2.jpeg; sourceTree = "<group>"; };
@@ -101,6 +120,10 @@
 		F68B66BD18E0B2BD002ABD03 /* logo_yellow.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo_yellow.PNG; sourceTree = "<group>"; };
 		F68B66BF18E0BD15002ABD03 /* ViewDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewDetailsViewController.h; sourceTree = "<group>"; };
 		F68B66C018E0BD15002ABD03 /* ViewDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewDetailsViewController.m; sourceTree = "<group>"; usesTabs = 0; };
+		F68BFBC21904CB2000ED8200 /* CoursePropertiesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoursePropertiesViewController.h; sourceTree = "<group>"; };
+		F68BFBC31904CB2100ED8200 /* CoursePropertiesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoursePropertiesViewController.m; sourceTree = "<group>"; };
+		F68BFBC51904CBF300ED8200 /* RosterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RosterViewController.h; sourceTree = "<group>"; };
+		F68BFBC61904CBF300ED8200 /* RosterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RosterViewController.m; sourceTree = "<group>"; };
 		F68D5C5E18DBA77D0025D416 /* StudentHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudentHomeViewController.h; sourceTree = "<group>"; };
 		F68D5C5F18DBA77D0025D416 /* StudentHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudentHomeViewController.m; sourceTree = "<group>"; };
 		F690197E18DD0752005330D7 /* QuestionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionsViewController.h; sourceTree = "<group>"; };
@@ -117,6 +140,16 @@
 		F690407718E5C71F00AF8CB4 /* ResetPassViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResetPassViewController.m; sourceTree = "<group>"; };
 		F690407918E5C75100AF8CB4 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
 		F690407A18E5C75100AF8CB4 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
+		F6C85F9A1904CDC800A0908D /* StatsByNameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatsByNameViewController.h; sourceTree = "<group>"; };
+		F6C85F9B1904CDC800A0908D /* StatsByNameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatsByNameViewController.m; sourceTree = "<group>"; };
+		F6C85F9C1904CDC800A0908D /* StatsByTopicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatsByTopicViewController.h; sourceTree = "<group>"; };
+		F6C85F9D1904CDC800A0908D /* StatsByTopicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatsByTopicViewController.m; sourceTree = "<group>"; };
+		F6E07DE618FC8384000B975D /* SectionHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SectionHomeViewController.h; sourceTree = "<group>"; };
+		F6E07DE718FC8384000B975D /* SectionHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SectionHomeViewController.m; sourceTree = "<group>"; };
+		F6E07DE918FC8395000B975D /* ProfessorHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfessorHomeViewController.h; sourceTree = "<group>"; };
+		F6E07DEA18FC8395000B975D /* ProfessorHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfessorHomeViewController.m; sourceTree = "<group>"; };
+		F6EE8E51190375530076552B /* ProfessorHome2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfessorHome2ViewController.h; sourceTree = "<group>"; };
+		F6EE8E52190375530076552B /* ProfessorHome2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfessorHome2ViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,51 +209,14 @@
 		F6773B4D18D80EB40066F2A6 /* Question of the Day */ = {
 			isa = PBXGroup;
 			children = (
-				F690406F18E5AD8F00AF8CB4 /* bifat.jpg */,
-				F690407018E5AD8F00AF8CB4 /* nebifat.jpg */,
-				F68B66BD18E0B2BD002ABD03 /* logo_yellow.PNG */,
-				F6647BD318DE59B600086D6D /* circle.jpg */,
-				F654E90018E0C050007889B7 /* DetailAnswerViewController.h */,
-				F654E90118E0C050007889B7 /* DetailAnswerViewController.m */,
-				F6647BD118DE58A600086D6D /* newMail.jpg */,
-				F6647BCA18DDB2BF00086D6D /* checked.jpg */,
-				F6647BCB18DDB2BF00086D6D /* unchecked.jpg */,
-				F6647BC818DD8FB900086D6D /* rightArrow2.jpeg */,
-				F6647BC518DD7E2000086D6D /* AnswerScreenViewController.h */,
-				F6647BC618DD7E2000086D6D /* AnswerScreenViewController.m */,
-				F6647BCE18DDD69900086D6D /* SubmittedViewController.h */,
-				F6647BCF18DDD69900086D6D /* SubmittedViewController.m */,
-				F68D5C5E18DBA77D0025D416 /* StudentHomeViewController.h */,
-				F68D5C5F18DBA77D0025D416 /* StudentHomeViewController.m */,
-				F68B66BA18E0A975002ABD03 /* QuestionStatViewController.h */,
-				F68B66BB18E0A975002ABD03 /* QuestionStatViewController.m */,
-				F6773B8818D820630066F2A6 /* UserModel.h */,
-				F6773B8918D820630066F2A6 /* UserModel.m */,
-				F6773B7F18D81C510066F2A6 /* SectionModel.h */,
-				F6773B8018D81C510066F2A6 /* SectionModel.m */,
-				F6773B8218D81C680066F2A6 /* QuestionModel.h */,
-				F6773B8318D81C680066F2A6 /* QuestionModel.m */,
+				F6E07DF018FC83BE000B975D /* img */,
+				F6E07DEF18FC83B4000B975D /* Professor */,
+				F6E07DEE18FC83AF000B975D /* Student */,
+				F6E07DED18FC83A6000B975D /* Login */,
+				F6E07DEC18FC839D000B975D /* Models */,
 				F6773B5618D80EB40066F2A6 /* QotDAppDelegate.h */,
 				F6773B5718D80EB40066F2A6 /* QotDAppDelegate.m */,
 				F6773B5918D80EB40066F2A6 /* Main.storyboard */,
-				F690407918E5C75100AF8CB4 /* RegisterViewController.h */,
-				F690407A18E5C75100AF8CB4 /* RegisterViewController.m */,
-				F690407618E5C71F00AF8CB4 /* ResetPassViewController.h */,
-				F690407718E5C71F00AF8CB4 /* ResetPassViewController.m */,
-				F690407318E5BC9A00AF8CB4 /* ChangePasswordViewController.h */,
-				F690407418E5BC9A00AF8CB4 /* ChangePasswordViewController.m */,
-				F68B66BF18E0BD15002ABD03 /* ViewDetailsViewController.h */,
-				F68B66C018E0BD15002ABD03 /* ViewDetailsViewController.m */,
-				F6647BD518DE5B3300086D6D /* NewQuestionsViewController.h */,
-				F6647BD618DE5B3300086D6D /* NewQuestionsViewController.m */,
-				F690197E18DD0752005330D7 /* QuestionsViewController.h */,
-				F690197F18DD0752005330D7 /* QuestionsViewController.m */,
-				F690198118DD0766005330D7 /* StatisticsViewController.h */,
-				F690198218DD0766005330D7 /* StatisticsViewController.m */,
-				F690198418DD0777005330D7 /* MenuViewController.h */,
-				F690198518DD0777005330D7 /* MenuViewController.m */,
-				F6773B5C18D80EB40066F2A6 /* LoginViewController.h */,
-				F6773B5D18D80EB40066F2A6 /* LoginViewController.m */,
 				F6773B5F18D80EB40066F2A6 /* Images.xcassets */,
 				F6773B4E18D80EB40066F2A6 /* Supporting Files */,
 			);
@@ -254,6 +250,105 @@
 				F6773B6F18D80EB50066F2A6 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F6E07DEC18FC839D000B975D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F6773B8818D820630066F2A6 /* UserModel.h */,
+				F6773B8918D820630066F2A6 /* UserModel.m */,
+				F6773B7F18D81C510066F2A6 /* SectionModel.h */,
+				F6773B8018D81C510066F2A6 /* SectionModel.m */,
+				F6773B8218D81C680066F2A6 /* QuestionModel.h */,
+				F6773B8318D81C680066F2A6 /* QuestionModel.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		F6E07DED18FC83A6000B975D /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				F690407918E5C75100AF8CB4 /* RegisterViewController.h */,
+				F690407A18E5C75100AF8CB4 /* RegisterViewController.m */,
+				F690407618E5C71F00AF8CB4 /* ResetPassViewController.h */,
+				F690407718E5C71F00AF8CB4 /* ResetPassViewController.m */,
+				F6773B5C18D80EB40066F2A6 /* LoginViewController.h */,
+				F6773B5D18D80EB40066F2A6 /* LoginViewController.m */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		F6E07DEE18FC83AF000B975D /* Student */ = {
+			isa = PBXGroup;
+			children = (
+				F654E90018E0C050007889B7 /* DetailAnswerViewController.h */,
+				F654E90118E0C050007889B7 /* DetailAnswerViewController.m */,
+				F6647BC518DD7E2000086D6D /* AnswerScreenViewController.h */,
+				F6647BC618DD7E2000086D6D /* AnswerScreenViewController.m */,
+				F6647BCE18DDD69900086D6D /* SubmittedViewController.h */,
+				F6647BCF18DDD69900086D6D /* SubmittedViewController.m */,
+				F68D5C5E18DBA77D0025D416 /* StudentHomeViewController.h */,
+				F68D5C5F18DBA77D0025D416 /* StudentHomeViewController.m */,
+				F68B66BA18E0A975002ABD03 /* QuestionStatViewController.h */,
+				F68B66BB18E0A975002ABD03 /* QuestionStatViewController.m */,
+				F690407318E5BC9A00AF8CB4 /* ChangePasswordViewController.h */,
+				F690407418E5BC9A00AF8CB4 /* ChangePasswordViewController.m */,
+				F68B66BF18E0BD15002ABD03 /* ViewDetailsViewController.h */,
+				F68B66C018E0BD15002ABD03 /* ViewDetailsViewController.m */,
+				F6647BD518DE5B3300086D6D /* NewQuestionsViewController.h */,
+				F6647BD618DE5B3300086D6D /* NewQuestionsViewController.m */,
+				F690197E18DD0752005330D7 /* QuestionsViewController.h */,
+				F690197F18DD0752005330D7 /* QuestionsViewController.m */,
+				F690198118DD0766005330D7 /* StatisticsViewController.h */,
+				F690198218DD0766005330D7 /* StatisticsViewController.m */,
+				F690198418DD0777005330D7 /* MenuViewController.h */,
+				F690198518DD0777005330D7 /* MenuViewController.m */,
+			);
+			name = Student;
+			sourceTree = "<group>";
+		};
+		F6E07DEF18FC83B4000B975D /* Professor */ = {
+			isa = PBXGroup;
+			children = (
+				F660558D1904CEC800237B24 /* SendByTopicViewController.h */,
+				F660558E1904CEC800237B24 /* SendByTopicViewController.m */,
+				F660558A1904CEB200237B24 /* SearchQuestionViewController.h */,
+				F660558B1904CEB200237B24 /* SearchQuestionViewController.m */,
+				F66055871904CE9400237B24 /* CreateQuestionViewController.h */,
+				F66055881904CE9400237B24 /* CreateQuestionViewController.m */,
+				F66055841904CE7A00237B24 /* ManageQuestionViewController.h */,
+				F66055851904CE7A00237B24 /* ManageQuestionViewController.m */,
+				F6C85F9A1904CDC800A0908D /* StatsByNameViewController.h */,
+				F6C85F9B1904CDC800A0908D /* StatsByNameViewController.m */,
+				F6C85F9C1904CDC800A0908D /* StatsByTopicViewController.h */,
+				F6C85F9D1904CDC800A0908D /* StatsByTopicViewController.m */,
+				F68BFBC51904CBF300ED8200 /* RosterViewController.h */,
+				F68BFBC61904CBF300ED8200 /* RosterViewController.m */,
+				F68BFBC21904CB2000ED8200 /* CoursePropertiesViewController.h */,
+				F68BFBC31904CB2100ED8200 /* CoursePropertiesViewController.m */,
+				F6E07DE618FC8384000B975D /* SectionHomeViewController.h */,
+				F6E07DE718FC8384000B975D /* SectionHomeViewController.m */,
+				F6E07DE918FC8395000B975D /* ProfessorHomeViewController.h */,
+				F6E07DEA18FC8395000B975D /* ProfessorHomeViewController.m */,
+				F6EE8E51190375530076552B /* ProfessorHome2ViewController.h */,
+				F6EE8E52190375530076552B /* ProfessorHome2ViewController.m */,
+			);
+			name = Professor;
+			sourceTree = "<group>";
+		};
+		F6E07DF018FC83BE000B975D /* img */ = {
+			isa = PBXGroup;
+			children = (
+				F6647BD118DE58A600086D6D /* newMail.jpg */,
+				F6647BCA18DDB2BF00086D6D /* checked.jpg */,
+				F6647BCB18DDB2BF00086D6D /* unchecked.jpg */,
+				F6647BC818DD8FB900086D6D /* rightArrow2.jpeg */,
+				F690406F18E5AD8F00AF8CB4 /* bifat.jpg */,
+				F690407018E5AD8F00AF8CB4 /* nebifat.jpg */,
+				F68B66BD18E0B2BD002ABD03 /* logo_yellow.PNG */,
+				F6647BD318DE59B600086D6D /* circle.jpg */,
+			);
+			name = img;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -363,6 +458,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F68B66C118E0BD15002ABD03 /* ViewDetailsViewController.m in Sources */,
+				F660558F1904CEC800237B24 /* SendByTopicViewController.m in Sources */,
+				F66055861904CE7A00237B24 /* ManageQuestionViewController.m in Sources */,
+				F6C85F9F1904CDC800A0908D /* StatsByTopicViewController.m in Sources */,
 				F6773B8118D81C510066F2A6 /* SectionModel.m in Sources */,
 				F6773B8418D81C680066F2A6 /* QuestionModel.m in Sources */,
 				F6647BD718DE5B3300086D6D /* NewQuestionsViewController.m in Sources */,
@@ -370,15 +468,23 @@
 				F690407818E5C71F00AF8CB4 /* ResetPassViewController.m in Sources */,
 				F690198318DD0766005330D7 /* StatisticsViewController.m in Sources */,
 				F6647BD018DDD69900086D6D /* SubmittedViewController.m in Sources */,
+				F6EE8E53190375530076552B /* ProfessorHome2ViewController.m in Sources */,
 				F690407B18E5C75100AF8CB4 /* RegisterViewController.m in Sources */,
 				F68D5C6018DBA77D0025D416 /* StudentHomeViewController.m in Sources */,
+				F6E07DEB18FC8395000B975D /* ProfessorHomeViewController.m in Sources */,
 				F6647BC718DD7E2000086D6D /* AnswerScreenViewController.m in Sources */,
+				F6E07DE818FC8384000B975D /* SectionHomeViewController.m in Sources */,
 				F654E90218E0C050007889B7 /* DetailAnswerViewController.m in Sources */,
+				F68BFBC71904CBF300ED8200 /* RosterViewController.m in Sources */,
+				F6C85F9E1904CDC800A0908D /* StatsByNameViewController.m in Sources */,
 				F6773B5818D80EB40066F2A6 /* QotDAppDelegate.m in Sources */,
+				F66055891904CE9400237B24 /* CreateQuestionViewController.m in Sources */,
 				F6773B5E18D80EB40066F2A6 /* LoginViewController.m in Sources */,
+				F68BFBC41904CB2100ED8200 /* CoursePropertiesViewController.m in Sources */,
 				F690198018DD0752005330D7 /* QuestionsViewController.m in Sources */,
 				F6773B5418D80EB40066F2A6 /* main.m in Sources */,
 				F690407518E5BC9A00AF8CB4 /* ChangePasswordViewController.m in Sources */,
+				F660558C1904CEB200237B24 /* SearchQuestionViewController.m in Sources */,
 				F68B66BC18E0A975002ABD03 /* QuestionStatViewController.m in Sources */,
 				F690198618DD0777005330D7 /* MenuViewController.m in Sources */,
 			);

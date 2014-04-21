@@ -114,6 +114,7 @@
                         <outlet property="passwordTextField" destination="Rsf-O8-8a5" id="kJL-tK-c5l"/>
                         <outlet property="usernameTextField" destination="77O-bR-arR" id="qgc-WP-msy"/>
                         <segue destination="yyN-Sw-gn5" kind="push" identifier="goStudentHome" id="kxx-5x-ynj"/>
+                        <segue destination="7Sr-GG-sAB" kind="push" identifier="goProfessorHome" id="ImK-B0-SOT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -142,6 +143,983 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E0O-Dc-rPG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="547" y="1122"/>
+        </scene>
+        <!--Professor Home View Controller - Professor Home-->
+        <scene sceneID="uML-Vj-6xi">
+            <objects>
+                <viewController id="7Sr-GG-sAB" customClass="ProfessorHomeViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Jhs-Fk-fnR">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_yellow.PNG" id="Y3u-VK-RV3">
+                                <rect key="frame" x="0.0" y="64" width="320" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" indicatorStyle="black" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="52" sectionHeaderHeight="22" sectionFooterHeight="22" id="Tg8-uT-RUX">
+                                <rect key="frame" x="4" y="172" width="313" height="311"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="separatorColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="52" id="xaI-S0-twr">
+                                        <rect key="frame" x="0.0" y="22" width="313" height="52"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="105" contentMode="center" tableViewCell="xaI-S0-twr" id="U1x-Fh-Msv">
+                                            <rect key="frame" x="0.0" y="0.0" width="313" height="52"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" tag="2222" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="tailTruncation" id="dWH-f7-aGV">
+                                                    <rect key="frame" x="13" y="0.0" width="300" height="52"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="13"/>
+                                                    <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="15" maxY="0.0"/>
+                                                    <state key="normal" title="Button">
+                                                        <color key="titleColor" red="1" green="0.2434898408" blue="0.0041734570850000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                </button>
+                                                <imageView userInteractionEnabled="NO" tag="11" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rightArrow2.jpeg" id="d2e-U3-4KG">
+                                                    <rect key="frame" x="293" y="5" width="20" height="42"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <sections/>
+                                <connections>
+                                    <outlet property="dataSource" destination="7Sr-GG-sAB" id="mBi-g9-f09"/>
+                                    <outlet property="delegate" destination="7Sr-GG-sAB" id="7pl-sJ-d2u"/>
+                                </connections>
+                            </tableView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Courses" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="dwa-Yb-Rmj">
+                                <rect key="frame" x="56" y="136" width="208" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="17"/>
+                                <color key="textColor" red="0.97241932149999999" green="0.2716219634" blue="0.038715092610000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Professor Home" id="LLh-Ig-5c5"/>
+                    <connections>
+                        <outlet property="coursesTable" destination="Tg8-uT-RUX" id="DTQ-Wl-df3"/>
+                        <segue destination="wdp-uS-Lzx" kind="push" identifier="professor2" id="QtI-Sf-Oni"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Cg-u6-0ye" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1227" y="1968"/>
+        </scene>
+        <!--Professor Home2 View Controller - Professor Home-->
+        <scene sceneID="Oq7-11-SJD">
+            <objects>
+                <viewController id="wdp-uS-Lzx" customClass="ProfessorHome2ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="maq-Ou-lQC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_yellow.PNG" id="FJI-nA-6ri">
+                                <rect key="frame" x="0.0" y="64" width="320" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9iJ-rc-Kkb">
+                                <rect key="frame" x="20" y="128" width="280" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="17"/>
+                                <color key="textColor" red="0.97241932149999999" green="0.2716219634" blue="0.038715092610000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" indicatorStyle="black" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="52" sectionHeaderHeight="22" sectionFooterHeight="22" id="bkT-T0-dsX">
+                                <rect key="frame" x="4" y="173" width="313" height="311"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="separatorColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="52" id="kKB-Ns-Eoo">
+                                        <rect key="frame" x="0.0" y="22" width="313" height="52"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="105" contentMode="center" tableViewCell="kKB-Ns-Eoo" id="9pv-UD-Ih1">
+                                            <rect key="frame" x="0.0" y="0.0" width="313" height="52"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" tag="2222" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="tailTruncation" id="kpZ-ai-jsP">
+                                                    <rect key="frame" x="13" y="0.0" width="300" height="52"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="13"/>
+                                                    <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="15" maxY="0.0"/>
+                                                    <state key="normal" title="Button">
+                                                        <color key="titleColor" red="1" green="0.2434898408" blue="0.0041734570850000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                </button>
+                                                <imageView userInteractionEnabled="NO" tag="11" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rightArrow2.jpeg" id="tbp-W9-Bu9">
+                                                    <rect key="frame" x="293" y="5" width="20" height="42"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <sections/>
+                                <connections>
+                                    <outlet property="dataSource" destination="wdp-uS-Lzx" id="8xl-Wn-wU6"/>
+                                    <outlet property="delegate" destination="wdp-uS-Lzx" id="2QA-T6-vdf"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Professor Home" id="UIB-hK-bef"/>
+                    <connections>
+                        <outlet property="sectionsTable" destination="bkT-T0-dsX" id="kBr-WZ-Nxg"/>
+                        <outlet property="titleLabel" destination="9iJ-rc-Kkb" id="EtG-Ze-eXW"/>
+                        <segue destination="m0x-XR-AoL" kind="push" identifier="goToSection" id="2dV-Jz-E5O"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BW7-dp-C7q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1640" y="1968"/>
+        </scene>
+        <!--Section Home View Controller - Section Home-->
+        <scene sceneID="xhw-BE-qNH">
+            <objects>
+                <viewController id="m0x-XR-AoL" customClass="SectionHomeViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QfU-8K-HNW">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_yellow.PNG" id="9vK-Gm-CY1">
+                                <rect key="frame" x="0.0" y="66" width="320" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Course Name:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="edA-5I-PAV">
+                                <rect key="frame" x="8" y="196" width="105" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="15"/>
+                                <color key="textColor" red="0.97241932149999999" green="0.2716219634" blue="0.038715092610000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Course Code:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ZTC-GJ-wny">
+                                <rect key="frame" x="8" y="216" width="98" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="14"/>
+                                <color key="textColor" red="0.97241932149999999" green="0.2716219634" blue="0.038715092610000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Section ID:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="EmN-5S-SOI">
+                                <rect key="frame" x="8" y="234" width="87" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="14"/>
+                                <color key="textColor" red="0.97241932149999999" green="0.2716219634" blue="0.038715092610000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Professor:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Rox-Ue-Lf3">
+                                <rect key="frame" x="8" y="251" width="74" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="14"/>
+                                <color key="textColor" red="0.97241932149999999" green="0.2716219634" blue="0.038715092610000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Class Meets:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="izq-CR-0lm">
+                                <rect key="frame" x="8" y="268" width="98" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="14"/>
+                                <color key="textColor" red="0.97241932149999999" green="0.2716219634" blue="0.038715092610000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Semester:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="SHg-qz-eSK">
+                                <rect key="frame" x="8" y="290" width="74" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="14"/>
+                                <color key="textColor" red="0.97241932149999999" green="0.2716219634" blue="0.038715092610000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Send Questions to Prof:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="dLp-p1-ZG1">
+                                <rect key="frame" x="8" y="307" width="146" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="14"/>
+                                <color key="textColor" red="0.97241932149999999" green="0.2716219634" blue="0.038715092610000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time Limit:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="V3J-qd-W2Y">
+                                <rect key="frame" x="8" y="326" width="74" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="14"/>
+                                <color key="textColor" red="0.97241932149999999" green="0.2716219634" blue="0.038715092610000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sending Questions?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="O9T-NM-bhL">
+                                <rect key="frame" x="8" y="345" width="125" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="14"/>
+                                <color key="textColor" red="0.97241932149999999" green="0.2716219634" blue="0.038715092610000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sudent Self Drop?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="NGU-pB-nHg">
+                                <rect key="frame" x="8" y="367" width="125" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="14"/>
+                                <color key="textColor" red="0.97241932149999999" green="0.2716219634" blue="0.038715092610000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="TeJ-cs-S0f">
+                                <rect key="frame" x="81" y="396" width="162" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="15"/>
+                                <color key="tintColor" red="0.39934973239999999" green="0.2493808974" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Edit Course Properties">
+                                    <color key="titleColor" red="0.97241932149999999" green="0.2716219634" blue="0.038715092610000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="tZM-Ci-gKB" kind="push" identifier="EditCourseProperties" id="IWL-Gj-i2Y"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="DuP-1i-PmN">
+                                <rect key="frame" x="20" y="163" width="280" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="17"/>
+                                <color key="textColor" red="0.97241932149999999" green="0.2716219634" blue="0.038715092610000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="c0H-sZ-Hps">
+                                <rect key="frame" x="105" y="196" width="195" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="14"/>
+                                <color key="textColor" red="0.97241932149999999" green="0.2716219634" blue="0.038715092610000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="wDV-ef-c4h">
+                                <rect key="frame" x="136" y="216" width="164" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="14"/>
+                                <color key="textColor" red="0.97241932149999999" green="0.2716219634" blue="0.038715092610000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ss7-k1-7jM">
+                                <rect key="frame" x="122" y="234" width="178" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="14"/>
+                                <color key="textColor" red="0.97241932149999999" green="0.2716219634" blue="0.038715092610000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="CF8-Wo-mMp">
+                                <rect key="frame" x="129" y="251" width="171" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="14"/>
+                                <color key="textColor" red="0.97241932149999999" green="0.2716219634" blue="0.038715092610000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Mwo-9r-BV5">
+                                <rect key="frame" x="100" y="268" width="200" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="14"/>
+                                <color key="textColor" red="0.97241932149999999" green="0.2716219634" blue="0.038715092610000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="CYu-eT-V0x">
+                                <rect key="frame" x="105" y="290" width="195" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="14"/>
+                                <color key="textColor" red="0.97241932149999999" green="0.2716219634" blue="0.038715092610000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="WXi-v0-arn">
+                                <rect key="frame" x="162" y="307" width="138" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="14"/>
+                                <color key="textColor" red="0.97241932149999999" green="0.2716219634" blue="0.038715092610000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9u3-65-FiU">
+                                <rect key="frame" x="114" y="326" width="186" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="14"/>
+                                <color key="textColor" red="0.97241932149999999" green="0.2716219634" blue="0.038715092610000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="733-t7-3ME">
+                                <rect key="frame" x="156" y="345" width="144" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="14"/>
+                                <color key="textColor" red="0.97241932149999999" green="0.2716219634" blue="0.038715092610000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="5hw-rr-qF2">
+                                <rect key="frame" x="141" y="367" width="159" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="14"/>
+                                <color key="textColor" red="0.97241932149999999" green="0.2716219634" blue="0.038715092610000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="xIu-XD-usU">
+                                <rect key="frame" x="28" y="120" width="78" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="15"/>
+                                <color key="tintColor" red="0.39934973239999999" green="0.2493808974" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Questions">
+                                    <color key="titleColor" red="0.97241932149999999" green="0.2716219634" blue="0.038715092610000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="questionsButton:" destination="m0x-XR-AoL" eventType="touchUpInside" id="I7E-9F-2KD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="OuE-az-kUY">
+                                <rect key="frame" x="122" y="120" width="76" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="15"/>
+                                <color key="tintColor" red="0.39934973239999999" green="0.2493808974" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Statistics">
+                                    <color key="titleColor" red="0.97241932149999999" green="0.2716219634" blue="0.038715092610000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="statisticsButton:" destination="m0x-XR-AoL" eventType="touchUpInside" id="Cby-fd-3mb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Sib-Li-8Jb">
+                                <rect key="frame" x="217" y="120" width="83" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="15"/>
+                                <color key="tintColor" red="0.39934973239999999" green="0.2493808974" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="     Roster     ">
+                                    <color key="titleColor" red="0.97241932149999999" green="0.2716219634" blue="0.038715092610000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="cIn-IO-PRm" kind="push" identifier="EditRoster" id="ivo-Zr-y6X"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Section Home" id="XOW-uv-NJM"/>
+                    <connections>
+                        <outlet property="codeLabel" destination="wDV-ef-c4h" id="Hg4-bG-3nd"/>
+                        <outlet property="courseLabel" destination="c0H-sZ-Hps" id="Sc3-Mo-44h"/>
+                        <outlet property="dropSecion" destination="5hw-rr-qF2" id="Hg3-LL-pbG"/>
+                        <outlet property="meetLabel" destination="Mwo-9r-BV5" id="jNh-em-ram"/>
+                        <outlet property="professorLabel" destination="CF8-Wo-mMp" id="Vta-xT-BUR"/>
+                        <outlet property="sectionLabel" destination="ss7-k1-7jM" id="zsV-Cn-aT2"/>
+                        <outlet property="semesterLabel" destination="CYu-eT-V0x" id="VLb-wo-KN6"/>
+                        <outlet property="sendProf" destination="WXi-v0-arn" id="q5Q-33-wCC"/>
+                        <outlet property="sendQuestion" destination="733-t7-3ME" id="cyU-eS-KO0"/>
+                        <outlet property="timeLimit" destination="9u3-65-FiU" id="f6h-fF-mDP"/>
+                        <outlet property="titleLabel" destination="DuP-1i-PmN" id="gQl-yK-CSJ"/>
+                        <segue destination="tgD-ed-otx" kind="push" identifier="SearchQuestion" id="Tp8-Xl-26z"/>
+                        <segue destination="Trv-qq-3pq" kind="push" identifier="SendByTopic" id="sFU-qq-Qu0"/>
+                        <segue destination="ysT-aY-gFq" kind="push" identifier="StatsByName" id="i24-xN-qL5"/>
+                        <segue destination="EXk-e1-HsA" kind="push" identifier="StatsByTopic" id="lla-lo-kWN"/>
+                        <segue destination="rMF-Ts-JcQ" kind="push" identifier="ManageQuestion" id="DpS-pw-wlU"/>
+                        <segue destination="2mL-V5-QjZ" kind="push" identifier="CreateQuestion" id="Aaa-Ax-k16"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IwE-PG-FYx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2071" y="1968"/>
+        </scene>
+        <!--Create Question View Controller - Create Question-->
+        <scene sceneID="IYm-po-Spb">
+            <objects>
+                <viewController id="2mL-V5-QjZ" customClass="CreateQuestionViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="exN-1r-eUm">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_yellow.PNG" id="sY1-VW-aYi">
+                                <rect key="frame" x="0.0" y="65" width="320" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="u9M-yn-wHa">
+                                <rect key="frame" x="28" y="119" width="78" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="15"/>
+                                <color key="tintColor" red="0.39934973239999999" green="0.2493808974" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Questions">
+                                    <color key="titleColor" red="0.97241932149999999" green="0.2716219634" blue="0.038715092610000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="questionsButton:" destination="2mL-V5-QjZ" eventType="touchUpInside" id="n8g-d7-fwK"/>
+                                    <action selector="questionsButton:" destination="m0x-XR-AoL" eventType="touchUpInside" id="pfD-si-V67"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="e3r-7N-Oo4">
+                                <rect key="frame" x="122" y="119" width="76" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="15"/>
+                                <color key="tintColor" red="0.39934973239999999" green="0.2493808974" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Statistics">
+                                    <color key="titleColor" red="0.97241932149999999" green="0.2716219634" blue="0.038715092610000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="statisticsButton:" destination="2mL-V5-QjZ" eventType="touchUpInside" id="Yh6-aI-h9i"/>
+                                    <action selector="statisticsButton:" destination="m0x-XR-AoL" eventType="touchUpInside" id="xLk-OJ-q2o"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="knc-Kq-fvZ">
+                                <rect key="frame" x="217" y="119" width="83" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="15"/>
+                                <color key="tintColor" red="0.39934973239999999" green="0.2493808974" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="     Roster     ">
+                                    <color key="titleColor" red="0.97241932149999999" green="0.2716219634" blue="0.038715092610000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="cIn-IO-PRm" kind="push" identifier="EditRoster" id="3r7-rE-ZxL"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Create Question" id="8CC-52-SDa"/>
+                    <connections>
+                        <segue destination="rMF-Ts-JcQ" kind="push" identifier="ManageQuestion" id="QyE-Sk-Yb2"/>
+                        <segue destination="tgD-ed-otx" kind="push" identifier="SendByTopic" id="bSV-H2-VGf"/>
+                        <segue destination="Trv-qq-3pq" kind="push" identifier="SearchQuestion" id="d1k-bI-aKS"/>
+                        <segue destination="ysT-aY-gFq" kind="push" identifier="StatsByName" id="AOb-d4-65Y"/>
+                        <segue destination="EXk-e1-HsA" kind="push" identifier="StatsByTopic" id="DdC-mX-6UL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Kw-0y-UUb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3888" y="131"/>
+        </scene>
+        <!--Manage Question View Controller - Manage Questions-->
+        <scene sceneID="uUl-ds-Xnf">
+            <objects>
+                <viewController id="rMF-Ts-JcQ" customClass="ManageQuestionViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BcM-Oz-0In">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_yellow.PNG" id="riK-Rc-ocO">
+                                <rect key="frame" x="0.0" y="65" width="320" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ecB-lw-YzU">
+                                <rect key="frame" x="28" y="119" width="78" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="15"/>
+                                <color key="tintColor" red="0.39934973239999999" green="0.2493808974" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Questions">
+                                    <color key="titleColor" red="0.97241932149999999" green="0.2716219634" blue="0.038715092610000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="questionsButton:" destination="m0x-XR-AoL" eventType="touchUpInside" id="IVt-Cp-MSN"/>
+                                    <action selector="questionsButton:" destination="rMF-Ts-JcQ" eventType="touchUpInside" id="vfV-b8-8p1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="QGP-1C-1F9">
+                                <rect key="frame" x="122" y="119" width="76" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="15"/>
+                                <color key="tintColor" red="0.39934973239999999" green="0.2493808974" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Statistics">
+                                    <color key="titleColor" red="0.97241932149999999" green="0.2716219634" blue="0.038715092610000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="statisticsButton:" destination="rMF-Ts-JcQ" eventType="touchUpInside" id="0QF-VU-5tl"/>
+                                    <action selector="statisticsButton:" destination="m0x-XR-AoL" eventType="touchUpInside" id="UnB-14-rdD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="zPK-D8-oB7">
+                                <rect key="frame" x="217" y="119" width="83" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="15"/>
+                                <color key="tintColor" red="0.39934973239999999" green="0.2493808974" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="     Roster     ">
+                                    <color key="titleColor" red="0.97241932149999999" green="0.2716219634" blue="0.038715092610000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="cIn-IO-PRm" kind="push" identifier="EditRoster" id="Qhc-By-3Wx"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Manage Questions" id="6KS-B5-rf4"/>
+                    <connections>
+                        <segue destination="2mL-V5-QjZ" kind="push" identifier="CreateQuestion" id="Bia-EP-efe"/>
+                        <segue destination="tgD-ed-otx" kind="push" identifier="SendByTopic" id="BYu-EJ-ze9"/>
+                        <segue destination="Trv-qq-3pq" kind="push" identifier="SearchQuestion" id="RAI-0N-Vav"/>
+                        <segue destination="ysT-aY-gFq" kind="push" identifier="StatsByName" id="pjL-W5-bH6"/>
+                        <segue destination="EXk-e1-HsA" kind="push" identifier="StatsByTopic" id="dZK-XE-GgW"/>
+                        <segue destination="cIn-IO-PRm" kind="push" identifier="EditRoster" id="2fX-r3-sDn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e4Y-lE-2ll" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3888" y="852"/>
+        </scene>
+        <!--Roster View Controller - Student Roster-->
+        <scene sceneID="ZWR-MR-aFn">
+            <objects>
+                <viewController id="cIn-IO-PRm" customClass="RosterViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2Xq-Fn-4wq">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_yellow.PNG" id="h28-hW-Kea">
+                                <rect key="frame" x="0.0" y="66" width="320" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="3MQ-Yw-tlk">
+                                <rect key="frame" x="28" y="120" width="78" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="15"/>
+                                <color key="tintColor" red="0.39934973239999999" green="0.2493808974" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Questions">
+                                    <color key="titleColor" red="0.97241932149999999" green="0.2716219634" blue="0.038715092610000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="questionsButton:" destination="cIn-IO-PRm" eventType="touchUpInside" id="z9B-CN-RBP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="y0B-dn-gdQ">
+                                <rect key="frame" x="122" y="120" width="76" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="15"/>
+                                <color key="tintColor" red="0.39934973239999999" green="0.2493808974" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Statistics">
+                                    <color key="titleColor" red="0.97241932149999999" green="0.2716219634" blue="0.038715092610000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="statisticsButton:" destination="cIn-IO-PRm" eventType="touchUpInside" id="1az-ix-wmY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="OlG-rU-EVL">
+                                <rect key="frame" x="217" y="120" width="83" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="15"/>
+                                <color key="tintColor" red="0.39934973239999999" green="0.2493808974" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="     Roster     ">
+                                    <color key="titleColor" red="0.97241932149999999" green="0.2716219634" blue="0.038715092610000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" indicatorStyle="black" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="42" sectionHeaderHeight="22" sectionFooterHeight="22" id="nO8-dW-Fn0">
+                                <rect key="frame" x="4" y="205" width="313" height="205"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="separatorColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="6" reuseIdentifier="Cell" rowHeight="42" id="m5W-GY-eYx">
+                                        <rect key="frame" x="0.0" y="22" width="313" height="42"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="105" contentMode="center" tableViewCell="m5W-GY-eYx" id="Q1F-02-q07">
+                                            <rect key="frame" x="0.0" y="0.0" width="313" height="42"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" tag="2222" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="tailTruncation" id="2mB-2S-NGb">
+                                                    <rect key="frame" x="0.0" y="7" width="300" height="27"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="13"/>
+                                                    <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="15" maxY="0.0"/>
+                                                    <state key="normal" title="                 Button">
+                                                        <color key="titleColor" red="1" green="0.2434898408" blue="0.0041734570850000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                </button>
+                                                <imageView userInteractionEnabled="NO" tag="7777" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="lTG-fg-fUT">
+                                                    <rect key="frame" x="15" y="13" width="20" height="18"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <sections/>
+                                <connections>
+                                    <outlet property="dataSource" destination="cIn-IO-PRm" id="P7x-t4-rhu"/>
+                                    <outlet property="delegate" destination="cIn-IO-PRm" id="iRB-Og-fy0"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="yhA-RS-INP">
+                                <rect key="frame" x="90" y="418" width="141" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="15"/>
+                                <color key="tintColor" red="0.39934973239999999" green="0.2493808974" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Remove Students">
+                                    <color key="titleColor" red="0.97241932149999999" green="0.2716219634" blue="0.038715092610000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="removeStudents:" destination="cIn-IO-PRm" eventType="touchUpInside" id="44l-zk-HOl"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Student Roster" id="fLs-OL-o7f"/>
+                    <connections>
+                        <outlet property="rosterTable" destination="nO8-dW-Fn0" id="Ly3-g4-Qb9"/>
+                        <segue destination="EXk-e1-HsA" kind="push" identifier="StatsByTopic" id="Sgk-bq-qY1"/>
+                        <segue destination="ysT-aY-gFq" kind="push" identifier="StatsByName" id="IQj-L7-d3f"/>
+                        <segue destination="Trv-qq-3pq" kind="push" identifier="SearchQuestion" id="cwD-CS-bEs"/>
+                        <segue destination="tgD-ed-otx" kind="push" identifier="SendByTopic" id="YPC-hL-yyN"/>
+                        <segue destination="rMF-Ts-JcQ" kind="push" identifier="ManageQuestion" id="0Ji-Up-cM1"/>
+                        <segue destination="2mL-V5-QjZ" kind="push" identifier="CreateQuestion" id="o1x-AL-Cqx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1ia-nX-Olg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2599" y="2752"/>
+        </scene>
+        <!--Stats By Name View Controller - Statistics By Name-->
+        <scene sceneID="PzU-vJ-bTS">
+            <objects>
+                <viewController id="ysT-aY-gFq" customClass="StatsByNameViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="J1r-uV-qSk">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_yellow.PNG" id="jaj-0y-qmI">
+                                <rect key="frame" x="0.0" y="65" width="320" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Q7a-jO-3h0">
+                                <rect key="frame" x="28" y="119" width="78" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="15"/>
+                                <color key="tintColor" red="0.39934973239999999" green="0.2493808974" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Questions">
+                                    <color key="titleColor" red="0.97241932149999999" green="0.2716219634" blue="0.038715092610000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="questionsButton:" destination="ysT-aY-gFq" eventType="touchUpInside" id="jPg-Zu-SyO"/>
+                                    <action selector="questionsButton:" destination="m0x-XR-AoL" eventType="touchUpInside" id="mxW-0E-hI7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="W9s-Vx-v3r">
+                                <rect key="frame" x="122" y="119" width="76" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="15"/>
+                                <color key="tintColor" red="0.39934973239999999" green="0.2493808974" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Statistics">
+                                    <color key="titleColor" red="0.97241932149999999" green="0.2716219634" blue="0.038715092610000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="statisticsButton:" destination="ysT-aY-gFq" eventType="touchUpInside" id="81w-MW-TNF"/>
+                                    <action selector="statisticsButton:" destination="m0x-XR-AoL" eventType="touchUpInside" id="aLV-Fd-WSd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="oOc-BB-g05">
+                                <rect key="frame" x="217" y="119" width="83" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="15"/>
+                                <color key="tintColor" red="0.39934973239999999" green="0.2493808974" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="     Roster     ">
+                                    <color key="titleColor" red="0.97241932149999999" green="0.2716219634" blue="0.038715092610000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="cIn-IO-PRm" kind="push" identifier="EditRoster" id="MZb-Xo-Mtz"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Statistics By Name" id="BQ0-Cj-OjB"/>
+                    <connections>
+                        <segue destination="EXk-e1-HsA" kind="push" identifier="StatsByTopic" id="1mS-lf-CDH"/>
+                        <segue destination="Trv-qq-3pq" kind="push" identifier="SearchQuestion" id="cri-JA-H9a"/>
+                        <segue destination="tgD-ed-otx" kind="push" identifier="SendByTopic" id="x8U-JW-RPz"/>
+                        <segue destination="rMF-Ts-JcQ" kind="push" identifier="ManageQuestion" id="izl-Ib-Te5"/>
+                        <segue destination="2mL-V5-QjZ" kind="push" identifier="CreateQuestion" id="T9q-gM-JYP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9V0-gD-1LY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3896" y="3000"/>
+        </scene>
+        <!--Stats By Topic View Controller - Statistics By Topic-->
+        <scene sceneID="V9w-bb-N5J">
+            <objects>
+                <viewController id="EXk-e1-HsA" customClass="StatsByTopicViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CJx-oB-X7P">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_yellow.PNG" id="6hs-wR-e1b">
+                                <rect key="frame" x="0.0" y="64" width="320" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="x4L-t2-wVR">
+                                <rect key="frame" x="28" y="118" width="78" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="15"/>
+                                <color key="tintColor" red="0.39934973239999999" green="0.2493808974" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Questions">
+                                    <color key="titleColor" red="0.97241932149999999" green="0.2716219634" blue="0.038715092610000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="questionsButton:" destination="EXk-e1-HsA" eventType="touchUpInside" id="fwe-zY-5X5"/>
+                                    <action selector="questionsButton:" destination="m0x-XR-AoL" eventType="touchUpInside" id="ocV-Cg-SfA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="XEt-y8-tMI">
+                                <rect key="frame" x="122" y="118" width="76" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="15"/>
+                                <color key="tintColor" red="0.39934973239999999" green="0.2493808974" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Statistics">
+                                    <color key="titleColor" red="0.97241932149999999" green="0.2716219634" blue="0.038715092610000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="statisticsButton:" destination="EXk-e1-HsA" eventType="touchUpInside" id="BjS-Mz-emY"/>
+                                    <action selector="statisticsButton:" destination="m0x-XR-AoL" eventType="touchUpInside" id="HBR-bx-VRP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="EXl-pU-JLB">
+                                <rect key="frame" x="217" y="118" width="83" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="15"/>
+                                <color key="tintColor" red="0.39934973239999999" green="0.2493808974" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="     Roster     ">
+                                    <color key="titleColor" red="0.97241932149999999" green="0.2716219634" blue="0.038715092610000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="cIn-IO-PRm" kind="push" identifier="EditRoster" id="Ajn-CA-VRQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Statistics By Topic" id="4ZJ-Ef-zVg"/>
+                    <connections>
+                        <segue destination="ysT-aY-gFq" kind="push" identifier="StatsByName" id="7q4-Ld-rLM"/>
+                        <segue destination="Trv-qq-3pq" kind="push" identifier="SearchQuestion" id="HHg-AN-7cb"/>
+                        <segue destination="tgD-ed-otx" kind="push" identifier="SendByTopic" id="36R-9v-IIs"/>
+                        <segue destination="rMF-Ts-JcQ" kind="push" identifier="ManageQuestion" id="pDD-F5-wHv"/>
+                        <segue destination="2mL-V5-QjZ" kind="push" identifier="CreateQuestion" id="cEp-Ne-zrQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p5G-pk-UOb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3913" y="3704"/>
+        </scene>
+        <!--Search Question View Controller - Search Question-->
+        <scene sceneID="wxf-N8-1WZ">
+            <objects>
+                <viewController id="Trv-qq-3pq" customClass="SearchQuestionViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="G1p-O3-p9Q">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_yellow.PNG" id="ZyV-KS-XeH">
+                                <rect key="frame" x="0.0" y="65" width="320" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="XF2-Ox-tqU">
+                                <rect key="frame" x="28" y="119" width="78" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="15"/>
+                                <color key="tintColor" red="0.39934973239999999" green="0.2493808974" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Questions">
+                                    <color key="titleColor" red="0.97241932149999999" green="0.2716219634" blue="0.038715092610000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="questionsButton:" destination="m0x-XR-AoL" eventType="touchUpInside" id="VfS-eY-J14"/>
+                                    <action selector="questionsButton:" destination="Trv-qq-3pq" eventType="touchUpInside" id="bTp-cS-sW6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="9bj-md-lPz">
+                                <rect key="frame" x="122" y="119" width="76" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="15"/>
+                                <color key="tintColor" red="0.39934973239999999" green="0.2493808974" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Statistics">
+                                    <color key="titleColor" red="0.97241932149999999" green="0.2716219634" blue="0.038715092610000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="statisticsButton:" destination="Trv-qq-3pq" eventType="touchUpInside" id="J3A-IF-o3H"/>
+                                    <action selector="statisticsButton:" destination="m0x-XR-AoL" eventType="touchUpInside" id="lSG-OA-mxc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="SxB-dF-3Km">
+                                <rect key="frame" x="217" y="119" width="83" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="15"/>
+                                <color key="tintColor" red="0.39934973239999999" green="0.2493808974" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="     Roster     ">
+                                    <color key="titleColor" red="0.97241932149999999" green="0.2716219634" blue="0.038715092610000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="cIn-IO-PRm" kind="push" identifier="EditRoster" id="fVH-Vm-W5V"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Search Question" id="PRP-50-O3p"/>
+                    <connections>
+                        <segue destination="2mL-V5-QjZ" kind="push" identifier="CreateQuestion" id="C8I-Cn-wCc"/>
+                        <segue destination="rMF-Ts-JcQ" kind="push" identifier="ManageQuestion" id="7mP-55-jsq"/>
+                        <segue destination="tgD-ed-otx" kind="push" identifier="SendByTopic" id="qLL-NM-qoA"/>
+                        <segue destination="ysT-aY-gFq" kind="push" identifier="StatsByName" id="s3C-MM-WZG"/>
+                        <segue destination="EXk-e1-HsA" kind="push" identifier="StatsByTopic" id="o5Z-zA-8dY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9f5-e3-a2R" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3900" y="2284"/>
+        </scene>
+        <!--Send By Topic View Controller - Send By Topic-->
+        <scene sceneID="4IC-Z8-h4Z">
+            <objects>
+                <viewController id="tgD-ed-otx" customClass="SendByTopicViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="g4M-8K-2Vw">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_yellow.PNG" id="Cbu-rO-3zB">
+                                <rect key="frame" x="0.0" y="64" width="320" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="pM8-bj-MIZ">
+                                <rect key="frame" x="28" y="118" width="78" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="15"/>
+                                <color key="tintColor" red="0.39934973239999999" green="0.2493808974" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Questions">
+                                    <color key="titleColor" red="0.97241932149999999" green="0.2716219634" blue="0.038715092610000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="questionsButton:" destination="m0x-XR-AoL" eventType="touchUpInside" id="f0t-nP-CQd"/>
+                                    <action selector="questionsButton:" destination="tgD-ed-otx" eventType="touchUpInside" id="iMN-Mo-Wg1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="IuK-Xx-T1k">
+                                <rect key="frame" x="122" y="118" width="76" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="15"/>
+                                <color key="tintColor" red="0.39934973239999999" green="0.2493808974" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Statistics">
+                                    <color key="titleColor" red="0.97241932149999999" green="0.2716219634" blue="0.038715092610000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="statisticsButton:" destination="m0x-XR-AoL" eventType="touchUpInside" id="AaJ-vH-Wqp"/>
+                                    <action selector="statisticsButton:" destination="tgD-ed-otx" eventType="touchUpInside" id="zh2-PT-J1w"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="yxj-bf-hVo">
+                                <rect key="frame" x="217" y="118" width="83" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="15"/>
+                                <color key="tintColor" red="0.39934973239999999" green="0.2493808974" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="     Roster     ">
+                                    <color key="titleColor" red="0.97241932149999999" green="0.2716219634" blue="0.038715092610000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="cIn-IO-PRm" kind="push" identifier="EditRoster" id="dhM-t1-ltE"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Send By Topic" id="fdN-CQ-KmT"/>
+                    <connections>
+                        <segue destination="2mL-V5-QjZ" kind="push" identifier="CreateQuestion" id="j1Q-nL-RJn"/>
+                        <segue destination="rMF-Ts-JcQ" kind="push" identifier="ManageQuestion" id="Seb-lt-tqF"/>
+                        <segue destination="Trv-qq-3pq" kind="push" identifier="SearchQuestion" id="xFf-9x-QNC"/>
+                        <segue destination="ysT-aY-gFq" kind="push" identifier="StatsByName" id="kfQ-S9-QLD"/>
+                        <segue destination="EXk-e1-HsA" kind="push" identifier="StatsByTopic" id="0LS-ae-ZSq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="beM-2d-6eW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3900" y="1568"/>
+        </scene>
+        <!--Course Properties View Controller - Edit Properties-->
+        <scene sceneID="kvJ-iV-WkS">
+            <objects>
+                <viewController id="tZM-Ci-gKB" customClass="CoursePropertiesViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="AlY-6B-xBI">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_yellow.PNG" id="FT4-3x-9HA">
+                                <rect key="frame" x="0.0" y="66" width="320" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="McJ-2f-4Kc">
+                                <rect key="frame" x="28" y="120" width="78" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="15"/>
+                                <color key="tintColor" red="0.39934973239999999" green="0.2493808974" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Questions">
+                                    <color key="titleColor" red="0.97241932149999999" green="0.2716219634" blue="0.038715092610000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="questionsButton:" destination="tZM-Ci-gKB" eventType="touchUpInside" id="yxA-mH-lQR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="hb5-96-Jzv">
+                                <rect key="frame" x="122" y="120" width="76" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="15"/>
+                                <color key="tintColor" red="0.39934973239999999" green="0.2493808974" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Statistics">
+                                    <color key="titleColor" red="0.97241932149999999" green="0.2716219634" blue="0.038715092610000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="statisticsButton:" destination="tZM-Ci-gKB" eventType="touchUpInside" id="vWt-Nz-6kj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="fAG-G2-SCm">
+                                <rect key="frame" x="217" y="120" width="83" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="15"/>
+                                <color key="tintColor" red="0.39934973239999999" green="0.2493808974" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="     Roster     ">
+                                    <color key="titleColor" red="0.97241932149999999" green="0.2716219634" blue="0.038715092610000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="cIn-IO-PRm" kind="push" identifier="EditRoster" id="gwY-pN-epV"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Edit Properties" id="MnF-zV-VIZ"/>
+                    <connections>
+                        <segue destination="2mL-V5-QjZ" kind="push" identifier="CreateQuestion" id="dam-pV-FSR"/>
+                        <segue destination="rMF-Ts-JcQ" kind="push" identifier="ManageQuestion" id="ql1-At-wdn"/>
+                        <segue destination="tgD-ed-otx" kind="push" identifier="SendByTopic" id="bed-ME-nOR"/>
+                        <segue destination="Trv-qq-3pq" kind="push" identifier="SearchQuestion" id="VPJ-Od-Uu4"/>
+                        <segue destination="ysT-aY-gFq" kind="push" identifier="StatsByName" id="nxP-cp-qDn"/>
+                        <segue destination="EXk-e1-HsA" kind="push" identifier="StatsByTopic" id="F3C-g0-0wT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lnv-ec-1n6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1964" y="2752"/>
         </scene>
         <!--Reset Pass View Controller - Reset Password-->
         <scene sceneID="7zf-in-cdv">
@@ -299,7 +1277,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8HM-4I-VGz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="767" y="433"/>
+            <point key="canvasLocation" x="1303" y="-1599"/>
         </scene>
         <!--Statistics View Controller - Student Statistics-->
         <scene sceneID="woe-Wt-I16">
@@ -380,7 +1358,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gem-Ux-tML" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1333" y="433"/>
+            <point key="canvasLocation" x="1869" y="-1599"/>
         </scene>
         <!--Question Stat View Controller - Personal Statistics-->
         <scene sceneID="Jbm-eS-0pe">
@@ -488,7 +1466,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7l9-Aw-g8f" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1744" y="433"/>
+            <point key="canvasLocation" x="2280" y="-1599"/>
         </scene>
         <!--Menu View Controller - Settings-->
         <scene sceneID="eir-jA-gUH">
@@ -578,7 +1556,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IPm-Nv-1u3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1333" y="1846"/>
+            <point key="canvasLocation" x="1853" y="-642"/>
         </scene>
         <!--Change Password View Controller - Change Password-->
         <scene sceneID="EWm-Lk-9aH">
@@ -680,7 +1658,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N4r-Uj-LiM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1760" y="1846"/>
+            <point key="canvasLocation" x="2280" y="-642"/>
         </scene>
         <!--Questions View Controller - Questions-->
         <scene sceneID="R4y-pi-TES">
@@ -761,7 +1739,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fd4-rL-2AU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1347" y="-1089"/>
+            <point key="canvasLocation" x="1883" y="-3121"/>
         </scene>
         <!--New Questions View Controller - New Questions-->
         <scene sceneID="jTE-yG-Zth">
@@ -841,7 +1819,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="je2-Ql-CIX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1333" y="-336"/>
+            <point key="canvasLocation" x="1869" y="-2368"/>
         </scene>
         <!--Submitted View Controller - Question of the Day-->
         <scene sceneID="dUk-Zg-wGx">
@@ -941,7 +1919,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sob-PA-qMm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3377" y="-606"/>
+            <point key="canvasLocation" x="3913" y="-2638"/>
         </scene>
         <!--Detail Answer View Controller - Choose an Option-->
         <scene sceneID="Tqh-HE-Uib">
@@ -988,7 +1966,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vOo-Tz-AvZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2021" y="-573"/>
+            <point key="canvasLocation" x="2557" y="-2605"/>
         </scene>
         <!--Answer Screen View Controller - Answer Page-->
         <scene sceneID="AZQ-3U-29g">
@@ -1126,7 +2104,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o3o-J4-AIs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2810" y="-573"/>
+            <point key="canvasLocation" x="3346" y="-2605"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Td7-33-OjY">
@@ -1337,7 +2315,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GP5-xd-XCo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2837" y="469"/>
+            <point key="canvasLocation" x="3373" y="-1563"/>
         </scene>
     </scenes>
     <resources>
@@ -1352,6 +2330,13 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="dxO-wD-dNU"/>
+        <segue reference="UR9-18-4WS"/>
+        <segue reference="0Ji-Up-cM1"/>
+        <segue reference="Qhc-By-3Wx"/>
+        <segue reference="RAI-0N-Vav"/>
+        <segue reference="dZK-XE-GgW"/>
+        <segue reference="BYu-EJ-ze9"/>
+        <segue reference="Bia-EP-efe"/>
+        <segue reference="pjL-W5-bH6"/>
     </inferredMetricsTieBreakers>
 </document>

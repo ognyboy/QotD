@@ -100,6 +100,10 @@
     
     NSURL *boolURL = [NSURL URLWithString:[NSString stringWithFormat:@"http://199.180.255.173/index.php/mobile/changeEmailSettings/%@/%d", [self.userModel getUserName], send]];
     NSData *userIDData = [NSData dataWithContentsOfURL:boolURL];
+    if(userIDData == 0)
+    {
+        
+    }
     [self.navigationController popViewControllerAnimated:YES];
 }
 
