@@ -7,6 +7,7 @@
 //
 
 #import "CreateQuestionViewController.h"
+#import "SectionHomeViewController.h"
 
 @interface CreateQuestionViewController ()
 {
@@ -37,6 +38,16 @@
     return _sectionModel;
 }
 
+-(QuestionModel *)questionModel
+{
+    if(_questionModel == Nil)
+    {
+        _questionModel = [[QuestionModel alloc] init];
+    }
+    
+    return _questionModel;
+}
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -50,11 +61,52 @@
 {
     [super viewDidLoad];
     
-    [super viewDidLoad];
-    
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Log out" style:UIBarButtonItemStyleBordered target:self action:@selector(logout:)];
 
     option = false;
+    
+    CGRect newFrame = self.bottomView.frame;
+    newFrame.size.height = self.createButton.frame.origin.y + self.createButton.frame.size.height + 20;
+    self.bottomView.frame =newFrame;
+    
+    self.scrollView.contentSize = CGSizeMake(self.bottomView.frame.size.width, self.bottomView.frame.size.height);
+    
+    if(![[self.questionModel getTopic] isEqualToString:@""])
+    {
+        [self.topicField setText:[self.questionModel getTopic]];
+    }
+    if(![[self.questionModel getPrompt] isEqualToString:@""])
+    {
+        [self.promptField setText:[self.questionModel getPrompt]];
+    }
+    if(![[self.questionModel getA] isEqualToString:@""])
+    {
+        [self.aField setText:[self.questionModel getA]];
+    }
+    if(![[self.questionModel getB] isEqualToString:@""])
+    {
+        [self.bField setText:[self.questionModel getB]];
+    }
+    if(![[self.questionModel getC] isEqualToString:@""])
+    {
+        [self.cField setText:[self.questionModel getC]];
+    }
+    if(![[self.questionModel getD] isEqualToString:@""])
+    {
+        [self.dField setText:[self.questionModel getD]];
+    }
+    if(![[self.questionModel getCorrect] isEqualToString:@""])
+    {
+        [self.correctField setText:[self.questionModel getCorrect]];
+    }
+    if(![[self.questionModel getHint] isEqualToString:@""])
+    {
+        [self.hintField setText:[self.questionModel getHint]];
+    }
+    if(![[self.questionModel getExplanation] isEqualToString:@""])
+    {
+        [self.explanationField setText:[self.questionModel getExplanation]];
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -126,6 +178,15 @@
         viewCont.userModel = self.userModel;
         viewCont.sectionModel = self.sectionModel;
     }
+    if ( [segue.identifier isEqualToString:@"gotoMenu"])   //this is the segue name that you can change from story board.
+    {
+        
+        SectionHomeViewController *viewCont = segue.destinationViewController;
+        viewCont.userModel = self.userModel;
+        viewCont.sectionModel = self.sectionModel;
+    }
+    
+    
     
 }
 
@@ -165,4 +226,162 @@
         [self performSegueWithIdentifier:@"StatsByTopic" sender:self];
 }
 
+- (void)touchesBegan: (NSSet *) touches withEvent:(UIEvent *)event
+{
+    // Hides Keyboard after clicking outside of keyboard
+    
+    [self.view endEditing: YES];
+    [super touchesBegan:touches withEvent: event];
+}
+
+-(IBAction)valueReturn:(id)sender
+{
+    [sender resignFirstResponder];
+}
+
+- (IBAction)createAction:(id)sender
+{
+    if([self.promptField.text isEqualToString:@""])
+    {
+        UIAlertView *alert2 = [[UIAlertView alloc] initWithTitle:@"Incorrect Input"
+                                                         message:@"Prompt Field is empty"
+                                                        delegate:nil
+                                               cancelButtonTitle:@"OK"
+                                               otherButtonTitles:nil];
+        [alert2 show];
+    }
+    
+    else if([self.topicField.text isEqualToString:@""])
+    {
+        UIAlertView *alert2 = [[UIAlertView alloc] initWithTitle:@"Incorrect Input"
+                                                         message:@"Topic Name Field is empty"
+                                                        delegate:nil
+                                               cancelButtonTitle:@"OK"
+                                               otherButtonTitles:nil];
+        [alert2 show];
+    }
+    
+    else if([self.aField.text isEqualToString:@""])
+    {
+        UIAlertView *alert2 = [[UIAlertView alloc] initWithTitle:@"Incorrect Input"
+                                                         message:@"A Field is empty"
+                                                        delegate:nil
+                                               cancelButtonTitle:@"OK"
+                                               otherButtonTitles:nil];
+        [alert2 show];
+    }
+    
+    else if([self.bField.text isEqualToString:@""])
+    {
+        UIAlertView *alert2 = [[UIAlertView alloc] initWithTitle:@"Incorrect Input"
+                                                         message:@"B Field is empty"
+                                                        delegate:nil
+                                               cancelButtonTitle:@"OK"
+                                               otherButtonTitles:nil];
+        [alert2 show];
+    }
+    
+    else if([self.cField.text isEqualToString:@""])
+    {
+        UIAlertView *alert2 = [[UIAlertView alloc] initWithTitle:@"Incorrect Input"
+                                                         message:@"C Field is empty"
+                                                        delegate:nil
+                                               cancelButtonTitle:@"OK"
+                                               otherButtonTitles:nil];
+        [alert2 show];
+    }
+    
+    else if([self.dField.text isEqualToString:@""])
+    {
+        UIAlertView *alert2 = [[UIAlertView alloc] initWithTitle:@"Incorrect Input"
+                                                         message:@"D Field is empty"
+                                                        delegate:nil
+                                               cancelButtonTitle:@"OK"
+                                               otherButtonTitles:nil];
+        [alert2 show];
+    }
+    else if([self.correctField.text isEqualToString:@""])
+    {
+        UIAlertView *alert2 = [[UIAlertView alloc] initWithTitle:@"Incorrect Input"
+                                                         message:@"Correct Field is empty"
+                                                        delegate:nil
+                                               cancelButtonTitle:@"OK"
+                                               otherButtonTitles:nil];
+        [alert2 show];
+    }
+    else if([self.hintField.text isEqualToString:@""])
+    {
+        UIAlertView *alert2 = [[UIAlertView alloc] initWithTitle:@"Incorrect Input"
+                                                         message:@"Hint Field is empty"
+                                                        delegate:nil
+                                               cancelButtonTitle:@"OK"
+                                               otherButtonTitles:nil];
+        [alert2 show];
+    }
+    else if([self.explanationField.text isEqualToString:@""])
+    {
+        UIAlertView *alert2 = [[UIAlertView alloc] initWithTitle:@"Incorrect Input"
+                                                         message:@"Explanation Field is empty"
+                                                        delegate:nil
+                                               cancelButtonTitle:@"OK"
+                                               otherButtonTitles:nil];
+        [alert2 show];
+    }
+    else
+    {
+        NSString *topic= @"", *prompt = @"", *a= @"", *b= @"", *c= @"", *d= @"", *correct= @"", *hint= @"", *explanation= @"";
+        
+        topic = [[self.topicField text] stringByReplacingOccurrencesOfString:@" " withString:@"%20"];
+        prompt = [[self.promptField text] stringByReplacingOccurrencesOfString:@" " withString:@"%20"];
+        a = [[self.aField text] stringByReplacingOccurrencesOfString:@" " withString:@"%20"];
+        b = [[self.bField text] stringByReplacingOccurrencesOfString:@" " withString:@"%20"];
+        c = [[self.cField text] stringByReplacingOccurrencesOfString:@" " withString:@"%20"];
+        d = [[self.dField text] stringByReplacingOccurrencesOfString:@" " withString:@"%20"];
+        correct = [[self.correctField text] stringByReplacingOccurrencesOfString:@" " withString:@"%20"];
+        hint = [[self.hintField text] stringByReplacingOccurrencesOfString:@" " withString:@"%20"];
+        explanation = [[self.explanationField text] stringByReplacingOccurrencesOfString:@" " withString:@"%20"];
+        
+        if(self.edit)
+        {
+            NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://199.180.255.173/index.php/mobile/editQuestion/%d/%@/%@/%@/%@/%@/%@/%@/%@/%@/%@", [self.questionModel getQuestionID], topic, prompt, a, b, c, d, correct, hint, explanation, [self.sectionModel getSectionID]]];
+            
+            NSData *responseData = [NSData dataWithContentsOfURL:url];
+            NSString *response = [[NSString alloc] initWithData:responseData encoding:NSASCIIStringEncoding];
+            if([response isEqualToString:@""])
+            {
+                
+            }
+            
+            UIAlertView *alert2 = [[UIAlertView alloc] initWithTitle:@"Question Edited"
+                                                             message:@"You have successfuly edited the question"
+                                                            delegate:nil
+                                                   cancelButtonTitle:@"OK"
+                                                   otherButtonTitles:nil];
+            [alert2 show];
+
+            [self performSegueWithIdentifier:@"gotoMenu" sender:self];
+        }
+        else
+        {
+            NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://199.180.255.173/index.php/mobile/createQuestion/%@/%@/%@/%@/%@/%@/%@/%@/%@/%@",  topic, prompt, a, b, c, d, correct, hint, explanation, [self.sectionModel getSectionID]]];
+            
+            NSData *responseData = [NSData dataWithContentsOfURL:url];
+            NSString *response = [[NSString alloc] initWithData:responseData encoding:NSASCIIStringEncoding];
+            if([response isEqualToString:@""])
+            {
+                
+            }
+            
+            UIAlertView *alert2 = [[UIAlertView alloc] initWithTitle:@"Question Edited"
+                                                             message:@"You have successfuly edited the question"
+                                                            delegate:nil
+                                                   cancelButtonTitle:@"OK"
+                                                   otherButtonTitles:nil];
+            [alert2 show];
+            
+            [self performSegueWithIdentifier:@"gotoMenu" sender:self];
+        }
+    }
+
+}
 @end

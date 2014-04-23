@@ -16,6 +16,7 @@
 #import "SendByTopicViewController.h"
 #import "StatsByNameViewController.h"
 #import "StatsByTopicViewController.h"
+#import "TopicHomeViewController.h"
 
 @interface ManageQuestionViewController : UIViewController <UIAlertViewDelegate>
 

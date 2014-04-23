@@ -1,18 +1,20 @@
 //
-//  ViewDetailsViewController.m
+//  QuestionDetailViewController.m
 //  Question of the Day
 //
-//  Created by Ogny on 3/24/14.
+//  Created by Ogny on 4/21/14.
 //  Copyright (c) 2014 dognean. All rights reserved.
 //
 
-#import "ViewDetailsViewController.h"
+#import "QuestionDetailViewController.h"
+#import "CreateQuestionViewController.h"
+#import "SectionHomeViewController.h"
 
-@interface ViewDetailsViewController ()
+@interface QuestionDetailViewController ()
 
 @end
 
-@implementation ViewDetailsViewController
+@implementation QuestionDetailViewController
 
 -(UserModel *)userModel
 {
@@ -22,6 +24,16 @@
     }
     
     return _userModel;
+}
+
+-(SectionModel *)sectionModel
+{
+    if(_sectionModel == Nil)
+    {
+        _sectionModel = [[SectionModel alloc] init];
+    }
+    
+    return _sectionModel;
 }
 
 -(QuestionModel *)questionModel
@@ -43,13 +55,13 @@
     return self;
 }
 
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	[self instantiate];
     
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Log out" style:UIBarButtonItemStyleBordered target:self action:@selector(logout:)];
+    self.navigationItem.title = @"Question Details";
+    [self instantiate];
 }
 
 - (void)didReceiveMemoryWarning
@@ -65,14 +77,12 @@
 
 -(void) instantiate
 {
-    
     [self.titleDetail setText:[NSString stringWithFormat:@"Details for #%d:", [self.questionModel getQuestionID]]];
     
     NSString *temp = [NSString stringWithFormat:@"%@", [self.questionModel getTopic]];
     if([temp rangeOfString:@"<br>"].location != NSNotFound)
         temp = [temp stringByReplacingOccurrencesOfString:@"<br>" withString:@"  "];
     [self.topicDetail setText:temp];
-    
     
     temp = [NSString stringWithFormat:@"%@", [self.questionModel getPrompt]];
     if([temp rangeOfString:@"<br>"].location != NSNotFound)
@@ -175,7 +185,6 @@
     self.hi.frame = newFrame;
     [self.hintDetail sizeToFit];
     [self.hi sizeToFit];
-
     
     if([[self.hintDetail text] isEqualToString:@""])
     {
@@ -194,26 +203,80 @@
         [self.e sizeToFit];
     }
     else{
-        temp = [NSString stringWithFormat:@"%@", [self.questionModel getExplanation]];
-        if([temp rangeOfString:@"<br>"].location != NSNotFound)
-            temp = [temp stringByReplacingOccurrencesOfString:@"<br>" withString:@"  "];
-        [self.explanationDetail setText:temp];
-        newFrame = self.hintDetail.frame;
-        newFrame.origin.y = self.hintDetail.frame.origin.y + self.hintDetail.frame.size.height+10;
-        newFrame.size.width = self.promptDetail.frame.size.width;
-        self.explanationDetail.frame = newFrame;
-        newFrame = self.hi.frame;
-        newFrame.origin.y = self.hi.frame.origin.y + self.hintDetail.frame.size.height+10;
-        self.e.frame = newFrame;
-        [self.explanationDetail sizeToFit];
-        [self.e sizeToFit];
+    temp = [NSString stringWithFormat:@"%@", [self.questionModel getExplanation]];
+    if([temp rangeOfString:@"<br>"].location != NSNotFound)
+        temp = [temp stringByReplacingOccurrencesOfString:@"<br>" withString:@"  "];
+    [self.explanationDetail setText:temp];
+    newFrame = self.hintDetail.frame;
+    newFrame.origin.y = self.hintDetail.frame.origin.y + self.hintDetail.frame.size.height+10;
+    newFrame.size.width = self.promptDetail.frame.size.width;
+    self.explanationDetail.frame = newFrame;
+    newFrame = self.hi.frame;
+    newFrame.origin.y = self.hi.frame.origin.y + self.hintDetail.frame.size.height+10;
+    self.e.frame = newFrame;
+    [self.explanationDetail sizeToFit];
+    [self.e sizeToFit];
     }
     
+    newFrame = self.editButton.frame;
+    newFrame.origin.y = self.explanationDetail.frame.origin.y + self.explanationDetail.frame.size.height+20;
+    newFrame.origin.x = 40;
+    self.editButton.frame = newFrame;
     
-    newFrame = self.viewsuff.frame;
-    newFrame.size.height = self.explanationDetail.frame.origin.y + self.explanationDetail.frame.size.height + 10;
-    self.viewsuff.frame =newFrame;
-    self.scrollStuff.contentSize = CGSizeMake(self.viewsuff.frame.size.width, self.viewsuff.frame.size.height);
+    newFrame = self.deleteButton.frame;
+    newFrame.origin.y = self.editButton.frame.origin.y;
+    newFrame.origin.x = self.editButton.frame.origin.x + 100;
+    self.deleteButton.frame = newFrame;
+    
+    newFrame = self.bottomView.frame;
+    newFrame.size.height = self.editButton.frame.origin.y + self.editButton.frame.size.height + 20;
+    self.bottomView.frame =newFrame;
+    
+    self.scrollStuff.contentSize = CGSizeMake(self.bottomView.frame.size.width, self.bottomView.frame.size.height);
 }
 
+- (IBAction)editButton:(id)sender
+{
+    [self performSegueWithIdentifier:@"CreateQ" sender:self];
+}
+
+- (IBAction)deleteButton:(id)sender
+{
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://199.180.255.173/index.php/mobile/removeQuestion/%@/%d", [self.sectionModel getSectionID], [self.questionModel getQuestionID]]];
+    
+    NSData *responseData = [NSData dataWithContentsOfURL:url];
+    NSString *response = [[NSString alloc] initWithData:responseData encoding:NSASCIIStringEncoding];
+    if([response isEqualToString:@""])
+        {
+            
+        }
+    [self performSegueWithIdentifier:@"SecHome" sender:self];
+    
+    UIAlertView *alert2 = [[UIAlertView alloc] initWithTitle:@"Question Removed"
+                                                     message:@"THe quesion has been removed from this section!"
+                                                    delegate:nil
+                                           cancelButtonTitle:@"OK"
+                                           otherButtonTitles:nil];
+    [alert2 show];
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ( [segue.identifier isEqualToString:@"CreateQ"])   //this is the segue name that you can change from story board.
+    {
+        CreateQuestionViewController *viewCont = segue.destinationViewController;
+        viewCont.userModel = self.userModel;
+        viewCont.sectionModel = self.sectionModel;
+        viewCont.questionModel = self.questionModel;
+        viewCont.edit = true;
+    }
+    
+    if ( [segue.identifier isEqualToString:@"SecHome"])   //this is the segue name that you can change from story board.
+    {
+        SectionHomeViewController *viewCont = segue.destinationViewController;
+        viewCont.userModel = self.userModel;
+        viewCont.sectionModel = self.sectionModel;
+    }
+    
+}
 @end

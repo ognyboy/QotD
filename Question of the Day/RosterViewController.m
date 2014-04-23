@@ -107,6 +107,7 @@
         CreateQuestionViewController *viewCont = segue.destinationViewController;
         viewCont.userModel = self.userModel;
         viewCont.sectionModel = self.sectionModel;
+        viewCont.edit = false;
     }
     
     if ( [segue.identifier isEqualToString:@"ManageQuestion"])   //this is the segue name that you can change from story board.
@@ -261,6 +262,7 @@
             response = [response substringWithRange:NSMakeRange(1, 1)];
             
             [studentList removeObjectAtIndex:i];
+            [checkedList removeObjectAtIndex:i];
             if([response isEqualToString:@"f"])
             {
                 UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error In Removing"

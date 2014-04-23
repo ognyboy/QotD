@@ -710,12 +710,12 @@
                         <outlet property="sendQuestion" destination="733-t7-3ME" id="cyU-eS-KO0"/>
                         <outlet property="timeLimit" destination="9u3-65-FiU" id="f6h-fF-mDP"/>
                         <outlet property="titleLabel" destination="DuP-1i-PmN" id="gQl-yK-CSJ"/>
-                        <segue destination="tgD-ed-otx" kind="push" identifier="SearchQuestion" id="Tp8-Xl-26z"/>
-                        <segue destination="Trv-qq-3pq" kind="push" identifier="SendByTopic" id="sFU-qq-Qu0"/>
+                        <segue destination="tgD-ed-otx" kind="push" identifier="SendByTopic" id="Tp8-Xl-26z"/>
                         <segue destination="ysT-aY-gFq" kind="push" identifier="StatsByName" id="i24-xN-qL5"/>
                         <segue destination="EXk-e1-HsA" kind="push" identifier="StatsByTopic" id="lla-lo-kWN"/>
                         <segue destination="rMF-Ts-JcQ" kind="push" identifier="ManageQuestion" id="DpS-pw-wlU"/>
                         <segue destination="2mL-V5-QjZ" kind="push" identifier="CreateQuestion" id="Aaa-Ax-k16"/>
+                        <segue destination="Trv-qq-3pq" kind="push" identifier="SearchQuestion" id="4RH-dD-sJz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IwE-PG-FYx" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -730,61 +730,289 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="tP4-Eq-qYt">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" id="M76-fB-lhC">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="583"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="e3r-7N-Oo4">
+                                                <rect key="frame" x="121" y="138" width="76" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="15"/>
+                                                <color key="tintColor" red="0.39934973239999999" green="0.2493808974" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <state key="normal" title="Statistics">
+                                                    <color key="titleColor" red="0.97241932149999999" green="0.2716219634" blue="0.038715092610000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="statisticsButton:" destination="2mL-V5-QjZ" eventType="touchUpInside" id="Yh6-aI-h9i"/>
+                                                    <action selector="statisticsButton:" destination="m0x-XR-AoL" eventType="touchUpInside" id="xLk-OJ-q2o"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hint:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="QDk-j3-xZx">
+                                                <rect key="frame" x="22" y="453" width="42" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="17"/>
+                                                <color key="textColor" red="0.97241932149999999" green="0.2716219634" blue="0.038715092610000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Explanation:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gl6-jw-RIx">
+                                                <rect key="frame" x="19" y="491" width="98" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="15"/>
+                                                <color key="textColor" red="0.97241932149999999" green="0.2716219634" blue="0.038715092610000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="v7D-Pb-dGe">
+                                                <rect key="frame" x="92" y="538" width="112" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="15"/>
+                                                <color key="tintColor" red="0.39934973239999999" green="0.2493808974" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <state key="normal" title="Create Question">
+                                                    <color key="titleColor" red="0.97241932149999999" green="0.2716219634" blue="0.038715092610000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="createAction:" destination="2mL-V5-QjZ" eventType="touchUpInside" id="Xdl-5l-cM5"/>
+                                                </connections>
+                                            </button>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="r9h-jq-k7E">
+                                                <rect key="frame" x="108" y="301" width="194" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="valueReturn:" destination="2mL-V5-QjZ" eventType="editingDidEnd" id="1JI-dV-wzB"/>
+                                                    <action selector="valueReturn:" destination="2mL-V5-QjZ" eventType="editingDidEndOnExit" id="8O2-iC-Zrt"/>
+                                                    <action selector="valueReturn:" destination="2mL-V5-QjZ" eventType="touchDragOutside" id="baz-UO-0YZ"/>
+                                                    <action selector="valueReturn:" destination="2mL-V5-QjZ" eventType="touchUpOutside" id="cZw-wl-bvD"/>
+                                                    <action selector="valueReturn:" destination="2mL-V5-QjZ" eventType="touchDragExit" id="fUa-vc-STa"/>
+                                                    <action selector="valueReturn:" destination="2mL-V5-QjZ" eventType="touchCancel" id="jc8-2T-tdm"/>
+                                                </connections>
+                                            </textField>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="w66-qp-2RT">
+                                                <rect key="frame" x="108" y="339" width="191" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="valueReturn:" destination="2mL-V5-QjZ" eventType="touchCancel" id="4sh-XZ-f8Z"/>
+                                                    <action selector="valueReturn:" destination="2mL-V5-QjZ" eventType="touchUpOutside" id="5hu-Wb-dEv"/>
+                                                    <action selector="valueReturn:" destination="2mL-V5-QjZ" eventType="editingDidEnd" id="IEe-ht-sAv"/>
+                                                    <action selector="valueReturn:" destination="2mL-V5-QjZ" eventType="touchDragOutside" id="Kuw-Li-NcN"/>
+                                                    <action selector="valueReturn:" destination="2mL-V5-QjZ" eventType="touchDragExit" id="MsT-K4-68z"/>
+                                                    <action selector="valueReturn:" destination="2mL-V5-QjZ" eventType="editingDidEndOnExit" id="uCq-HU-Vqs"/>
+                                                </connections>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="u9M-yn-wHa">
+                                                <rect key="frame" x="27" y="138" width="78" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="15"/>
+                                                <color key="tintColor" red="0.39934973239999999" green="0.2493808974" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <state key="normal" title="Questions">
+                                                    <color key="titleColor" red="0.97241932149999999" green="0.2716219634" blue="0.038715092610000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="questionsButton:" destination="2mL-V5-QjZ" eventType="touchUpInside" id="n8g-d7-fwK"/>
+                                                    <action selector="questionsButton:" destination="m0x-XR-AoL" eventType="touchUpInside" id="pfD-si-V67"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="knc-Kq-fvZ">
+                                                <rect key="frame" x="216" y="138" width="83" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="15"/>
+                                                <color key="tintColor" red="0.39934973239999999" green="0.2493808974" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <state key="normal" title="     Roster     ">
+                                                    <color key="titleColor" red="0.97241932149999999" green="0.2716219634" blue="0.038715092610000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <segue destination="cIn-IO-PRm" kind="push" identifier="EditRoster" id="3r7-rE-ZxL"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Topic:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="6V1-KD-vBo">
+                                                <rect key="frame" x="19" y="187" width="42" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="17"/>
+                                                <color key="textColor" red="0.97241932149999999" green="0.2716219634" blue="0.038715092610000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Prompt:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="eG1-kO-Eq8">
+                                                <rect key="frame" x="19" y="225" width="63" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="17"/>
+                                                <color key="textColor" red="0.97241932149999999" green="0.2716219634" blue="0.038715092610000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="txI-gt-cWE">
+                                                <rect key="frame" x="19" y="263" width="42" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="17"/>
+                                                <color key="textColor" red="0.97241932149999999" green="0.2716219634" blue="0.038715092610000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="GYH-AR-wbr">
+                                                <rect key="frame" x="108" y="187" width="194" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="valueReturn:" destination="2mL-V5-QjZ" eventType="touchDragExit" id="3HD-5e-Xkn"/>
+                                                    <action selector="valueReturn:" destination="2mL-V5-QjZ" eventType="touchDragOutside" id="Yxe-MD-G0b"/>
+                                                    <action selector="valueReturn:" destination="2mL-V5-QjZ" eventType="editingDidEnd" id="dDN-yI-TWm"/>
+                                                    <action selector="valueReturn:" destination="2mL-V5-QjZ" eventType="editingDidEndOnExit" id="k7B-53-k6s"/>
+                                                    <action selector="valueReturn:" destination="2mL-V5-QjZ" eventType="touchCancel" id="p38-6u-a4C"/>
+                                                    <action selector="valueReturn:" destination="2mL-V5-QjZ" eventType="touchUpOutside" id="vT6-b1-hzY"/>
+                                                </connections>
+                                            </textField>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="1GB-fM-j22">
+                                                <rect key="frame" x="108" y="225" width="191" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="valueReturn:" destination="2mL-V5-QjZ" eventType="touchDragOutside" id="5wI-Ig-pK3"/>
+                                                    <action selector="valueReturn:" destination="2mL-V5-QjZ" eventType="touchUpOutside" id="6F2-yD-1xj"/>
+                                                    <action selector="valueReturn:" destination="2mL-V5-QjZ" eventType="touchCancel" id="eS5-rs-h2k"/>
+                                                    <action selector="valueReturn:" destination="2mL-V5-QjZ" eventType="editingDidEnd" id="teW-vh-CHd"/>
+                                                    <action selector="valueReturn:" destination="2mL-V5-QjZ" eventType="editingDidEndOnExit" id="uHl-PZ-D5w"/>
+                                                    <action selector="valueReturn:" destination="2mL-V5-QjZ" eventType="touchDragExit" id="ywO-fZ-sza"/>
+                                                </connections>
+                                            </textField>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="DhZ-Sm-e5r">
+                                                <rect key="frame" x="108" y="263" width="194" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="valueReturn:" destination="2mL-V5-QjZ" eventType="touchUpOutside" id="8K6-10-ABc"/>
+                                                    <action selector="valueReturn:" destination="2mL-V5-QjZ" eventType="touchDragExit" id="HUC-Gq-tZ6"/>
+                                                    <action selector="valueReturn:" destination="2mL-V5-QjZ" eventType="editingDidEnd" id="YFm-Sm-wmt"/>
+                                                    <action selector="valueReturn:" destination="2mL-V5-QjZ" eventType="touchDragOutside" id="YHE-Wf-Hy8"/>
+                                                    <action selector="valueReturn:" destination="2mL-V5-QjZ" eventType="editingDidEndOnExit" id="kdj-Y0-ZgG"/>
+                                                    <action selector="valueReturn:" destination="2mL-V5-QjZ" eventType="touchCancel" id="lOo-vh-QSi"/>
+                                                </connections>
+                                            </textField>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="B:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="BS9-NW-DQl">
+                                                <rect key="frame" x="19" y="301" width="42" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="17"/>
+                                                <color key="textColor" red="0.97241932149999999" green="0.2716219634" blue="0.038715092610000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="C:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jLA-m4-Ydp">
+                                                <rect key="frame" x="22" y="339" width="42" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="17"/>
+                                                <color key="textColor" red="0.97241932149999999" green="0.2716219634" blue="0.038715092610000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="D:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="IHJ-8i-IU3">
+                                                <rect key="frame" x="22" y="377" width="42" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="17"/>
+                                                <color key="textColor" red="0.97241932149999999" green="0.2716219634" blue="0.038715092610000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Correct:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="YFf-R7-PQf">
+                                                <rect key="frame" x="19" y="415" width="75" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="17"/>
+                                                <color key="textColor" red="0.97241932149999999" green="0.2716219634" blue="0.038715092610000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="qup-fI-IKm">
+                                                <rect key="frame" x="108" y="377" width="191" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="valueReturn:" destination="2mL-V5-QjZ" eventType="touchDragOutside" id="N9a-Nl-lKG"/>
+                                                    <action selector="valueReturn:" destination="2mL-V5-QjZ" eventType="editingDidEndOnExit" id="Q8O-7K-KVq"/>
+                                                    <action selector="valueReturn:" destination="2mL-V5-QjZ" eventType="editingDidEnd" id="WeG-MH-IWZ"/>
+                                                    <action selector="valueReturn:" destination="2mL-V5-QjZ" eventType="touchDragExit" id="Zu8-FU-xcZ"/>
+                                                    <action selector="valueReturn:" destination="2mL-V5-QjZ" eventType="touchUpOutside" id="e3x-ff-8gL"/>
+                                                    <action selector="valueReturn:" destination="2mL-V5-QjZ" eventType="touchCancel" id="fiW-EP-IQg"/>
+                                                </connections>
+                                            </textField>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="Ddv-CG-yKg">
+                                                <rect key="frame" x="108" y="491" width="191" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="valueReturn:" destination="2mL-V5-QjZ" eventType="touchUpOutside" id="8lt-xB-I6J"/>
+                                                    <action selector="valueReturn:" destination="2mL-V5-QjZ" eventType="editingDidEndOnExit" id="ENg-JT-Yjo"/>
+                                                    <action selector="valueReturn:" destination="2mL-V5-QjZ" eventType="touchCancel" id="LVT-iy-mYm"/>
+                                                    <action selector="valueReturn:" destination="2mL-V5-QjZ" eventType="editingDidEnd" id="Xr5-gc-os2"/>
+                                                    <action selector="valueReturn:" destination="2mL-V5-QjZ" eventType="touchDragOutside" id="Yoj-Zg-ZYO"/>
+                                                    <action selector="valueReturn:" destination="2mL-V5-QjZ" eventType="touchDragExit" id="ds2-ew-HlZ"/>
+                                                </connections>
+                                            </textField>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="1EC-5J-nGl">
+                                                <rect key="frame" x="109" y="453" width="190" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="valueReturn:" destination="2mL-V5-QjZ" eventType="touchUpOutside" id="0CS-DU-7Je"/>
+                                                    <action selector="valueReturn:" destination="2mL-V5-QjZ" eventType="editingDidEndOnExit" id="Gie-dz-1tn"/>
+                                                    <action selector="valueReturn:" destination="2mL-V5-QjZ" eventType="touchDragExit" id="KtU-DN-qjP"/>
+                                                    <action selector="valueReturn:" destination="2mL-V5-QjZ" eventType="touchDragOutside" id="b4U-Bx-r8z"/>
+                                                    <action selector="valueReturn:" destination="2mL-V5-QjZ" eventType="editingDidEnd" id="hN8-uZ-uiq"/>
+                                                    <action selector="valueReturn:" destination="2mL-V5-QjZ" eventType="touchCancel" id="vJr-Bb-2Uy"/>
+                                                </connections>
+                                            </textField>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="SNC-tc-OI7">
+                                                <rect key="frame" x="109" y="415" width="190" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="valueReturn:" destination="2mL-V5-QjZ" eventType="touchUpOutside" id="ATg-Rz-nh3"/>
+                                                    <action selector="valueReturn:" destination="2mL-V5-QjZ" eventType="touchDragExit" id="MRD-Et-8zO"/>
+                                                    <action selector="valueReturn:" destination="2mL-V5-QjZ" eventType="editingDidEnd" id="S5r-dz-k2Y"/>
+                                                    <action selector="valueReturn:" destination="2mL-V5-QjZ" eventType="touchDragOutside" id="izG-Vd-mDm"/>
+                                                    <action selector="valueReturn:" destination="2mL-V5-QjZ" eventType="editingDidEndOnExit" id="pR7-Hd-Wi4"/>
+                                                    <action selector="valueReturn:" destination="2mL-V5-QjZ" eventType="touchCancel" id="voX-UE-vuA"/>
+                                                </connections>
+                                            </textField>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                    </view>
+                                </subviews>
+                            </scrollView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_yellow.PNG" id="sY1-VW-aYi">
                                 <rect key="frame" x="0.0" y="65" width="320" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="u9M-yn-wHa">
-                                <rect key="frame" x="28" y="119" width="78" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="15"/>
-                                <color key="tintColor" red="0.39934973239999999" green="0.2493808974" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Questions">
-                                    <color key="titleColor" red="0.97241932149999999" green="0.2716219634" blue="0.038715092610000001" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="questionsButton:" destination="2mL-V5-QjZ" eventType="touchUpInside" id="n8g-d7-fwK"/>
-                                    <action selector="questionsButton:" destination="m0x-XR-AoL" eventType="touchUpInside" id="pfD-si-V67"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="e3r-7N-Oo4">
-                                <rect key="frame" x="122" y="119" width="76" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="15"/>
-                                <color key="tintColor" red="0.39934973239999999" green="0.2493808974" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Statistics">
-                                    <color key="titleColor" red="0.97241932149999999" green="0.2716219634" blue="0.038715092610000001" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="statisticsButton:" destination="2mL-V5-QjZ" eventType="touchUpInside" id="Yh6-aI-h9i"/>
-                                    <action selector="statisticsButton:" destination="m0x-XR-AoL" eventType="touchUpInside" id="xLk-OJ-q2o"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="knc-Kq-fvZ">
-                                <rect key="frame" x="217" y="119" width="83" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="15"/>
-                                <color key="tintColor" red="0.39934973239999999" green="0.2493808974" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="     Roster     ">
-                                    <color key="titleColor" red="0.97241932149999999" green="0.2716219634" blue="0.038715092610000001" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="cIn-IO-PRm" kind="push" identifier="EditRoster" id="3r7-rE-ZxL"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Create Question" id="8CC-52-SDa"/>
                     <connections>
+                        <outlet property="aField" destination="DhZ-Sm-e5r" id="UoR-V7-3pe"/>
+                        <outlet property="bField" destination="r9h-jq-k7E" id="c4I-fv-51h"/>
+                        <outlet property="bottomView" destination="M76-fB-lhC" id="XM7-L0-bpw"/>
+                        <outlet property="cField" destination="w66-qp-2RT" id="pKL-ZC-y73"/>
+                        <outlet property="correctField" destination="SNC-tc-OI7" id="RN5-hX-Q5x"/>
+                        <outlet property="createButton" destination="v7D-Pb-dGe" id="VtO-vv-8Q3"/>
+                        <outlet property="dField" destination="qup-fI-IKm" id="b0Z-pH-ujQ"/>
+                        <outlet property="explanationField" destination="Ddv-CG-yKg" id="VgX-gs-jeu"/>
+                        <outlet property="hintField" destination="1EC-5J-nGl" id="LNG-dh-IPv"/>
+                        <outlet property="promptField" destination="1GB-fM-j22" id="k7i-O0-ApZ"/>
+                        <outlet property="scrollView" destination="tP4-Eq-qYt" id="HYH-EO-0Ae"/>
+                        <outlet property="topicField" destination="GYH-AR-wbr" id="IAg-Sl-n6V"/>
                         <segue destination="rMF-Ts-JcQ" kind="push" identifier="ManageQuestion" id="QyE-Sk-Yb2"/>
                         <segue destination="tgD-ed-otx" kind="push" identifier="SendByTopic" id="bSV-H2-VGf"/>
                         <segue destination="Trv-qq-3pq" kind="push" identifier="SearchQuestion" id="d1k-bI-aKS"/>
                         <segue destination="ysT-aY-gFq" kind="push" identifier="StatsByName" id="AOb-d4-65Y"/>
                         <segue destination="EXk-e1-HsA" kind="push" identifier="StatsByTopic" id="DdC-mX-6UL"/>
+                        <segue destination="m0x-XR-AoL" kind="push" identifier="gotoMenu" id="0Rd-v0-v6h"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Kw-0y-UUb" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -844,6 +1072,50 @@
                                     <segue destination="cIn-IO-PRm" kind="push" identifier="EditRoster" id="Qhc-By-3Wx"/>
                                 </connections>
                             </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" indicatorStyle="black" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="52" sectionHeaderHeight="22" sectionFooterHeight="22" id="6BR-OI-wzJ">
+                                <rect key="frame" x="4" y="198" width="313" height="287"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="separatorColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="52" id="sjh-uP-CpJ">
+                                        <rect key="frame" x="0.0" y="22" width="313" height="52"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="105" contentMode="center" tableViewCell="sjh-uP-CpJ" id="RI6-4G-8tD">
+                                            <rect key="frame" x="0.0" y="0.0" width="313" height="52"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" tag="5555" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="tailTruncation" id="W3q-jw-KBJ">
+                                                    <rect key="frame" x="13" y="0.0" width="300" height="52"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="13"/>
+                                                    <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="15" maxY="0.0"/>
+                                                    <state key="normal" title="Button">
+                                                        <color key="titleColor" red="1" green="0.2434898408" blue="0.0041734570850000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                </button>
+                                                <imageView userInteractionEnabled="NO" tag="11" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rightArrow2.jpeg" id="GmA-FG-ccK">
+                                                    <rect key="frame" x="293" y="5" width="20" height="42"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <sections/>
+                                <connections>
+                                    <outlet property="dataSource" destination="rMF-Ts-JcQ" id="jsB-WB-pOC"/>
+                                    <outlet property="delegate" destination="rMF-Ts-JcQ" id="mRw-Dr-GFd"/>
+                                </connections>
+                            </tableView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select a Topic" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hTQ-jb-qO9">
+                                <rect key="frame" x="60" y="169" width="205" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="17"/>
+                                <color key="textColor" red="0.97241932149999999" green="0.2716219634" blue="0.038715092610000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -855,11 +1127,304 @@
                         <segue destination="ysT-aY-gFq" kind="push" identifier="StatsByName" id="pjL-W5-bH6"/>
                         <segue destination="EXk-e1-HsA" kind="push" identifier="StatsByTopic" id="dZK-XE-GgW"/>
                         <segue destination="cIn-IO-PRm" kind="push" identifier="EditRoster" id="2fX-r3-sDn"/>
+                        <segue destination="fgJ-VX-IkG" kind="push" identifier="TopicHome" id="ApV-AJ-DzD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e4Y-lE-2ll" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3888" y="852"/>
+        </scene>
+        <!--Topic Home View Controller-->
+        <scene sceneID="URH-yb-XDX">
+            <objects>
+                <viewController id="fgJ-VX-IkG" customClass="TopicHomeViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iJy-Vx-uZy">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_yellow.PNG" id="uWf-Jq-Hg1">
+                                <rect key="frame" x="0.0" y="62" width="320" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Vu0-Wn-CE5">
+                                <rect key="frame" x="20" y="128" width="280" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="17"/>
+                                <color key="textColor" red="0.97241932149999999" green="0.2716219634" blue="0.038715092610000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" indicatorStyle="black" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="52" sectionHeaderHeight="22" sectionFooterHeight="22" id="BjA-N4-VJ1">
+                                <rect key="frame" x="4" y="175" width="313" height="287"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="separatorColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="52" id="oHv-JW-ugZ">
+                                        <rect key="frame" x="0.0" y="22" width="313" height="52"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="105" contentMode="center" tableViewCell="oHv-JW-ugZ" id="eqv-Nt-6IL">
+                                            <rect key="frame" x="0.0" y="0.0" width="313" height="52"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" tag="2222" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="tailTruncation" id="yCc-Xv-T1J">
+                                                    <rect key="frame" x="13" y="0.0" width="300" height="52"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="13"/>
+                                                    <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="15" maxY="0.0"/>
+                                                    <state key="normal" title="Button">
+                                                        <color key="titleColor" red="1" green="0.2434898408" blue="0.0041734570850000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                </button>
+                                                <imageView userInteractionEnabled="NO" tag="22" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rightArrow2.jpeg" id="W4g-Po-Mo8">
+                                                    <rect key="frame" x="293" y="5" width="20" height="42"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <sections/>
+                                <connections>
+                                    <outlet property="dataSource" destination="fgJ-VX-IkG" id="7Yh-Wa-Rnj"/>
+                                    <outlet property="delegate" destination="fgJ-VX-IkG" id="1b9-iS-rMD"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="JVT-hW-EJv"/>
+                    <connections>
+                        <outlet property="titleLabel" destination="Vu0-Wn-CE5" id="h35-OI-U5u"/>
+                        <outlet property="topicTable" destination="BjA-N4-VJ1" id="grc-ci-4ba"/>
+                        <segue destination="OQl-TV-YEC" kind="push" identifier="QuestionDet" id="lev-u3-wRq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j9n-hh-g9E" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4653" y="856"/>
+        </scene>
+        <!--Question Detail View Controller-->
+        <scene sceneID="wMC-XI-GZ8">
+            <objects>
+                <viewController id="OQl-TV-YEC" customClass="QuestionDetailViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jgc-jx-F4t">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="agl-XQ-en5">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" id="Nhx-pj-nBh">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="1000"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_yellow.PNG" id="QJb-wE-Apn">
+                                                <rect key="frame" x="0.0" y="86" width="320" height="46"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Kqo-Lb-BRh">
+                                                <rect key="frame" x="125" y="238" width="175" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="12"/>
+                                                <color key="textColor" red="1" green="0.2434898408" blue="0.0041734570850000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Y1l-OA-sgD">
+                                                <rect key="frame" x="125" y="267" width="175" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="12"/>
+                                                <color key="textColor" red="1" green="0.2434898408" blue="0.0041734570850000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cR5-oD-iyT">
+                                                <rect key="frame" x="17" y="238" width="42" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="17"/>
+                                                <color key="textColor" red="0.97241932149999999" green="0.2716219634" blue="0.038715092610000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="t0l-lT-6hO">
+                                                <rect key="frame" x="125" y="296" width="170" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="12"/>
+                                                <color key="textColor" red="1" green="0.2434898408" blue="0.0041734570850000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="CAd-DK-Ddb">
+                                                <rect key="frame" x="125" y="324" width="175" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="12"/>
+                                                <color key="textColor" red="1" green="0.2434898408" blue="0.0041734570850000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="XBd-5T-YhG">
+                                                <rect key="frame" x="125" y="354" width="175" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="12"/>
+                                                <color key="textColor" red="1" green="0.2434898408" blue="0.0041734570850000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="C:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Wbq-gc-U1G">
+                                                <rect key="frame" x="17" y="296" width="42" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="17"/>
+                                                <color key="textColor" red="0.97241932149999999" green="0.2716219634" blue="0.038715092610000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="D:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="w8Z-ls-TrH">
+                                                <rect key="frame" x="17" y="325" width="42" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="17"/>
+                                                <color key="textColor" red="0.97241932149999999" green="0.2716219634" blue="0.038715092610000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="B:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="n6C-kk-1Ip">
+                                                <rect key="frame" x="17" y="267" width="42" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="17"/>
+                                                <color key="textColor" red="0.97241932149999999" green="0.2716219634" blue="0.038715092610000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="a8D-g9-o3m">
+                                                <rect key="frame" x="125" y="181" width="175" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="12"/>
+                                                <color key="textColor" red="1" green="0.2434898408" blue="0.0041734570850000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Explanation:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7Dv-4P-xdZ">
+                                                <rect key="frame" x="17" y="412" width="99" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="17"/>
+                                                <color key="textColor" red="1" green="0.2434898408" blue="0.0041734570850000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Topic:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="XMD-Md-KZv">
+                                                <rect key="frame" x="17" y="181" width="48" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="17"/>
+                                                <color key="textColor" red="0.97241932149999999" green="0.2716219634" blue="0.038715092610000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="dSd-oE-cH2">
+                                                <rect key="frame" x="125" y="209" width="175" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="12"/>
+                                                <color key="textColor" red="1" green="0.2434898408" blue="0.0041734570850000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="GTf-a0-4ED">
+                                                <rect key="frame" x="7" y="140" width="306" height="32"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="19"/>
+                                                <color key="textColor" red="1" green="0.2434898408" blue="0.0041734570850000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Correct:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9dC-pI-WqT">
+                                                <rect key="frame" x="17" y="354" width="71" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="17"/>
+                                                <color key="textColor" red="0.97241932149999999" green="0.2716219634" blue="0.038715092610000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kDY-Lz-PJD">
+                                                <rect key="frame" x="125" y="383" width="175" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="12"/>
+                                                <color key="textColor" red="1" green="0.2434898408" blue="0.0041734570850000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hint:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="OOu-UZ-ON2">
+                                                <rect key="frame" x="20" y="383" width="42" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="17"/>
+                                                <color key="textColor" red="1" green="0.2434898408" blue="0.0041734570850000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="atn-tU-Eav">
+                                                <rect key="frame" x="125" y="412" width="175" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="12"/>
+                                                <color key="textColor" red="1" green="0.2434898408" blue="0.0041734570850000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Prompt:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="eiO-BR-grM">
+                                                <rect key="frame" x="17" y="209" width="71" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="17"/>
+                                                <color key="textColor" red="0.97241932149999999" green="0.2716219634" blue="0.038715092610000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="V3c-oE-ZFG">
+                                                <rect key="frame" x="28" y="454" width="76" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="15"/>
+                                                <color key="tintColor" red="0.39934973239999999" green="0.2493808974" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <state key="normal" title="     Edit     ">
+                                                    <color key="titleColor" red="0.97241932149999999" green="0.2716219634" blue="0.038715092610000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="editButton:" destination="OQl-TV-YEC" eventType="touchUpInside" id="Z8z-Ea-dQO"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="s3A-tZ-zgt">
+                                                <rect key="frame" x="182" y="454" width="60" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="15"/>
+                                                <color key="tintColor" red="0.39934973239999999" green="0.2493808974" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <state key="normal" title="Delete">
+                                                    <color key="titleColor" red="0.97241932149999999" green="0.2716219634" blue="0.038715092610000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="deleteButton:" destination="OQl-TV-YEC" eventType="touchUpInside" id="g10-h0-QGb"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                    </view>
+                                </subviews>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="lte-90-1GE"/>
+                    <connections>
+                        <outlet property="a" destination="cR5-oD-iyT" id="NZw-8m-ds9"/>
+                        <outlet property="aDetail" destination="Kqo-Lb-BRh" id="uyx-eI-p4o"/>
+                        <outlet property="b" destination="n6C-kk-1Ip" id="BQR-LK-ftp"/>
+                        <outlet property="bDetail" destination="Y1l-OA-sgD" id="uBo-BR-v0Q"/>
+                        <outlet property="bottomView" destination="Nhx-pj-nBh" id="FbP-2K-IDI"/>
+                        <outlet property="c" destination="Wbq-gc-U1G" id="2cK-y3-eoQ"/>
+                        <outlet property="cDetail" destination="t0l-lT-6hO" id="SJl-RI-MUf"/>
+                        <outlet property="co" destination="9dC-pI-WqT" id="xHW-15-sFx"/>
+                        <outlet property="correctDetail" destination="XBd-5T-YhG" id="gDu-yQ-8Va"/>
+                        <outlet property="d" destination="w8Z-ls-TrH" id="ENl-cg-Rlh"/>
+                        <outlet property="dDetail" destination="CAd-DK-Ddb" id="NLu-uS-4Pb"/>
+                        <outlet property="deleteButton" destination="s3A-tZ-zgt" id="sAm-bC-2ey"/>
+                        <outlet property="e" destination="7Dv-4P-xdZ" id="VOZ-aE-f5G"/>
+                        <outlet property="editButton" destination="V3c-oE-ZFG" id="1C3-3u-heP"/>
+                        <outlet property="explanationDetail" destination="atn-tU-Eav" id="DZg-1d-P1q"/>
+                        <outlet property="hi" destination="OOu-UZ-ON2" id="bnf-Ae-XZe"/>
+                        <outlet property="hintDetail" destination="kDY-Lz-PJD" id="t1G-ba-7xI"/>
+                        <outlet property="logo" destination="QJb-wE-Apn" id="CZ0-pd-bFG"/>
+                        <outlet property="p" destination="eiO-BR-grM" id="elZ-oM-xGR"/>
+                        <outlet property="promptDetail" destination="dSd-oE-cH2" id="kRt-vQ-Sos"/>
+                        <outlet property="scrollStuff" destination="agl-XQ-en5" id="VTj-FV-kZn"/>
+                        <outlet property="t" destination="XMD-Md-KZv" id="AIK-a0-zwx"/>
+                        <outlet property="titleDetail" destination="GTf-a0-4ED" id="7Ft-o2-HFP"/>
+                        <outlet property="topView" destination="jgc-jx-F4t" id="AP5-9d-2Lg"/>
+                        <outlet property="topicDetail" destination="a8D-g9-o3m" id="wjN-xW-XFc"/>
+                        <segue destination="2mL-V5-QjZ" kind="push" identifier="CreateQ" id="eeG-7E-NP5"/>
+                        <segue destination="m0x-XR-AoL" kind="push" identifier="SecHome" id="dUB-Uw-u8D"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zbE-jV-ZFR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5174" y="854"/>
         </scene>
         <!--Roster View Controller - Student Roster-->
         <scene sceneID="ZWR-MR-aFn">
@@ -1030,6 +1595,13 @@
                                     <segue destination="cIn-IO-PRm" kind="push" identifier="EditRoster" id="MZb-Xo-Mtz"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Statistics Available" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9ha-HB-WNP">
+                                <rect key="frame" x="28" y="198" width="272" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="17"/>
+                                <color key="textColor" red="0.97241932149999999" green="0.2716219634" blue="0.038715092610000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -1099,6 +1671,13 @@
                                     <segue destination="cIn-IO-PRm" kind="push" identifier="EditRoster" id="Ajn-CA-VRQ"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Statistics Available" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="h3a-ez-C0z">
+                                <rect key="frame" x="22" y="213" width="272" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="17"/>
+                                <color key="textColor" red="0.97241932149999999" green="0.2716219634" blue="0.038715092610000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -1168,6 +1747,50 @@
                                     <segue destination="cIn-IO-PRm" kind="push" identifier="EditRoster" id="fVH-Vm-W5V"/>
                                 </connections>
                             </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" indicatorStyle="black" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="52" sectionHeaderHeight="22" sectionFooterHeight="22" id="xGF-up-cKt">
+                                <rect key="frame" x="4" y="199" width="313" height="307"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="separatorColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="40" id="Ceu-PI-Bny">
+                                        <rect key="frame" x="0.0" y="22" width="313" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="105" contentMode="center" tableViewCell="Ceu-PI-Bny" id="49M-Hq-rER">
+                                            <rect key="frame" x="0.0" y="0.0" width="313" height="40"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" tag="5555" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="tailTruncation" id="hKX-3P-PQt">
+                                                    <rect key="frame" x="13" y="0.0" width="300" height="40"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="13"/>
+                                                    <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="15" maxY="0.0"/>
+                                                    <state key="normal" title="Button">
+                                                        <color key="titleColor" red="1" green="0.2434898408" blue="0.0041734570850000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                </button>
+                                                <imageView userInteractionEnabled="NO" tag="11" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rightArrow2.jpeg" id="cbL-Op-iGx">
+                                                    <rect key="frame" x="293" y="0.0" width="20" height="40"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <sections/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Trv-qq-3pq" id="9Fd-Fd-fM2"/>
+                                    <outlet property="delegate" destination="Trv-qq-3pq" id="O2C-fN-UWO"/>
+                                </connections>
+                            </tableView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please select a question topic to search" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="tNq-Xo-36e">
+                                <rect key="frame" x="4" y="157" width="306" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="16"/>
+                                <color key="textColor" red="0.97241932149999999" green="0.2716219634" blue="0.038715092610000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -1178,11 +1801,99 @@
                         <segue destination="tgD-ed-otx" kind="push" identifier="SendByTopic" id="qLL-NM-qoA"/>
                         <segue destination="ysT-aY-gFq" kind="push" identifier="StatsByName" id="s3C-MM-WZG"/>
                         <segue destination="EXk-e1-HsA" kind="push" identifier="StatsByTopic" id="o5Z-zA-8dY"/>
+                        <segue destination="6Da-Jw-ypU" kind="push" identifier="QuestionList" id="nZS-ik-qsw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9f5-e3-a2R" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3900" y="2284"/>
+        </scene>
+        <!--Question List View Controller-->
+        <scene sceneID="vy7-wo-kG8">
+            <objects>
+                <viewController id="6Da-Jw-ypU" customClass="QuestionListViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uY3-zl-iHJ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_yellow.PNG" id="zLa-v2-nYj">
+                                <rect key="frame" x="0.0" y="65" width="320" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="mSJ-j3-cBG">
+                                <rect key="frame" x="105" y="429" width="110" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="15"/>
+                                <color key="tintColor" red="0.39934973239999999" green="0.2493808974" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Add Questions">
+                                    <color key="titleColor" red="0.97241932149999999" green="0.2716219634" blue="0.038715092610000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="addQuestions:" destination="6Da-Jw-ypU" eventType="touchUpInside" id="73U-6y-JlI"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" indicatorStyle="black" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="52" sectionHeaderHeight="22" sectionFooterHeight="22" id="eXX-ir-Sbc">
+                                <rect key="frame" x="4" y="114" width="313" height="307"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="separatorColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="40" id="JXN-hF-jsJ">
+                                        <rect key="frame" x="0.0" y="22" width="313" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="105" contentMode="center" tableViewCell="JXN-hF-jsJ" id="TwF-9N-vFg">
+                                            <rect key="frame" x="0.0" y="0.0" width="313" height="40"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" tag="5555" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="tailTruncation" id="qUf-EZ-Hoc">
+                                                    <rect key="frame" x="50" y="0.0" width="263" height="40"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="13"/>
+                                                    <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="15" maxY="0.0"/>
+                                                    <state key="normal" title="Button">
+                                                        <color key="titleColor" red="1" green="0.2434898408" blue="0.0041734570850000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                </button>
+                                                <imageView userInteractionEnabled="NO" tag="11" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rightArrow2.jpeg" id="DbN-cT-f5K">
+                                                    <rect key="frame" x="293" y="0.0" width="20" height="40"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <button opaque="NO" tag="9999" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="i94-1r-YHm">
+                                                    <rect key="frame" x="5" y="7" width="32" height="25"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                </button>
+                                                <imageView userInteractionEnabled="NO" tag="8888" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle.jpg" highlightedImage="newMail.jpg" id="f1C-Lc-Xws">
+                                                    <rect key="frame" x="9" y="8" width="24" height="24"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <sections/>
+                                <connections>
+                                    <outlet property="dataSource" destination="6Da-Jw-ypU" id="hxj-dh-dw6"/>
+                                    <outlet property="delegate" destination="6Da-Jw-ypU" id="tGl-Cu-zMq"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Hc2-ZZ-pSc"/>
+                    <connections>
+                        <outlet property="questionsTable" destination="eXX-ir-Sbc" id="BZm-cH-dre"/>
+                        <segue destination="m0x-XR-AoL" kind="push" identifier="SecHome4" id="N6V-3Y-Rjs"/>
+                        <segue destination="H2T-Bh-iQV" kind="push" identifier="Qdetail" id="sMp-dX-teC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ts6-6W-GN4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4365" y="2284"/>
         </scene>
         <!--Send By Topic View Controller - Send By Topic-->
         <scene sceneID="4IC-Z8-h4Z">
@@ -1237,21 +1948,294 @@
                                     <segue destination="cIn-IO-PRm" kind="push" identifier="EditRoster" id="dhM-t1-ltE"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose your Topic" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="JZD-MP-tmE">
+                                <rect key="frame" x="72" y="166" width="175" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="17"/>
+                                <color key="textColor" red="0.97241932149999999" green="0.2716219634" blue="0.038715092610000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" indicatorStyle="black" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="52" sectionHeaderHeight="22" sectionFooterHeight="22" id="2Bh-3c-iGh">
+                                <rect key="frame" x="3" y="205" width="313" height="307"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="separatorColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="52" id="dBX-8M-N6X">
+                                        <rect key="frame" x="0.0" y="22" width="313" height="52"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="105" contentMode="center" tableViewCell="dBX-8M-N6X" id="8un-5h-Zce">
+                                            <rect key="frame" x="0.0" y="0.0" width="313" height="52"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" tag="5555" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="tailTruncation" id="faj-mW-ZEn">
+                                                    <rect key="frame" x="13" y="0.0" width="300" height="52"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="13"/>
+                                                    <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="15" maxY="0.0"/>
+                                                    <state key="normal" title="Button">
+                                                        <color key="titleColor" red="1" green="0.2434898408" blue="0.0041734570850000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                </button>
+                                                <imageView userInteractionEnabled="NO" tag="11" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rightArrow2.jpeg" id="454-Bz-rXu">
+                                                    <rect key="frame" x="293" y="5" width="20" height="42"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <sections/>
+                                <connections>
+                                    <outlet property="dataSource" destination="tgD-ed-otx" id="IXQ-Fa-XVi"/>
+                                    <outlet property="delegate" destination="tgD-ed-otx" id="cfv-Zt-oa4"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Send By Topic" id="fdN-CQ-KmT"/>
                     <connections>
+                        <outlet property="topicTable" destination="2Bh-3c-iGh" id="7JM-kz-zsK"/>
                         <segue destination="2mL-V5-QjZ" kind="push" identifier="CreateQuestion" id="j1Q-nL-RJn"/>
                         <segue destination="rMF-Ts-JcQ" kind="push" identifier="ManageQuestion" id="Seb-lt-tqF"/>
                         <segue destination="Trv-qq-3pq" kind="push" identifier="SearchQuestion" id="xFf-9x-QNC"/>
                         <segue destination="ysT-aY-gFq" kind="push" identifier="StatsByName" id="kfQ-S9-QLD"/>
                         <segue destination="EXk-e1-HsA" kind="push" identifier="StatsByTopic" id="0LS-ae-ZSq"/>
+                        <segue destination="RC7-wm-9Rn" kind="push" identifier="TopicHome2" id="3lb-2X-y4c"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="beM-2d-6eW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3900" y="1568"/>
+        </scene>
+        <!--Topic Home2 View Controller-->
+        <scene sceneID="MXU-dg-cOL">
+            <objects>
+                <viewController id="RC7-wm-9Rn" customClass="TopicHome2ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XJ8-Qy-ftg">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_yellow.PNG" id="23L-r1-Z8N">
+                                <rect key="frame" x="0.0" y="65" width="320" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" indicatorStyle="black" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="32" sectionHeaderHeight="22" sectionFooterHeight="22" id="DfX-a9-P0d">
+                                <rect key="frame" x="4" y="149" width="313" height="154"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="separatorColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="5" reuseIdentifier="Cell" rowHeight="32" id="gAe-dg-MQJ">
+                                        <rect key="frame" x="0.0" y="22" width="313" height="32"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="105" contentMode="center" tableViewCell="gAe-dg-MQJ" id="sCj-YU-eh9">
+                                            <rect key="frame" x="0.0" y="0.0" width="313" height="32"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" tag="8888" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="tailTruncation" id="FSs-kt-cc5">
+                                                    <rect key="frame" x="13" y="0.0" width="300" height="32"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="13"/>
+                                                    <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="15" maxY="0.0"/>
+                                                    <state key="normal" title="Button">
+                                                        <color key="titleColor" red="1" green="0.2434898408" blue="0.0041734570850000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                </button>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <sections/>
+                                <connections>
+                                    <outlet property="dataSource" destination="RC7-wm-9Rn" id="4O6-cu-tFn"/>
+                                    <outlet property="delegate" destination="RC7-wm-9Rn" id="lud-dp-B2e"/>
+                                </connections>
+                            </tableView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start Date:(YYYY-MM-DD)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Bcz-21-tgw">
+                                <rect key="frame" x="12" y="311" width="210" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="17"/>
+                                <color key="textColor" red="0.97241932149999999" green="0.2716219634" blue="0.038715092610000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="yyyy-mm-dd" borderStyle="roundedRect" minimumFontSize="17" id="UVa-7F-Il4">
+                                <rect key="frame" x="12" y="335" width="189" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
+                                <connections>
+                                    <action selector="valueReturn:" destination="RC7-wm-9Rn" eventType="touchDragOutside" id="7MY-2j-eeL"/>
+                                    <action selector="valueReturn:" destination="RC7-wm-9Rn" eventType="touchUpOutside" id="Rr8-go-PX1"/>
+                                    <action selector="valueReturn:" destination="RC7-wm-9Rn" eventType="touchDragExit" id="Y5N-XU-STn"/>
+                                    <action selector="valueReturn:" destination="RC7-wm-9Rn" eventType="editingDidEndOnExit" id="ZYN-rX-Irw"/>
+                                    <action selector="valueReturn:" destination="RC7-wm-9Rn" eventType="editingDidEnd" id="cFh-Ng-LrL"/>
+                                    <action selector="valueReturn:" destination="RC7-wm-9Rn" eventType="touchCancel" id="uKv-5h-SOg"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Y4P-t3-WCb">
+                                <rect key="frame" x="97" y="432" width="104" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="15"/>
+                                <color key="tintColor" red="0.39934973239999999" green="0.2493808974" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Save">
+                                    <color key="titleColor" red="0.97241932149999999" green="0.2716219634" blue="0.038715092610000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="saveDetails:" destination="RC7-wm-9Rn" eventType="touchUpInside" id="BfC-KV-jcy"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="M:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Mxd-ba-Dde">
+                                <rect key="frame" x="20" y="373" width="23" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="15"/>
+                                <color key="textColor" red="0.97241932149999999" green="0.2716219634" blue="0.038715092610000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tu:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="150-Fl-Bcq">
+                                <rect key="frame" x="85" y="373" width="21" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="15"/>
+                                <color key="textColor" red="0.97241932149999999" green="0.2716219634" blue="0.038715092610000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="W:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nCe-dB-vkT">
+                                <rect key="frame" x="159" y="373" width="20" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="15"/>
+                                <color key="textColor" red="0.97241932149999999" green="0.2716219634" blue="0.038715092610000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Th:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="aEV-Js-Lwr">
+                                <rect key="frame" x="230" y="373" width="26" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="15"/>
+                                <color key="textColor" red="0.97241932149999999" green="0.2716219634" blue="0.038715092610000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="F:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="HX4-NS-fqh">
+                                <rect key="frame" x="20" y="402" width="23" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="15"/>
+                                <color key="textColor" red="0.97241932149999999" green="0.2716219634" blue="0.038715092610000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sa:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="JtH-ah-IM7">
+                                <rect key="frame" x="85" y="402" width="26" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="15"/>
+                                <color key="textColor" red="0.97241932149999999" green="0.2716219634" blue="0.038715092610000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Su:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="tvt-aE-P6m">
+                                <rect key="frame" x="159" y="402" width="26" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="15"/>
+                                <color key="textColor" red="0.97241932149999999" green="0.2716219634" blue="0.038715092610000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Jwe-An-IfP">
+                                <rect key="frame" x="42" y="374" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="mondayAction:" destination="RC7-wm-9Rn" eventType="touchUpInside" id="lw4-bJ-Z8o"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="fGD-Zf-3h1">
+                                <rect key="frame" x="107" y="375" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="tuesdayAction:" destination="RC7-wm-9Rn" eventType="touchUpInside" id="fa2-vw-0eC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="kiB-Z4-9nA">
+                                <rect key="frame" x="181" y="375" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="wednesdayAcion:" destination="RC7-wm-9Rn" eventType="touchUpInside" id="RQg-9T-gax"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="uEq-7f-6yM">
+                                <rect key="frame" x="256" y="375" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="thursdayAction:" destination="RC7-wm-9Rn" eventType="touchUpInside" id="VEm-Zs-JWo"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="McG-N1-Xhx">
+                                <rect key="frame" x="182" y="404" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="sundayAction:" destination="RC7-wm-9Rn" eventType="touchUpInside" id="C3a-qj-Lrw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="nIU-wY-V7a">
+                                <rect key="frame" x="104" y="404" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="saturdayAction:" destination="RC7-wm-9Rn" eventType="touchUpInside" id="7KF-GO-cLu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="6q5-wv-hpR">
+                                <rect key="frame" x="36" y="404" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="fridayAction:" destination="RC7-wm-9Rn" eventType="touchUpInside" id="XKw-Xw-xdm"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Is0-At-nIg">
+                                <rect key="frame" x="31" y="119" width="269" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="17"/>
+                                <color key="textColor" red="0.97241932149999999" green="0.2716219634" blue="0.038715092610000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="olo-4Q-hZt"/>
+                    <connections>
+                        <outlet property="MondayButton" destination="Jwe-An-IfP" id="Plb-lv-gV0"/>
+                        <outlet property="dateField" destination="UVa-7F-Il4" id="QqV-0X-5AU"/>
+                        <outlet property="fridayButton" destination="6q5-wv-hpR" id="ZN0-P8-QxU"/>
+                        <outlet property="questionTable" destination="DfX-a9-P0d" id="ygF-fU-f2i"/>
+                        <outlet property="saturdayButton" destination="nIU-wY-V7a" id="G9B-Lp-1XI"/>
+                        <outlet property="sundayButton" destination="McG-N1-Xhx" id="GN1-AR-t6C"/>
+                        <outlet property="thursdayButton" destination="uEq-7f-6yM" id="DGc-8d-K5m"/>
+                        <outlet property="topicTitle" destination="Is0-At-nIg" id="jAl-AZ-ypV"/>
+                        <outlet property="tuesdayButton" destination="fGD-Zf-3h1" id="sPN-6x-WTQ"/>
+                        <outlet property="wednesdayButton" destination="kiB-Z4-9nA" id="IJJ-KW-Yi4"/>
+                        <segue destination="m0x-XR-AoL" kind="push" identifier="SecHome3" id="srV-TH-49j"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Iet-0w-AiC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4376" y="1560"/>
         </scene>
         <!--Course Properties View Controller - Edit Properties-->
         <scene sceneID="kvJ-iV-WkS">
@@ -2515,7 +3499,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GP5-xd-XCo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3373" y="-1563"/>
+            <point key="canvasLocation" x="3346" y="-1697"/>
         </scene>
     </scenes>
     <resources>
@@ -2530,13 +3514,15 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
+        <segue reference="7mP-55-jsq"/>
+        <segue reference="4RH-dD-sJz"/>
+        <segue reference="N6V-3Y-Rjs"/>
+        <segue reference="sMp-dX-teC"/>
+        <segue reference="C8I-Cn-wCc"/>
+        <segue reference="qLL-NM-qoA"/>
+        <segue reference="s3C-MM-WZG"/>
+        <segue reference="fVH-Vm-W5V"/>
+        <segue reference="o5Z-zA-8dY"/>
         <segue reference="UR9-18-4WS"/>
-        <segue reference="0Ji-Up-cM1"/>
-        <segue reference="Qhc-By-3Wx"/>
-        <segue reference="RAI-0N-Vav"/>
-        <segue reference="dZK-XE-GgW"/>
-        <segue reference="BYu-EJ-ze9"/>
-        <segue reference="Bia-EP-efe"/>
-        <segue reference="pjL-W5-bH6"/>
     </inferredMetricsTieBreakers>
 </document>

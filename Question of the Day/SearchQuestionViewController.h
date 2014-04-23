@@ -16,6 +16,7 @@
 #import "SendByTopicViewController.h"
 #import "StatsByNameViewController.h"
 #import "StatsByTopicViewController.h"
+#import "QuestionListViewController.h"
 
 @interface SearchQuestionViewController : UIViewController <UIAlertViewDelegate>
 

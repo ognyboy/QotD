@@ -74,8 +74,7 @@
     }
     
     if ( [segue.identifier isEqualToString:@"QuestionDetails"])   //this is the segue name that you can change from story board.
-    {
-        
+    {        
         ViewDetailsViewController *viewCont = segue.destinationViewController;
         viewCont.userModel = self.userModel;
         viewCont.questionModel = self.questionModel;

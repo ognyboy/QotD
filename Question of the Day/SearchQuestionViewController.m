@@ -11,6 +11,8 @@
 @interface SearchQuestionViewController ()
 {
     bool option;
+    NSMutableArray *topicList;
+    NSString *topic;
 }
 
 @end
@@ -50,11 +52,22 @@
 {
     [super viewDidLoad];
     
-    [super viewDidLoad];
+    [self instantiateTopicList];
     
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Log out" style:UIBarButtonItemStyleBordered target:self action:@selector(logout:)];
     
     option = false;
+}
+
+-(void)instantiateTopicList
+{
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://199.180.255.173/index.php/mobile/allTopics"]];
+    
+    NSData *userInfoData = [NSData dataWithContentsOfURL:url];
+    
+    NSMutableArray *userInfoDictionary = [NSJSONSerialization JSONObjectWithData:userInfoData options:NSJSONReadingMutableContainers error:Nil];
+    
+    topicList = userInfoDictionary;
 }
 
 - (void)didReceiveMemoryWarning
@@ -96,6 +109,7 @@
         CreateQuestionViewController *viewCont = segue.destinationViewController;
         viewCont.userModel = self.userModel;
         viewCont.sectionModel = self.sectionModel;
+        viewCont.edit = false;
     }
     
     if ( [segue.identifier isEqualToString:@"ManageQuestion"])   //this is the segue name that you can change from story board.
@@ -138,6 +152,15 @@
         viewCont.sectionModel = self.sectionModel;
     }
     
+    if ( [segue.identifier isEqualToString:@"QuestionList"])   //this is the segue name that you can change from story board.
+    {
+        
+        QuestionListViewController *viewCont = segue.destinationViewController;
+        viewCont.userModel = self.userModel;
+        viewCont.sectionModel = self.sectionModel;
+        viewCont.topic = topic;
+    }
+    
 }
 
 - (IBAction)statisticsButton:(id)sender
@@ -163,6 +186,54 @@
         [self performSegueWithIdentifier:@"StatsByName" sender:self];
     if(buttonIndex == 2 && !option)
         [self performSegueWithIdentifier:@"StatsByTopic" sender:self];
+}
+
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
+}
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return [topicList count];
+    
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *CellIdentifier = @"Cell";
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    
+    UIButton *button = (UIButton *)[cell viewWithTag:5555];
+    
+    UIImageView *imageView = (UIImageView *)[cell viewWithTag:11];
+    
+    UIImage *with = [UIImage imageNamed:@"rightArrow2.jpeg"];
+    [imageView setImage:with];
+    
+    button.tag = indexPath.row;
+    [button addTarget:self action:@selector(buttonPressed:) forControlEvents:UIControlEventTouchUpInside];
+    
+    NSString *test = [NSString stringWithFormat:@"%@", [[topicList objectAtIndex:indexPath.row] valueForKey:@"topic"]];
+    button.titleLabel.numberOfLines = 0;
+    
+    
+    if([test rangeOfString:@"<br>"].location != NSNotFound)
+        test = [test stringByReplacingOccurrencesOfString:@"<br>" withString:@"  "];
+    
+    [button setTitle:test forState:UIControlStateNormal];
+    
+    return cell;
+    
+}
+
+-(void)buttonPressed:(id)sender {
+    
+    UIButton *button = (UIButton *) sender;
+    
+    topic = [[topicList objectAtIndex:button.tag] valueForKey:@"topic"];
+    [self performSegueWithIdentifier:@"QuestionList" sender:self];
 }
 
 @end
