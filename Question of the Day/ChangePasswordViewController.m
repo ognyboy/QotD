@@ -81,7 +81,7 @@
     else
     {
         // Verify entered password first
-        NSString *theURL = [NSString stringWithFormat:@"http://199.180.255.173/index.php/mobile/getPassword/%@/%@", [self.userModel getUserName], oldPassword];
+        NSString *theURL = [NSString stringWithFormat:@"http://cse110.courses.asu.edu/index.php/mobile/getPassword/%@/%@", [self.userModel getUserName], oldPassword];
         NSURL *url = [NSURL URLWithString:theURL];
         
         NSData *userInfoData = [NSData dataWithContentsOfURL:url];
@@ -100,7 +100,7 @@
         else
         {
             // Log in with username
-            NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://199.180.255.173/index.php/mobile/updatePassword/%@/%@", [self.userModel getUserName], theNewPassword]];
+            NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://cse110.courses.asu.edu/index.php/mobile/updatePassword/%@/%@", [self.userModel getUserName], theNewPassword]];
             
             NSData *userInfoData = [NSData dataWithContentsOfURL:url];
             if(userInfoData == 0)

@@ -61,7 +61,7 @@
 -(void) getSections
 {
     
-    NSString *url2 = [NSString stringWithFormat:@"http://199.180.255.173/index.php/mobile/getSectionsForCourse/%@", self.course];
+    NSString *url2 = [NSString stringWithFormat:@"http://cse110.courses.asu.edu/index.php/mobile/getSectionsForCourse/%@", self.course];
     url2 = [url2 stringByReplacingOccurrencesOfString:@" " withString:@"%20"];
 
     NSURL *url = [NSURL URLWithString:url2];
@@ -109,7 +109,7 @@
     UIImage *with = [UIImage imageNamed:@"rightArrow2.jpeg"];
     [imageView setImage:with];
     
-    button.tag = indexPath.row;
+    
     [button addTarget:self action:@selector(buttonPressed:) forControlEvents:UIControlEventTouchUpInside];
     
     NSString *test = [NSString stringWithFormat:@"%@", [[sectionList objectAtIndex:indexPath.row] valueForKey:@"sectionID"]];
@@ -125,11 +125,27 @@
     
 }
 
+-(int) indexForButtonTitle: (NSString *) string
+{
+    __block int index = 0;
+    NSString *temp = string;
+    
+    [sectionList enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        if([[obj valueForKey:@"sectionID"] isEqualToString:temp])
+        {
+            index = idx;
+            *stop = YES;
+        }
+    }];
+    
+    return index;
+}
+
 -(void)buttonPressed:(id)sender {
     
     UIButton *button = (UIButton *) sender;
-    
-    NSArray *singleCourse = [sectionList objectAtIndex:button.tag];
+    int index = [self indexForButtonTitle:button.titleLabel.text];
+    NSArray *singleCourse = [sectionList objectAtIndex:index];
     
     
     [self.sectionModel setCanDrop:[[singleCourse valueForKey:@"canDrop"] integerValue]];

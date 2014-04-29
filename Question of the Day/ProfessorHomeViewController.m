@@ -56,7 +56,7 @@
 
 -(void) getCourses
 {
-    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://199.180.255.173/index.php/mobile/getCoursesForProfessor/%d", [self.userModel getUserID]]];
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://cse110.courses.asu.edu/index.php/mobile/getCoursesForProfessor/%d", [self.userModel getUserID]]];
     
     NSData *userInfoData = [NSData dataWithContentsOfURL:url];
 
@@ -95,7 +95,7 @@
     UIImage *with = [UIImage imageNamed:@"rightArrow2.jpeg"];
     [imageView setImage:with];
     
-    button.tag = indexPath.row;
+    
     [button addTarget:self action:@selector(buttonPressed:) forControlEvents:UIControlEventTouchUpInside];
     
     NSString *test = [NSString stringWithFormat:@"%@", [[courseList objectAtIndex:indexPath.row] valueForKey:@"courseID"]];
@@ -111,11 +111,27 @@
     
 }
 
+-(int) indexForButtonTitle: (NSString *) string
+{
+    __block int index = 0;
+    NSString *temp = string;
+    
+    [courseList enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        if([[obj valueForKey:@"courseID"] isEqualToString:temp])
+        {
+            index = idx;
+            *stop = YES;
+        }
+    }];
+    
+    return index;
+}
+
 -(void)buttonPressed:(id)sender {
     
     UIButton *button = (UIButton *) sender;
-    
-    NSArray *singleCourse = [courseList objectAtIndex:button.tag];
+    int index = [self indexForButtonTitle:button.titleLabel.text];
+    NSArray *singleCourse = [courseList objectAtIndex:index];
     
     course = [singleCourse valueForKey:@"courseID"];
     [self performSegueWithIdentifier:@"professor2" sender:self];

@@ -343,7 +343,7 @@
         
         if(self.edit)
         {
-            NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://199.180.255.173/index.php/mobile/editQuestion/%d/%@/%@/%@/%@/%@/%@/%@/%@/%@/%@", [self.questionModel getQuestionID], topic, prompt, a, b, c, d, correct, hint, explanation, [self.sectionModel getSectionID]]];
+            NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://cse110.courses.asu.edu/index.php/mobile/editQuestion/%d/%@/%@/%@/%@/%@/%@/%@/%@/%@/%@", [self.questionModel getQuestionID], topic, prompt, a, b, c, d, correct, hint, explanation, [self.sectionModel getSectionID]]];
             
             NSData *responseData = [NSData dataWithContentsOfURL:url];
             NSString *response = [[NSString alloc] initWithData:responseData encoding:NSASCIIStringEncoding];
@@ -363,7 +363,7 @@
         }
         else
         {
-            NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://199.180.255.173/index.php/mobile/createQuestion/%@/%@/%@/%@/%@/%@/%@/%@/%@/%@",  topic, prompt, a, b, c, d, correct, hint, explanation, [self.sectionModel getSectionID]]];
+            NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://cse110.courses.asu.edu/index.php/mobile/createQuestion/%@/%@/%@/%@/%@/%@/%@/%@/%@/%@",  topic, prompt, a, b, c, d, correct, hint, explanation, [self.sectionModel getSectionID]]];
             
             NSData *responseData = [NSData dataWithContentsOfURL:url];
             NSString *response = [[NSString alloc] initWithData:responseData encoding:NSASCIIStringEncoding];

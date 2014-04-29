@@ -54,7 +54,7 @@
 
 -(bool)checkEmails
 {
-    NSURL *boolURL = [NSURL URLWithString:[NSString stringWithFormat:@"http://199.180.255.173/index.php/mobile/emailss/%@", [self.userModel getUserName]]];
+    NSURL *boolURL = [NSURL URLWithString:[NSString stringWithFormat:@"http://cse110.courses.asu.edu/index.php/mobile/emailss/%@", [self.userModel getUserName]]];
     
     NSData *userIDData = [NSData dataWithContentsOfURL:boolURL];
     NSString *boolcheck = [[NSString alloc] initWithData:userIDData encoding:NSASCIIStringEncoding];
@@ -98,7 +98,7 @@
     else
         send = 0;
     
-    NSURL *boolURL = [NSURL URLWithString:[NSString stringWithFormat:@"http://199.180.255.173/index.php/mobile/changeEmailSettings/%@/%d", [self.userModel getUserName], send]];
+    NSURL *boolURL = [NSURL URLWithString:[NSString stringWithFormat:@"http://cse110.courses.asu.edu/index.php/mobile/changeEmailSettings/%@/%d", [self.userModel getUserName], send]];
     NSData *userIDData = [NSData dataWithContentsOfURL:boolURL];
     if(userIDData == 0)
     {

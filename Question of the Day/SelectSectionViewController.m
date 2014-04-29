@@ -105,7 +105,7 @@
 
 -(void) instantiateSections
 {
-    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://199.180.255.173/index.php/mobile/getSections" ]];
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://cse110.courses.asu.edu/index.php/mobile/getSections" ]];
     
     NSData *userInfoData = [NSData dataWithContentsOfURL:url];
     
@@ -145,7 +145,7 @@
     UIImage *with = [UIImage imageNamed:@"rightArrow2.jpeg"];
     [imageView setImage:with];
     
-    button.tag = indexPath.row;
+    
     [button addTarget:self action:@selector(buttonPressed:) forControlEvents:UIControlEventTouchUpInside];
     
     NSString *days = @"";
@@ -184,7 +184,7 @@
         days = @"No meeting days";
     }
     
-    NSString *test = [NSString stringWithFormat:@"%@      %@   (%@)", days, [[sectionList objectAtIndex:indexPath.row] valueForKey:@"time"], [[sectionList objectAtIndex:indexPath.row] valueForKey:@"professorID"]];
+    NSString *test = [NSString stringWithFormat:@"%@. %@      %@   (%@)", [[sectionList objectAtIndex:indexPath.row] valueForKey:@"sectionID"], days, [[sectionList objectAtIndex:indexPath.row] valueForKey:@"time"], [[sectionList objectAtIndex:indexPath.row] valueForKey:@"professorID"]];
     button.titleLabel.numberOfLines = 0;
     
     
@@ -197,10 +197,27 @@
     
 }
 
+-(int) indexForButtonTitle: (NSString *) string
+{
+    __block int index = 0;
+    NSString *temp = string;
+    temp = [[temp componentsSeparatedByString:@"."] objectAtIndex:0];
+    
+    [sectionList enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        if([[obj valueForKey:@"sectionID"] isEqualToString:temp])
+        {
+            index = idx;
+            *stop = YES;
+        }
+    }];
+    
+    return index;
+}
+
 -(void)buttonPressed:(id)sender {
     UIButton *button = (UIButton *) sender;
-    
-    NSString *sectionID = [[sectionList objectAtIndex:button.tag] valueForKey:@"sectionID"];
+    int index = [self indexForButtonTitle:button.titleLabel.text];
+    NSString *sectionID = [[sectionList objectAtIndex:index] valueForKey:@"sectionID"];
     
     self.username = [self.username stringByReplacingOccurrencesOfString:@" " withString:@"%20"];
     self.firstName = [self.firstName stringByReplacingOccurrencesOfString:@" " withString:@"%20"];
@@ -211,7 +228,7 @@
     self.password2 = [self.password2 stringByReplacingOccurrencesOfString:@" " withString:@"%20"];
     sectionID = [sectionID stringByReplacingOccurrencesOfString:@" " withString:@"%20"];
     
-    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://199.180.255.173/index.php/mobile/createUser/%@/%@/%@/%@/%@/%@/%@", self.username, self.firstName, self.lastName, self.email, self.password1, self.password2, sectionID]];
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://cse110.courses.asu.edu/index.php/mobile/createUser/%@/%@/%@/%@/%@/%@/%@", self.username, self.firstName, self.lastName, self.email, self.password1, self.password2, sectionID]];
     
     NSData *responseData = [NSData dataWithContentsOfURL:url];
     NSString *response = [[NSString alloc] initWithData:responseData encoding:NSASCIIStringEncoding];

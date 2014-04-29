@@ -70,7 +70,7 @@
 
 -(void) instantiateQUestionList
 {
-    NSString *url2 = [NSString stringWithFormat:@"http://199.180.255.173/index.php/mobile/getQuestionStatsByTopic/%@/%@/%d", self.topic, [self.sectionModel getSectionID], [self.userModel getUserID]];
+    NSString *url2 = [NSString stringWithFormat:@"http://cse110.courses.asu.edu/index.php/mobile/getQuestionStatsByTopic/%@/%@/%d", self.topic, [self.sectionModel getSectionID], [self.userModel getUserID]];
     url2 = [url2 stringByReplacingOccurrencesOfString:@" " withString:@"%20"];
     
     NSURL *url = [NSURL URLWithString:url2];
@@ -117,7 +117,7 @@
     UIImage *with = [UIImage imageNamed:@"rightArrow2.jpeg"];
     [imageView setImage:with];
     
-    button.tag = indexPath.row;
+    
     [button addTarget:self action:@selector(buttonPressed:) forControlEvents:UIControlEventTouchUpInside];
     
     NSString *test = [NSString stringWithFormat:@"%d. %@", [[[questionsList objectAtIndex:indexPath.row] valueForKey:@"id"] integerValue], [[questionsList objectAtIndex:indexPath.row] valueForKey:@"prompt"]];
@@ -132,11 +132,31 @@
     
 }
 
+-(int) indexForButtonTitle: (NSString *) string
+{
+    __block int index = 0;
+    NSString *temp = string;
+    
+    //this returns the string that holds the i
+    temp = [[temp componentsSeparatedByString:@"."] objectAtIndex:0];
+    
+    [questionsList enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        if([[obj valueForKey:@"id"] isEqualToString:temp])
+        {
+            index = idx;
+            *stop = YES;
+        }
+    }];
+    
+    return index;
+}
+
 -(void)buttonPressed:(id)sender
 {
     UIButton *button = (UIButton *) sender;
+    int index = [self indexForButtonTitle:button.titleLabel.text];
     
-    NSArray *singleQuestion = [questionsList objectAtIndex:button.tag];
+    NSArray *singleQuestion = [questionsList objectAtIndex:index];
     
     
     [self.questionModel setTopic:[singleQuestion valueForKey:@"topic"]];

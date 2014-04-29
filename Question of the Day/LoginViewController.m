@@ -29,22 +29,7 @@
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
-    
-    UIAlertView *alert2 = [[UIAlertView alloc] initWithTitle:@"Message to Graders"
-                                                     message:@"As of now there is not a way to register users. Please use my user(ID: dognean, PASS: romania   to test the program. Release 2 will have this option along with a professor side. Thank you! Remember access http://199.180.255.173 before running app. Thanks!"
-                                                    delegate:nil
-                                           cancelButtonTitle:@"OK"
-                                           otherButtonTitles:nil];
-    [alert2 show];
-    
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Message to Graders"
-                                                    message:@"Please note!\nIf you are grading this from a public network such as ASU you will need to access the API website and click that it is not malicious. The location of the API is on a server without a Domain name, and ASU does not like that and blocks conections. \nTLDR; Please go to http://199.180.255.173 and click it is not malicious. The team will work around this in Project 2. Thank you!"
-                                                   delegate:nil
-                                          cancelButtonTitle:@"OK"
-                                          otherButtonTitles:nil];
-    [alert show];
-    
+    [super viewDidLoad];    
     
 }
 
@@ -74,7 +59,7 @@
     else
     {
         // Verify entered password first
-        NSString *theURL = [NSString stringWithFormat:@"http://199.180.255.173/index.php/mobile/getPassword/%@/%@", [self.userModel getUserName], password];
+        NSString *theURL = [NSString stringWithFormat:@"http://cse110.courses.asu.edu/index.php/mobile/getPassword/%@/%@", [self.userModel getUserName], password];
         NSURL *url = [NSURL URLWithString:theURL];
         
         NSData *userInfoData = [NSData dataWithContentsOfURL:url];
@@ -93,7 +78,7 @@
         else
         {
             // Log in with username
-            NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://199.180.255.173/index.php/mobile/getUserInfo/%@", [self.userModel getUserName]]];
+            NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://cse110.courses.asu.edu/index.php/mobile/getUserInfo/%@", [self.userModel getUserName]]];
             
             NSData *userInfoData = [NSData dataWithContentsOfURL:url];
             
@@ -114,7 +99,7 @@
             
             
             
-            NSURL *idURL = [NSURL URLWithString:[NSString stringWithFormat:@"http://199.180.255.173/index.php/mobile/isProfessor/%@", [self.userModel getUserName]]];
+            NSURL *idURL = [NSURL URLWithString:[NSString stringWithFormat:@"http://cse110.courses.asu.edu/index.php/mobile/isProfessor/%@", [self.userModel getUserName]]];
             
             NSData *userIDData = [NSData dataWithContentsOfURL:idURL];
             NSString *boolcheck = [[NSString alloc] initWithData:userIDData encoding:NSASCIIStringEncoding];

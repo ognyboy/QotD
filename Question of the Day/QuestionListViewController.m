@@ -72,7 +72,7 @@
 
 -(void) instantiateQUestionList
 {
-    NSString *url2 = [NSString stringWithFormat:@"http://199.180.255.173/index.php/mobile/search/%@", self.topic];
+    NSString *url2 = [NSString stringWithFormat:@"http://cse110.courses.asu.edu/index.php/mobile/search/%@", self.topic];
     url2 = [url2 stringByReplacingOccurrencesOfString:@" " withString:@"%20"];
     
     NSURL *url = [NSURL URLWithString:url2];
@@ -143,13 +143,13 @@
 }
   
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    
-    NSLog(@"%@", [[questionsList objectAtIndex:indexPath.row] valueForKey:@"id"]);
-    
+{    
     static NSString *CellIdentifier = @"Cell";
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    UITableViewCell *cell = nil;
+    
+    
+    cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     UIButton *button = (UIButton *)[cell viewWithTag:5555];
     
@@ -168,10 +168,10 @@
     if([[checkedList objectAtIndex:indexPath.row] integerValue] == 1)
         [imageView2 setImage:checked];
     
-    button.tag = indexPath.row;
+    
     [button addTarget:self action:@selector(buttonPressed:) forControlEvents:UIControlEventTouchUpInside];
     
-    button2.tag = indexPath.row;
+
     [button2 addTarget:self action:@selector(button2Pressed:) forControlEvents:UIControlEventTouchUpInside];
     
     NSString *test = [NSString stringWithFormat:@"%@. %@", [[questionsList objectAtIndex:indexPath.row] valueForKey:@"id"], [[questionsList objectAtIndex:indexPath.row] valueForKey:@"prompt"]];
@@ -182,25 +182,45 @@
         test = [test stringByReplacingOccurrencesOfString:@"<br>" withString:@"  "];
     
     [button setTitle:test forState:UIControlStateNormal];
-    
+    button.titleLabel.text = test;
     return cell;
     
+}
+
+-(int) indexForButtonTitle: (NSString *) string
+{
+    __block int index = 0;
+    NSString *temp = string;
+    
+    //this returns the string that holds the i
+    temp = [[temp componentsSeparatedByString:@"."] objectAtIndex:0];
+    
+    [questionsList enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        if([[obj valueForKey:@"id"] isEqualToString:temp])
+        {
+            index = idx;
+            *stop = YES;
+        }
+    }];
+    
+    return index;
 }
 
 -(void)buttonPressed:(id)sender {
     
     UIButton *button = (UIButton *) sender;
     
+    int index = [self indexForButtonTitle:button.titleLabel.text];
     [self.questionModel setTopic:self.topic];
-    [self.questionModel setPrompt:[[questionsList objectAtIndex:button.tag] valueForKey:@"prompt"]];
-    [self.questionModel setA:[[questionsList objectAtIndex:button.tag] valueForKey:@"a"]];
-    [self.questionModel setB:[[questionsList objectAtIndex:button.tag] valueForKey:@"b"]];
-    [self.questionModel setC:[[questionsList objectAtIndex:button.tag] valueForKey:@"c"]];
-    [self.questionModel setD:[[questionsList objectAtIndex:button.tag] valueForKey:@"d"]];
-    [self.questionModel setCorrect:[[questionsList objectAtIndex:button.tag] valueForKey:@"correct"]];
-    [self.questionModel setHint:[[questionsList objectAtIndex:button.tag] valueForKey:@"hint"]];
-    [self.questionModel setExplanation:[[questionsList objectAtIndex:button.tag] valueForKey:@"explanation"]];
-    [self.questionModel setQuestionID:[[[questionsList objectAtIndex:button.tag] valueForKey:@"id"] integerValue]];
+    [self.questionModel setPrompt:[[questionsList objectAtIndex:index] valueForKey:@"prompt"]];
+    [self.questionModel setA:[[questionsList objectAtIndex:index] valueForKey:@"a"]];
+    [self.questionModel setB:[[questionsList objectAtIndex:index] valueForKey:@"b"]];
+    [self.questionModel setC:[[questionsList objectAtIndex:index] valueForKey:@"c"]];
+    [self.questionModel setD:[[questionsList objectAtIndex:index] valueForKey:@"d"]];
+    [self.questionModel setCorrect:[[questionsList objectAtIndex:index] valueForKey:@"correct"]];
+    [self.questionModel setHint:[[questionsList objectAtIndex:index] valueForKey:@"hint"]];
+    [self.questionModel setExplanation:[[questionsList objectAtIndex:index] valueForKey:@"explanation"]];
+    [self.questionModel setQuestionID:[[[questionsList objectAtIndex:index] valueForKey:@"id"] integerValue]];
     
     [self performSegueWithIdentifier:@"Qdetail" sender:self];
 }
@@ -209,13 +229,15 @@
     
     UIButton *button = (UIButton *) sender;
     
-    if([[checkedList objectAtIndex:button.tag] integerValue] == 0)
+    int index = [self indexForButtonTitle:button.titleLabel.text];
+    
+    if([[checkedList objectAtIndex:index] integerValue] == 0)
     {
-        [checkedList replaceObjectAtIndex:button.tag withObject:[NSNumber numberWithInteger:1]];
+        [checkedList replaceObjectAtIndex:index withObject:[NSNumber numberWithInteger:1]];
     }
-    else if([[checkedList objectAtIndex:button.tag] integerValue] == 1)
+    else if([[checkedList objectAtIndex:index] integerValue] == 1)
     {
-        [checkedList replaceObjectAtIndex:button.tag withObject:[NSNumber numberWithInteger:0]];
+        [checkedList replaceObjectAtIndex:index withObject:[NSNumber numberWithInteger:0]];
     }
     
     [self.questionsTable reloadData];

@@ -242,7 +242,7 @@
 
 - (IBAction)deleteButton:(id)sender
 {
-    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://199.180.255.173/index.php/mobile/removeQuestion/%@/%d", [self.sectionModel getSectionID], [self.questionModel getQuestionID]]];
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://cse110.courses.asu.edu/index.php/mobile/removeQuestion/%@/%d", [self.sectionModel getSectionID], [self.questionModel getQuestionID]]];
     
     NSData *responseData = [NSData dataWithContentsOfURL:url];
     NSString *response = [[NSString alloc] initWithData:responseData encoding:NSASCIIStringEncoding];

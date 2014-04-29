@@ -51,7 +51,7 @@
 
 -(void)newQs
 {
-    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://199.180.255.173/index.php/mobile/getNotAnsweredQuestions/%@/%@/0", [self.userModel getUserName], [self.userModel.listOfSections objectAtIndex:0]]];
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://cse110.courses.asu.edu/index.php/mobile/getNotAnsweredQuestions/%@/%@/0", [self.userModel getUserName], [self.userModel.listOfSections objectAtIndex:0]]];
     
     NSData *userInfoData = [NSData dataWithContentsOfURL:url];
     

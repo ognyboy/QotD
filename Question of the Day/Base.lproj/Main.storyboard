@@ -1867,7 +1867,7 @@
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                 </button>
-                                                <imageView userInteractionEnabled="NO" tag="8888" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle.jpg" highlightedImage="newMail.jpg" id="f1C-Lc-Xws">
+                                                <imageView userInteractionEnabled="NO" tag="8888" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="f1C-Lc-Xws">
                                                     <rect key="frame" x="9" y="8" width="24" height="24"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
@@ -2428,7 +2428,6 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="newQuestions:" destination="yyN-Sw-gn5" eventType="touchUpInside" id="kKb-mJ-3x1"/>
                                     <segue destination="kdi-ex-O5S" kind="push" identifier="NewQuestions" id="Mo3-lz-x6a"/>
                                 </connections>
                             </button>
@@ -3518,11 +3517,11 @@
         <segue reference="4RH-dD-sJz"/>
         <segue reference="N6V-3Y-Rjs"/>
         <segue reference="sMp-dX-teC"/>
+        <segue reference="o5Z-zA-8dY"/>
         <segue reference="C8I-Cn-wCc"/>
         <segue reference="qLL-NM-qoA"/>
         <segue reference="s3C-MM-WZG"/>
         <segue reference="fVH-Vm-W5V"/>
-        <segue reference="o5Z-zA-8dY"/>
-        <segue reference="UR9-18-4WS"/>
+        <segue reference="FT9-kI-cSD"/>
     </inferredMetricsTieBreakers>
 </document>

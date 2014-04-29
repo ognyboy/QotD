@@ -62,7 +62,7 @@
 
 -(void) getStudentList
 {
-    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://199.180.255.173/index.php/mobile/getRoster/%@", [self.sectionModel getSectionID]]];
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://cse110.courses.asu.edu/index.php/mobile/getRoster/%@", [self.sectionModel getSectionID]]];
     
     NSData *userInfoData = [NSData dataWithContentsOfURL:url];
     
@@ -216,10 +216,9 @@
     
     UIButton *button = (UIButton *)[cell viewWithTag:2222];
     
-    button.tag = indexPath.row;
     [button addTarget:self action:@selector(buttonPressed:) forControlEvents:UIControlEventTouchUpInside];
     
-    NSString *test = [NSString stringWithFormat:@"                 %@ %@", [[studentList objectAtIndex:indexPath.row] valueForKey:@"firstName"], [[studentList objectAtIndex:indexPath.row] valueForKey:@"lastName"]];
+    NSString *test = [NSString stringWithFormat:@"                 %@ %@ (%@)", [[studentList objectAtIndex:indexPath.row] valueForKey:@"firstName"], [[studentList objectAtIndex:indexPath.row] valueForKey:@"lastName"], [[studentList objectAtIndex:indexPath.row] valueForKey:@"username"]];
     button.titleLabel.numberOfLines = 0;
     
     
@@ -232,17 +231,37 @@
     
 }
 
+-(int) indexForButtonTitle: (NSString *) string
+{
+    __block int index = 0;
+    NSString *temp = string;
+    
+    //this returns the string that holds the i
+    temp = [[temp componentsSeparatedByString:@"("] objectAtIndex:1];
+    temp = [[temp componentsSeparatedByString:@")"] objectAtIndex:0];
+    [studentList enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        if([[obj valueForKey:@"username"] isEqualToString:temp])
+        {
+            index = idx;
+            *stop = YES;
+        }
+    }];
+    
+    return index;
+}
+
 -(void)buttonPressed:(id)sender
 {
     UIButton *button = (UIButton *) sender;
+    int index = [self indexForButtonTitle:button.titleLabel.text];
     
-    if([[checkedList objectAtIndex:button.tag] integerValue] == 0)
+    if([[checkedList objectAtIndex:index] integerValue] == 0)
     {
-        [checkedList replaceObjectAtIndex:button.tag withObject:[NSNumber numberWithInteger:1]];
+        [checkedList replaceObjectAtIndex:index withObject:[NSNumber numberWithInteger:1]];
     }
-    else if([[checkedList objectAtIndex:button.tag] integerValue] == 1)
+    else if([[checkedList objectAtIndex:index] integerValue] == 1)
     {
-        [checkedList replaceObjectAtIndex:button.tag withObject:[NSNumber numberWithInteger:0]];
+        [checkedList replaceObjectAtIndex:index withObject:[NSNumber numberWithInteger:0]];
     }
     
     [self.rosterTable reloadData];
@@ -255,7 +274,7 @@
     {
         if([[checkedList objectAtIndex:i] integerValue] == 1)
         {
-            NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://199.180.255.173/index.php/mobile/removeStudent/%@/%@", [[studentList objectAtIndex:i] valueForKey:@"username"], [self.sectionModel getSectionID]]];
+            NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://cse110.courses.asu.edu/index.php/mobile/removeStudent/%@/%@", [[studentList objectAtIndex:i] valueForKey:@"username"], [self.sectionModel getSectionID]]];
             
             NSData *responseData = [NSData dataWithContentsOfURL:url];
             NSString *response = [[NSString alloc] initWithData:responseData encoding:NSASCIIStringEncoding];

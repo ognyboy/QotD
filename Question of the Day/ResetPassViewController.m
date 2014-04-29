@@ -52,7 +52,7 @@
     
     else
     {
-        NSString *theURL = [NSString stringWithFormat:@"http://199.180.255.173/index.php/mobile/requestReset/%@", email];
+        NSString *theURL = [NSString stringWithFormat:@"http://cse110.courses.asu.edu/index.php/mobile/requestReset/%@", email];
         NSURL *url = [NSURL URLWithString:theURL];
         
         NSData *userInfoData = [NSData dataWithContentsOfURL:url];

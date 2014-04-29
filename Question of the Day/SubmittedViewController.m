@@ -118,7 +118,7 @@
     else
         correct = 0;
     
-    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://199.180.255.173/index.php/mobile/dealWithAnswer/%d/%@/%d/%@/%d", [self.userModel getUserID], [self.userModel.listOfSections objectAtIndex:0], [self.questionModel getQuestionID], self.answer, correct]];
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://cse110.courses.asu.edu/index.php/mobile/dealWithAnswer/%d/%@/%d/%@/%d", [self.userModel getUserID], [self.userModel.listOfSections objectAtIndex:0], [self.questionModel getQuestionID], self.answer, correct]];
     
     NSData *responseData = [NSData dataWithContentsOfURL:url];
     NSString *response = [[NSString alloc] initWithData:responseData encoding:NSASCIIStringEncoding];

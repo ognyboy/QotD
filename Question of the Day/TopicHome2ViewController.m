@@ -110,7 +110,7 @@
 
 -(void) instantiateDetails
 {
-    NSString *url2 = [NSString stringWithFormat:@"http://199.180.255.173/index.php/mobile/getTopicSchedule/%@/%@", [self.sectionModel getSectionID], self.topic];
+    NSString *url2 = [NSString stringWithFormat:@"http://cse110.courses.asu.edu/index.php/mobile/getTopicSchedule/%@/%@", [self.sectionModel getSectionID], self.topic];
     url2 = [url2 stringByReplacingOccurrencesOfString:@" " withString:@"%20"];
     
     NSURL *url = [NSURL URLWithString:url2];
@@ -156,7 +156,7 @@
 
 -(void) instantiateQUestionList
 {
-    NSString *url2 = [NSString stringWithFormat:@"http://199.180.255.173/index.php/mobile/getQuestionStatsByTopic/%@/%@/%d", self.topic, [self.sectionModel getSectionID], [self.userModel getUserID]];
+    NSString *url2 = [NSString stringWithFormat:@"http://cse110.courses.asu.edu/index.php/mobile/getQuestionStatsByTopic/%@/%@/%d", self.topic, [self.sectionModel getSectionID], [self.userModel getUserID]];
     url2 = [url2 stringByReplacingOccurrencesOfString:@" " withString:@"%20"];
     
     NSURL *url = [NSURL URLWithString:url2];
@@ -211,7 +211,6 @@
     
     UIButton *button = (UIButton *)[cell viewWithTag:8888];
     
-    button.tag = indexPath.row;
     [button addTarget:self action:@selector(buttonPressed:) forControlEvents:UIControlEventTouchUpInside];
     
     NSString *test = [NSString stringWithFormat:@"%d. %@", [[[questionsList objectAtIndex:indexPath.row] valueForKey:@"id"] integerValue], [[questionsList objectAtIndex:indexPath.row] valueForKey:@"prompt"]];
@@ -229,6 +228,25 @@
 -(void)buttonPressed:(id)sender
 {
 
+}
+
+-(int) indexForButtonTitle: (NSString *) string
+{
+    __block int index = 0;
+    NSString *temp = string;
+    
+    //this returns the string that holds the i
+    temp = [[temp componentsSeparatedByString:@"."] objectAtIndex:0];
+    
+    [questionsList enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        if([[obj valueForKey:@"id"] isEqualToString:temp])
+        {
+            index = idx;
+            *stop = YES;
+        }
+    }];
+    
+    return index;
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
@@ -396,7 +414,7 @@
     else
         sunday = 0;
     
-    NSString *url2 = [NSString stringWithFormat:@"http://199.180.255.173/index.php/mobile/addTopic/%@/%@/%d/%d/%d/%d/%d/%d/%d/%@", [self.sectionModel getSectionID], self.topic, monday, tuesday, wednesday, thursday, friday, saturday, sunday, [self.dateField text]];
+    NSString *url2 = [NSString stringWithFormat:@"http://cse110.courses.asu.edu/index.php/mobile/addTopic/%@/%@/%d/%d/%d/%d/%d/%d/%d/%@", [self.sectionModel getSectionID], self.topic, monday, tuesday, wednesday, thursday, friday, saturday, sunday, [self.dateField text]];
     url2 = [url2 stringByReplacingOccurrencesOfString:@" " withString:@"%20"];
     
     NSURL *url = [NSURL URLWithString:url2];

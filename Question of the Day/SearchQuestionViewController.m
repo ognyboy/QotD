@@ -61,7 +61,7 @@
 
 -(void)instantiateTopicList
 {
-    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://199.180.255.173/index.php/mobile/allTopics"]];
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://cse110.courses.asu.edu/index.php/mobile/allTopics"]];
     
     NSData *userInfoData = [NSData dataWithContentsOfURL:url];
     
@@ -212,7 +212,6 @@
     UIImage *with = [UIImage imageNamed:@"rightArrow2.jpeg"];
     [imageView setImage:with];
     
-    button.tag = indexPath.row;
     [button addTarget:self action:@selector(buttonPressed:) forControlEvents:UIControlEventTouchUpInside];
     
     NSString *test = [NSString stringWithFormat:@"%@", [[topicList objectAtIndex:indexPath.row] valueForKey:@"topic"]];
@@ -228,11 +227,27 @@
     
 }
 
+-(int) indexForButtonTitle: (NSString *) string
+{
+    __block int index = 0;
+    NSString *temp = string;
+    
+    [topicList enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        if([[obj valueForKey:@"topic"] isEqualToString:temp])
+        {
+            index = idx;
+            *stop = YES;
+        }
+    }];
+    
+    return index;
+}
+
 -(void)buttonPressed:(id)sender {
     
     UIButton *button = (UIButton *) sender;
-    
-    topic = [[topicList objectAtIndex:button.tag] valueForKey:@"topic"];
+    int index = [self indexForButtonTitle:button.titleLabel.text];
+    topic = [[topicList objectAtIndex:index] valueForKey:@"topic"];
     [self performSegueWithIdentifier:@"QuestionList" sender:self];
 }
 
