@@ -239,6 +239,7 @@
     //this returns the string that holds the i
     temp = [[temp componentsSeparatedByString:@"("] objectAtIndex:1];
     temp = [[temp componentsSeparatedByString:@")"] objectAtIndex:0];
+    
     [studentList enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
         if([[obj valueForKey:@"username"] isEqualToString:temp])
         {

@@ -183,6 +183,7 @@
     
     [button setTitle:test forState:UIControlStateNormal];
     button.titleLabel.text = test;
+    button2.titleLabel.text = test;
     return cell;
     
 }
@@ -198,6 +199,7 @@
     [questionsList enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
         if([[obj valueForKey:@"id"] isEqualToString:temp])
         {
+            NSLog(@"%@", temp);
             index = idx;
             *stop = YES;
         }
@@ -230,7 +232,7 @@
     UIButton *button = (UIButton *) sender;
     
     int index = [self indexForButtonTitle:button.titleLabel.text];
-    
+    NSLog(@"%d", index);
     if([[checkedList objectAtIndex:index] integerValue] == 0)
     {
         [checkedList replaceObjectAtIndex:index withObject:[NSNumber numberWithInteger:1]];
