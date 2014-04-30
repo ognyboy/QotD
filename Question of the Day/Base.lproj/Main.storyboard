@@ -2565,7 +2565,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="H9q-o0-Gef" kind="push" identifier="PrepareQuestion3" id="dxO-wD-dNU"/>
+                                    <segue destination="maP-8y-cz0" kind="push" identifier="PrepareQuestion3" id="Wku-0S-AJ8"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" tag="11" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rightArrow2.jpeg" id="PwZ-tY-YPH">
@@ -2874,7 +2874,7 @@
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                     <connections>
-                                                        <segue destination="H9q-o0-Gef" kind="push" identifier="PrepareQuestion" id="FT9-kI-cSD"/>
+                                                        <segue destination="maP-8y-cz0" kind="push" identifier="PrepareQuestion" id="xpq-Ss-dvX"/>
                                                     </connections>
                                                 </button>
                                                 <imageView userInteractionEnabled="NO" tag="105" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="8Ho-hd-v8L">
@@ -2969,7 +2969,7 @@
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                     <connections>
-                                                        <segue destination="H9q-o0-Gef" kind="push" identifier="PrepareQuestion2" id="UR9-18-4WS"/>
+                                                        <segue destination="maP-8y-cz0" kind="push" identifier="PrepareQuestion2" id="G4c-X1-lbe"/>
                                                     </connections>
                                                 </button>
                                                 <imageView userInteractionEnabled="NO" tag="11" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rightArrow2.jpeg" id="4B1-Re-8Tf">
@@ -3149,7 +3149,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vOo-Tz-AvZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2557" y="-2605"/>
+            <point key="canvasLocation" x="3045" y="-1425"/>
         </scene>
         <!--Answer Screen View Controller - Answer Page-->
         <scene sceneID="AZQ-3U-29g">
@@ -3287,7 +3287,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o3o-J4-AIs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3346" y="-2605"/>
+            <point key="canvasLocation" x="3370" y="-2605"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Td7-33-OjY">
@@ -3498,7 +3498,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GP5-xd-XCo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3346" y="-1697"/>
+            <point key="canvasLocation" x="3698" y="-1425"/>
         </scene>
     </scenes>
     <resources>
@@ -3513,15 +3513,15 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
+        <segue reference="xpq-Ss-dvX"/>
         <segue reference="7mP-55-jsq"/>
         <segue reference="4RH-dD-sJz"/>
         <segue reference="N6V-3Y-Rjs"/>
-        <segue reference="sMp-dX-teC"/>
         <segue reference="o5Z-zA-8dY"/>
         <segue reference="C8I-Cn-wCc"/>
         <segue reference="qLL-NM-qoA"/>
         <segue reference="s3C-MM-WZG"/>
         <segue reference="fVH-Vm-W5V"/>
-        <segue reference="FT9-kI-cSD"/>
+        <segue reference="e1L-X9-JrC"/>
     </inferredMetricsTieBreakers>
 </document>

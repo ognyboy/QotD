@@ -7,7 +7,7 @@
 //
 
 #import "QuestionStatViewController.h"
-#import "DetailAnswerViewController.h"
+#import "AnswerScreenViewController.h"
 
 @interface QuestionStatViewController ()
 {
@@ -133,8 +133,7 @@
 {
     if ( [segue.identifier isEqualToString:@"PrepareQuestion3"])   //this is the segue name that you can change from story board.
     {
-        
-        DetailAnswerViewController *viewCont = segue.destinationViewController;
+        AnswerScreenViewController *viewCont = segue.destinationViewController;
         viewCont.userModel = self.userModel;
         viewCont.questionModel = self.questionModel;
     }
